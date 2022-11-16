@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "Jessie",
+	"display_name_bool": false,
+	"id": "character-1668598873.json",
+	"mirror_portraits": false,
+	"name": "Jessie Holmes",
+	"nickname": "Jessie",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Assets/Characters/jessie.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

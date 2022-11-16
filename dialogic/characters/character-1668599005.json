@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1668599005.json",
+	"mirror_portraits": false,
+	"name": "Isaías Fernández García",
+	"nickname": "Isaías",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Assets/Characters/isaias.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

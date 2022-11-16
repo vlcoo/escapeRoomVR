@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "Jurgen",
+	"display_name_bool": false,
+	"id": "character-1668598946.json",
+	"mirror_portraits": false,
+	"name": "Jurgen Müller",
+	"nickname": "Jurgen",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Assets/Characters/jurgen.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
