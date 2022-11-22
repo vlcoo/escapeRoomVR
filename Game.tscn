@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=19]
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=20]
 [ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=21]
+[ext_resource path="res://Assets/3D assets/Caja Domino.fbx" type="PackedScene" id=22]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1060,3 +1061,6 @@ transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 3.19063
 
 [node name="Dominos" parent="." instance=ExtResource( 21 )]
 transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
+
+[node name="Caja Domino" parent="." instance=ExtResource( 22 )]
+transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, 10.333, 0.230514, 24.8456 )
