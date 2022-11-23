@@ -10,7 +10,7 @@
 			"character": "character-1668599025.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Buenos días."
+			"text": "Buenos días, [player_name]"
 		}
 	],
 	"metadata": {

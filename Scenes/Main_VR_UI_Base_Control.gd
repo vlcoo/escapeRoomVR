@@ -5,9 +5,13 @@ extends Control
 
 # A variable to hold the Label node that shows the amount of spheres remaining in the scene
 var sphere_count_label
+var diag
 
 func _ready():
 	# Get the Label node
+	Dialogic.set_variable("player_name", "luigi")
+	diag = Dialogic.start('Default')
+	add_child(diag)
 	sphere_count_label = get_node("Label_Sphere_Count")
 
 	# Get the root node of the Game scene and assign this script to sphere_ui.

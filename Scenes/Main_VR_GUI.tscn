@@ -31,14 +31,12 @@ font_data = ExtResource( 3 )
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4.77395, 4.96041, 19.7775 )
 
 [node name="GUI_Mesh" type="MeshInstance" parent="."]
-transform = Transform( -1, 8.74228e-008, 0, 8.74228e-008, 1, 8.74228e-008, 7.64274e-015, 8.74228e-008, -1, 0, 0, -0.125 )
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 0, -0.125 )
 mesh = SubResource( 1 )
-material/0 = null
 script = ExtResource( 1 )
 gui_viewport_path = NodePath("../../Main_VR_GUI/GUI")
 
 [node name="GUI_Board" type="MeshInstance" parent="."]
-editor/display_folded = true
 transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 0.25, -0.014788, -0.123899, 0.132493 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
@@ -78,8 +76,8 @@ margin_left = -400.0
 margin_top = -306.0
 margin_right = 400.0
 margin_bottom = -207.0
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 1, 0.273438, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "Find all of the spheres and destroy them!"
 align = 1
 valign = 1
@@ -94,8 +92,8 @@ margin_top = -201.0
 margin_right = 675.0
 margin_bottom = 326.0
 rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.992188, 1, 0, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "Teleport by pressing the trigger while not holding anything
 
 Move with the touchpads and/or the joysticks
@@ -117,8 +115,8 @@ margin_left = -400.0
 margin_top = -226.0
 margin_right = 400.0
 margin_bottom = -127.0
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 1, 0.273438, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "10 Spheres remaining"
 align = 1
 valign = 1
@@ -131,8 +129,8 @@ anchor_bottom = 1.0
 margin_left = -400.0
 margin_top = -99.0
 margin_right = 400.0
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "Grab and interact with the
 red Box to reset!"
 align = 1
