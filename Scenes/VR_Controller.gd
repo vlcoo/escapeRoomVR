@@ -284,6 +284,11 @@ func button_pressed(button_index):
 	elif button_index == 1:
 		# Call the _on_button_pressed_menu function.
 		_on_button_pressed_menu()
+	
+	elif button_index == 14:
+		$"../..".diag_ui.get_node("DialogNode").next_event(false)
+		
+		
 
 
 # This function is called when the trigger button on the VR controller is pressed.

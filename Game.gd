@@ -6,6 +6,7 @@ var spheres_left = 10
 # A variable to store the UI used for the sphere count.
 # This variable is assumed to be set by Main_VR_UI_Base_Control.gd
 var sphere_ui = null
+var diag_ui
 
 
 func _ready():
