@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/GUI.gd" type="Script" id=13]
 [ext_resource path="res://Assets/Titillium-Regular.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://Audio/Soundrangers_Nature_Ambience/coastal_ambience_01_120_loop.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Assets/3D assets/ClockNormalsCorrected.fbx" type="PackedScene" id=16]
 [ext_resource path="res://Assets/3D assets/MorseCode1.fbx" type="PackedScene" id=18]
 [ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=19]
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=20]
@@ -469,9 +470,6 @@ transform = Transform( -0.845237, 0, 1.81262, 0, 2, 0, -1.81262, 0, -0.845237, -
 
 [node name="Main_VR_GUI" parent="." instance=ExtResource( 7 )]
 transform = Transform( 10.798, 0, 0, 0, 4, 0, 0, 0, 4, 4.77395, 4.96041, 19.7775 )
-
-[node name="RomanNumbers" parent="Main_VR_GUI" instance=ExtResource( 20 )]
-transform = Transform( -0.088491, 0, -0.488396, 0, 1.23919, 0, 2.6999, 0, -0.00951811, 0.584125, -0.138757, 0.464665 )
 
 [node name="Interactable_Objects" type="Spatial" parent="."]
 
@@ -1038,17 +1036,25 @@ stream = ExtResource( 15 )
 volume_db = -10.0
 autoplay = true
 
-[node name="MorseCode2" parent="." instance=ExtResource( 19 )]
+[node name="Models" type="Node" parent="."]
+
+[node name="Domino_Box" parent="Models" instance=ExtResource( 22 )]
+transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, -3.46816, 0.230514, 25.0666 )
+
+[node name="Puzzle_Domino" parent="Models" instance=ExtResource( 21 )]
+transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
+
+[node name="Puzzle_MorseCode1" parent="Models" instance=ExtResource( 18 )]
+transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 3.19063, 4.36479, 21.6017 )
+
+[node name="Puzzle_MorseCode2" parent="Models" instance=ExtResource( 19 )]
 transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 6.71407, 4.43136, 21.5389 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="MorseCode1" parent="." instance=ExtResource( 18 )]
-transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 3.19063, 4.36479, 21.6017 )
+[node name="Clock" parent="Models" instance=ExtResource( 16 )]
+transform = Transform( -0.000714093, -0.0223477, -2.62367, -2.6574, 0.257677, 0, 0.158079, 4.94713, -0.0122376, -2.64645, 4.95654, 22.1436 )
 
-[node name="Dominos" parent="." instance=ExtResource( 21 )]
-transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
-
-[node name="Caja Domino" parent="." instance=ExtResource( 22 )]
-transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, 10.333, 0.230514, 24.8456 )
+[node name="Puzzle_Roman_Numbers" parent="Models" instance=ExtResource( 20 )]
+transform = Transform( 5.86509e-08, 0, -4.61008, 0, 4.95484, 0, 2.84434, 0, 3.17923e-08, 11.0269, 4.43947, 22.1105 )
