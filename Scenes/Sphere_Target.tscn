@@ -2,8 +2,9 @@
 
 [ext_resource path="res://Scenes/Sphere_Target.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Shpere_Target.scn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Assets_Material.tres" type="Material" id=3]
+[ext_resource path="res://Assets/3D assets/Assets_Material.tres" type="Material" id=3]
 [ext_resource path="res://Audio/Antisample_Rocks_and_Stones/Rock_Impact_Slide_Wood_Cave_MONO_04.ogg" type="AudioStream" id=4]
+
 
 [sub_resource type="SphereShape" id=1]
 radius = 0.27

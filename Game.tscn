@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -16,11 +16,13 @@
 [ext_resource path="res://Assets/Titillium-Regular.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://Audio/Soundrangers_Nature_Ambience/coastal_ambience_01_120_loop.ogg" type="AudioStream" id=15]
 [ext_resource path="res://Assets/3D assets/ClockNormalsCorrected.fbx" type="PackedScene" id=16]
+[ext_resource path="res://Assets/3D assets/Padlock6.fbx" type="PackedScene" id=17]
 [ext_resource path="res://Assets/3D assets/MorseCode1.fbx" type="PackedScene" id=18]
 [ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=19]
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=20]
 [ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=21]
 [ext_resource path="res://Assets/3D assets/Caja Domino.fbx" type="PackedScene" id=22]
+[ext_resource path="res://Assets/3D assets/Frame2.fbx" type="PackedScene" id=23]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -179,6 +181,7 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="World/Wall6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="World/Wall6/StaticBody"]
 shape = SubResource( 6 )
@@ -1038,8 +1041,11 @@ autoplay = true
 
 [node name="Models" type="Node" parent="."]
 
+[node name="Frame" parent="Models" instance=ExtResource( 23 )]
+transform = Transform( 2.63115, 0, 0, 0, 2.12044, 0, 0, 0, 1, 5.97479, 2.10549, 24.5968 )
+
 [node name="Domino_Box" parent="Models" instance=ExtResource( 22 )]
-transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, -3.46816, 0.230514, 25.0666 )
+transform = Transform( 0.0186194, 0, -0.716783, 0, 1, 0, 0.892207, 0, 0.0231763, -3.46816, 0.230514, 25.0666 )
 
 [node name="Puzzle_Domino" parent="Models" instance=ExtResource( 21 )]
 transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
@@ -1054,7 +1060,10 @@ __meta__ = {
 }
 
 [node name="Clock" parent="Models" instance=ExtResource( 16 )]
-transform = Transform( -0.000714093, -0.0223477, -2.62367, -2.6574, 0.257677, 0, 0.158079, 4.94713, -0.0122376, -2.64645, 4.95654, 22.1436 )
+transform = Transform( -0.000538591, -0.0168553, -1.97885, -2.06489, 0.200223, 0, 0.158079, 4.94713, -0.0122376, -3.80853, 4.95654, 22.1436 )
 
 [node name="Puzzle_Roman_Numbers" parent="Models" instance=ExtResource( 20 )]
 transform = Transform( 5.86509e-08, 0, -4.61008, 0, 4.95484, 0, 2.84434, 0, 3.17923e-08, 11.0269, 4.43947, 22.1105 )
+
+[node name="Padlock" parent="Models" instance=ExtResource( 17 )]
+transform = Transform( 0.583064, 0, 0, 0, 0.497976, 0, 0, 0, 0.940896, 0.728091, 1.04382, 25.3226 )

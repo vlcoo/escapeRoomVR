@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Sword.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sword.scn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Assets_Material.tres" type="Material" id=3]
+[ext_resource path="res://Assets/3D assets/Assets_Material.tres" type="Material" id=3]
 [ext_resource path="res://Audio/Gamemaster_audio_Punch_and_Combat_Sounds/punch_grit_wet_impact_05.ogg" type="AudioStream" id=4]
 
 [sub_resource type="ConvexPolygonShape" id=1]
