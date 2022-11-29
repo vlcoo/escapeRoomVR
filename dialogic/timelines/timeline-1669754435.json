@@ -1,0 +1,249 @@
+{
+	"events": [
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[b]Good night![/b] What brought you here?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My name is [player_name] and I have been hired to solve the mystery of the 3 murders' case."
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]Cool![/wave] Let me introduce myself.\n\nI am Margarita and I'm one of the victims of that night. I'm glad you came, since not even I know what happened."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No worries, I am here to help you. Let’s look back to what we currently know. Correct me If I am wrong:\n\nYour name is Margarita Fernández García , you are 26 and you come from Mexico."
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Exactly."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What were you doing in Germany, Margarita?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I came here because I wanted to do my Erasmus year in such a beautiful European country that Germany is."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, I see. Did you come alone to Germany?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, my friends weren't interested in doing an erasmus. Despite that, I thought it was a great way to grow as a person and to meet new people. That’s why I did it."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That’s really good.\n\nDid you meet a lot of people during your stay?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes! I used to hang out with 3 girls from my class:\n\nJessie Holmes, Heidi Weber and Nicole Dubois."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Have you ever had problems with any of them?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not at all! We got along really well since the first day."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, and do you know if they ever had problems between them?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I would say no…\n\nOh wait! I remember some shouts from Jessie’s room between her and Heidi when I was going to take a bath but I couldn’t understand what they were talking about."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So would you say they were fighting or something?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, I would say so.\n\nBut it was really weird, Heidi and Jessie are best friends and I have never seen any argument between them."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, so maybe Heidi knows more about what really happened, don’t you think?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, probably."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is there anything else you want to tell me about?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nop, I think that’s all I know. Sorry."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are you sure? "
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]Yeah![/wave]"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You didn’t tell me that you have a brother..."
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake]Wait, what?[/shake]\n\nWhat does my brother have to do with this?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I heard he was in Berlin for several days and that he intended to visit you."
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, that’s true but my brother didn’t do anything, I can swear it."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am not saying that but could you tell me more about that?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay…\n\nRight after we had dinner in the living room, the doorbell rang. No one made the feint of getting up to open it.\n\nSo I walked to the door and my brother was behind it. His name is Isaías and he is 3 years older than me."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why did he come to the mansion?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He wanted to clear up something about our mother."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What exactly?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake]Why do you care?[/shake] I don’t even understand what this has to do with the murder. It's a family issue."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Calm down. I am just trying to fit all the facts together in my head. Please answer my questions."
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My brother and I haven't spoken in a long time. My mother passed away a month ago, and she reportedly gave me the entire estate.\n\nMy brother was so angry at me that he went on Instagram and contacted Jessie to get my address. Jessie was unaware of our condition, so she invited him to come here."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am so sorry for your loss. "
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks.\n\nSo, I went to an isolated room to talk with my brother. He tried to convince me to share half of the inheritance but I refused his offer.\n\nHe has never appreciated what our mother did for us so, for that reason he doesn’t deserve it.\n\nWe argued a lot but finally he gave up and he threw out the testament and left the mansion right after."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did you try to stop him?"
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, he left really fast and I was so anxious that I decided to take a hot bath and on the way I took a cocktail from the kitchen.\n\nWhen I was about to get to the bathroom I heard the argument between Heidi and Jessie I told you before and the last thing I remember is me taking the bath."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay , I think that’s enough for now.\n\nThanks a lot, Margarita."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669754435.json",
+		"name": "PresentacionMargarita"
+	}
+}

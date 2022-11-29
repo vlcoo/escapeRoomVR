@@ -3,19 +3,19 @@
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1668599025.json",
+	"id": "character-1669756551.json",
 	"mirror_portraits": false,
-	"name": "Pedro Sánchez",
-	"nickname": "Pedro",
-	"nickname_bool": true,
+	"name": "You",
+	"nickname": "",
+	"nickname_bool": false,
 	"offset_x": 0,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Assets/Characters/pedro.png"
+			"path": ""
 		}
 	],
-	"scale": 10,
+	"scale": 100,
 	"theme": ""
 }
