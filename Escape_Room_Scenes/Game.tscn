@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -24,6 +24,9 @@
 [ext_resource path="res://Assets/3D assets/Caja Domino.fbx" type="PackedScene" id=22]
 [ext_resource path="res://Assets/3D assets/Frame2.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/PuzzleBathroom.fbx" type="PackedScene" id=24]
+[ext_resource path="res://Escape_Room_Scenes/Ghost2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/Ghost/FBX/Ghost/Ghost.FBX" type="PackedScene" id=26]
+[ext_resource path="res://Escape_Room_Scenes/Ghost3.tscn" type="PackedScene" id=27]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1070,3 +1073,12 @@ transform = Transform( 5.86509e-08, 0, -4.61008, 0, 4.95484, 0, 2.84434, 0, 3.17
 
 [node name="Padlock" parent="Models" instance=ExtResource( 17 )]
 transform = Transform( 0.583064, 0, 0, 0, 0.497976, 0, 0, 0, 0.940896, 0.728091, 1.04382, 25.3226 )
+
+[node name="Margarita_Ghost" parent="Models" instance=ExtResource( 26 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -8.4865, -0.853674, 29.5567 )
+
+[node name="Jurgen_Ghost" parent="Models" instance=ExtResource( 25 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.40852, -0.700815, 30 )
+
+[node name="Jessie_Ghost" parent="Models" instance=ExtResource( 27 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 11.6108, -1.7292, 27.5125 )
