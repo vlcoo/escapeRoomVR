@@ -1,0 +1,158 @@
+{
+	"events": [
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]Hallo![/wave] Wer sind Sie?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": ". . . ."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Excuse me?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh sorry, English, right?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, my German is so bad unfortunately.\n\nMy name is [player_name] and I have been hired to solve the mystery of the 3 murders’ case."
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nice to meet you.\n\nI am Jurgen and I have no clue what happened here except that I am dead."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah , I can see that.\n\nYour last name is Müller, isn’t it?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]Genau.[/wave]"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I have already talked with Margarita. Did you know her?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, I met her last night during dinner. She seemed really nice."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, she was."
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wait, is she one of the others who was murdered?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, unfortunately."
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No way! Probably she was murdered by the same person as me and the other dead person."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes , that’s what I am trying to find out. Can I ask you some questions?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sure!"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let’s start with the easiest.\n\nWhat were you doing in the mansion yesterday?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am working in a big company here in Berlin and my boss invited me."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is Pedro Sanchez your boss?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, he is the owner of the house."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, I know.\n\nWhy did he invite you? Did you have a meeting?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not at all.\n\nMy department worked very hard last week and he wanted to celebrate it with a fancy dinner at his place."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh so you got along very well with him."
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah , he is a good man."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669758134.json",
+		"name": "PresentacionJurgen"
+	}
+}

@@ -4,7 +4,7 @@
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[b]Good night![/b] What brought you here?"
+			"text": "Good night!\n\n What brought you here?"
 		},
 		{
 			"character": "character-1669756551.json",
@@ -16,7 +16,7 @@
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[wave]Cool![/wave] Let me introduce myself.\n\nI am Margarita and I'm one of the victims of that night. I'm glad you came, since not even I know what happened."
+			"text": "[wave]Cool![/wave] Let me introduce myself.\n\nI am Margarita and I'm one of the victims of that night.\n\nI'm glad you came, since not even I know what happened."
 		},
 		{
 			"character": "character-1669756551.json",
@@ -148,7 +148,7 @@
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[shake]Wait, what?[/shake]\n\nWhat does my brother have to do with this?"
+			"text": "[shake rate=5 level=10]Wait, what?[/shake]\n\nWhat does my brother have to do with this?"
 		},
 		{
 			"character": "character-1669756551.json",
@@ -172,7 +172,18 @@
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okay…\n\nRight after we had dinner in the living room, the doorbell rang. No one made the feint of getting up to open it.\n\nSo I walked to the door and my brother was behind it. His name is Isaías and he is 3 years older than me."
+			"text": "Okay…"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Right after we had dinner in the living room, the doorbell rang. No one made the feint of getting up to open it.\n\nSo I walked to the door and my brother was behind it. His name is Isaías and he is 3 years older than me."
 		},
 		{
 			"character": "character-1669756551.json",
@@ -196,7 +207,7 @@
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[shake]Why do you care?[/shake] I don’t even understand what this has to do with the murder. It's a family issue."
+			"text": "[shake rate=5 level=10]Why do you care?[/shake] I don’t even understand what this has to do with the murder. It's a family issue."
 		},
 		{
 			"character": "character-1669756551.json",
