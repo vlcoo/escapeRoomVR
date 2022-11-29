@@ -5,7 +5,6 @@
 [ext_resource path="res://Assets/3D assets/Assets_Material.tres" type="Material" id=3]
 [ext_resource path="res://Audio/Oliver_Giaradot_Guns_And_Explosions/Bullet_Impact_22.ogg" type="AudioStream" id=4]
 
-
 [sub_resource type="SphereShape" id=1]
 radius = 0.110765
 
@@ -14,7 +13,7 @@ emission_shape = 1
 emission_sphere_radius = 0.05
 spread = 0.0
 gravity = Vector3( 0, 1, 0 )
-angular_velocity = 5.70328e-043
+angular_velocity = 5.70328e-43
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true

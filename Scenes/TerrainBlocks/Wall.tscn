@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="OpenSimplexNoise" id=3]
+seed = 11
+period = 12.0
+persistence = 0.3
+lacunarity = 1.5
+
+[sub_resource type="NoiseTexture" id=4]
+width = 1024
+height = 1024
+seamless = true
+as_normalmap = true
+bump_strength = 32.0
+noise = SubResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.752941, 0.690196, 0.65098, 1 )
+roughness = 0.7
+roughness_texture = SubResource( 4 )
+roughness_texture_channel = 4
+
+[sub_resource type="BoxShape" id=2]
+
+[node name="Wall" type="StaticBody"]
+
+[node name="Mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
+
+[node name="Collision" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0 )
+shape = SubResource( 2 )
