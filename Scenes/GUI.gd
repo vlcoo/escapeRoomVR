@@ -23,6 +23,7 @@ func _ready():
 	material.albedo_texture = gui_viewport.get_texture()
 	# Tell the material to use transparency
 	material.flags_transparent = true
+	material.flags_unshaded = true
 	# Finally, set the material of the MeshInstance to the newly created SpatialMaterial so the
 	# contents of the Viewport are visible
 	set_surface_material(0, material)
