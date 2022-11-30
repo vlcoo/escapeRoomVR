@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=110 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -72,6 +72,19 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=70]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/tabouret2.fbx" type="PackedScene" id=71]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/tabouret.fbx" type="PackedScene" id=72]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/balance.fbx" type="PackedScene" id=73]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/barell3.fbx" type="PackedScene" id=74]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/barell2.fbx" type="PackedScene" id=75]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/barrels.fbx" type="PackedScene" id=76]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/barricadefenetre2.fbx" type="PackedScene" id=77]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/barricadefenetre.fbx" type="PackedScene" id=78]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/book02.fbx" type="PackedScene" id=79]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/boiteamusique.fbx" type="PackedScene" id=80]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/boite_a_bijou.fbx" type="PackedScene" id=81]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/book01.fbx" type="PackedScene" id=82]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/caisseenbois.fbx" type="PackedScene" id=83]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_cube.fbx" type="PackedScene" id=84]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_large.fbx" type="PackedScene" id=85]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1264,6 +1277,47 @@ __meta__ = {
 
 [node name="PuzzleBathroom" parent="Models/Puzzles" instance=ExtResource( 24 )]
 transform = Transform( 0.237061, 0, -4.91868, 0, 4.78881, 0, 1.01986, 0, -0.0783875, -1.82865, 4.39514, 21.7364 )
+
+[node name="Items" type="Node" parent="Models"]
+
+[node name="balance" parent="Models/Items" instance=ExtResource( 73 )]
+transform = Transform( 0.129428, 0, 7.99895, 0, 8, 0, -7.99895, 0, 0.129428, 54.3047, 0, 41.3398 )
+
+[node name="barell2" parent="Models/Items" instance=ExtResource( 75 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 397.173, 7.15139, 107.319 )
+
+[node name="barell3" parent="Models/Items" instance=ExtResource( 74 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 367.184, 8.17498, 115.087 )
+
+[node name="barrels" parent="Models/Items" instance=ExtResource( 76 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 335.973, 9.19928, 52.2605 )
+
+[node name="barricadefenetre2" parent="Models/Items" instance=ExtResource( 77 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 92.6827, -7.14137, 33.2864 )
+
+[node name="barricadefenetre" parent="Models/Items" instance=ExtResource( 78 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 41.7258, -7.68847, 21.1217 )
+
+[node name="boiteamusique" parent="Models/Items" instance=ExtResource( 80 )]
+transform = Transform( 18, 0, 0, 0, 18, 0, 0, 0, 18, 53.2871, 0, 37.5281 )
+
+[node name="boite_a_bijou" parent="Models/Items" instance=ExtResource( 81 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 70.7356, 0, 43.8166 )
+
+[node name="book01" parent="Models/Items" instance=ExtResource( 82 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 53.106, -10.1946, 29.7193 )
+
+[node name="book02" parent="Models/Items" instance=ExtResource( 79 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 54.0963, -10.6793, 26.7969 )
+
+[node name="caisseenbois" parent="Models/Items" instance=ExtResource( 83 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 1.007, 98.6551, 26.2528, 35.3181 )
+
+[node name="carton_cube" parent="Models/Items" instance=ExtResource( 84 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 90.7498, 25.1165, 25.6812 )
+
+[node name="carton_large" parent="Models/Items" instance=ExtResource( 85 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 90.2797, 25.0332, 30.6647 )
 
 [node name="Frame" parent="Models" instance=ExtResource( 23 )]
 transform = Transform( 2.63115, 0, 0, 0, 2.12044, 0, 0, 0, 1, 5.97479, 2.10549, 24.5968 )
