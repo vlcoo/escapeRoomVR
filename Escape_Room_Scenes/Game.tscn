@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream:Escape_Room_Scenes/Game.tscn
-[gd_scene load_steps=110 format=2]
-=======
 [gd_scene load_steps=50 format=2]
->>>>>>> Stashed changes:Game.tscn
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -26,7 +22,6 @@
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=20]
 [ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=21]
 [ext_resource path="res://Assets/3D assets/Caja Domino.fbx" type="PackedScene" id=22]
-<<<<<<< Updated upstream:Escape_Room_Scenes/Game.tscn
 [ext_resource path="res://Assets/3D assets/Frame2.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/PuzzleBathroom.fbx" type="PackedScene" id=24]
 [ext_resource path="res://Escape_Room_Scenes/Ghost2.tscn" type="PackedScene" id=25]
@@ -90,11 +85,9 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/caisseenbois.fbx" type="PackedScene" id=83]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_cube.fbx" type="PackedScene" id=84]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_large.fbx" type="PackedScene" id=85]
-=======
 [ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
 [ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
->>>>>>> Stashed changes:Game.tscn
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1350,10 +1343,8 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -8.4865, -0.853674, 29.5567 )
 [node name="Jurgen_Ghost" parent="Models" instance=ExtResource( 25 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.40852, -0.700815, 30 )
 
-<<<<<<< Updated upstream:Escape_Room_Scenes/Game.tscn
 [node name="Jessie_Ghost" parent="Models" instance=ExtResource( 27 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 11.6108, -1.7292, 27.5125 )
-=======
 [node name="Caja Domino" parent="." instance=ExtResource( 22 )]
 transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, 10.333, 0.230514, 24.8456 )
 
@@ -1368,4 +1359,3 @@ __meta__ = {
 
 [node name="boardingPass" parent="." instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11624, 2.31405, 34.7679 )
->>>>>>> Stashed changes:Game.tscn
