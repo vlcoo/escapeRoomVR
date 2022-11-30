@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=2]
+[gd_scene load_steps=169 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -133,6 +133,13 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_pied.fbx" type="PackedScene" id=131]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lustre.fbx" type="PackedScene" id=132]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/plafonnier.fbx" type="PackedScene" id=133]
+[ext_resource path="res://Assets/Toilette/Meshes/ferguson.FBX" type="PackedScene" id=134]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor/Wooden Floor_4K_Roughness.tga" type="Texture" id=135]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor3/Wooden Floor3_4K_Albedo.tga" type="Texture" id=136]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor/Wooden Floor_4K_Metalness.tga" type="Texture" id=137]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor2/Wooden Floor2_4K_Albedo.tga" type="Texture" id=138]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor/Wooden Floor_4K_Albedo.tga" type="Texture" id=139]
+[ext_resource path="res://Assets/Walls/Wooden Floor Pack/Textures/Wooden Floor4/Wooden Floor4_4K_Albedo.tga" type="Texture" id=140]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -222,6 +229,20 @@ flags_unshaded = true
 
 [sub_resource type="BoxShape" id=24]
 extents = Vector3( 0.217814, 2.097, 0.657632 )
+
+[sub_resource type="SpatialMaterial" id=25]
+albedo_texture = ExtResource( 139 )
+metallic_texture = ExtResource( 137 )
+roughness_texture = ExtResource( 135 )
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_texture = ExtResource( 138 )
+
+[sub_resource type="SpatialMaterial" id=27]
+albedo_texture = ExtResource( 136 )
+
+[sub_resource type="SpatialMaterial" id=28]
+albedo_texture = ExtResource( 140 )
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
@@ -1310,6 +1331,9 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 308.925, -27.6211, 102.354 )
 [node name="tabouret3" parent="Models/Furniture" instance=ExtResource( 72 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 253.662, -28.1856, 90.346 )
 
+[node name="ferguson" parent="Models/Furniture" instance=ExtResource( 134 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 85.3852, 4.37584, 89.709 )
+
 [node name="Puzzles" type="Spatial" parent="Models"]
 
 [node name="Puzzle_Domino" parent="Models/Puzzles" instance=ExtResource( 21 )]
@@ -1552,3 +1576,19 @@ __meta__ = {
 
 [node name="boardingPass" parent="." instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11624, 2.31405, 34.7679 )
+
+[node name="Wall1" type="CSGBox" parent="."]
+transform = Transform( 0.083014, 0, 0, 0, 4.20693, 0, 0, 0, 5.01485, 80.0194, 2.8246, 32.7476 )
+material = SubResource( 25 )
+
+[node name="Wall2" type="CSGBox" parent="."]
+transform = Transform( 0.083014, 0, 0, 0, 4.20693, 0, 0, 0, 5.01485, 77.3248, 2.84191, 42.4973 )
+material = SubResource( 26 )
+
+[node name="Wall3" type="CSGBox" parent="."]
+transform = Transform( 0.083014, 0, 0, 0, 4.20693, 0, 0, 0, 5.01485, 77.3248, 2.84191, 54.0704 )
+material = SubResource( 27 )
+
+[node name="Wall4" type="CSGBox" parent="."]
+transform = Transform( 0.083014, 0, 0, 0, 4.20693, 0, 0, 0, 5.01485, 77.3248, 2.84191, 68.2793 )
+material = SubResource( 28 )
