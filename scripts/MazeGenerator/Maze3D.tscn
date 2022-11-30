@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Maze3D.gd" type="Script" id=1]
+
+[node name="Maze3D" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.99996, -0.00715236, 0.00538688, -0.00314831, 0.282351, 0.959306, -0.0083823, -0.959284, 0.282317, 9.43365, 16.1136, 16.612 )

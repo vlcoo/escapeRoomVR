@@ -1161,9 +1161,10 @@ stream = ExtResource( 15 )
 volume_db = -10.0
 autoplay = true
 
-[node name="Models" type="Node" parent="."]
+[node name="Models" type="Spatial" parent="."]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 53.0539, -0.637209, 0 )
 
-[node name="Furniture" type="Node" parent="Models"]
+[node name="Furniture" type="Spatial" parent="Models"]
 
 [node name="bar" parent="Models/Furniture" instance=ExtResource( 28 )]
 transform = Transform( -0.471942, 0, 7.98607, 0, 8, 0, -7.98607, 0, -0.471942, 76.0398, 0.616167, 0 )
@@ -1309,7 +1310,7 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 308.925, -27.6211, 102.354 )
 [node name="tabouret3" parent="Models/Furniture" instance=ExtResource( 72 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 253.662, -28.1856, 90.346 )
 
-[node name="Puzzles" type="Node" parent="Models"]
+[node name="Puzzles" type="Spatial" parent="Models"]
 
 [node name="Puzzle_Domino" parent="Models/Puzzles" instance=ExtResource( 21 )]
 transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
@@ -1326,7 +1327,7 @@ __meta__ = {
 [node name="PuzzleBathroom" parent="Models/Puzzles" instance=ExtResource( 24 )]
 transform = Transform( 0.237061, 0, -4.91868, 0, 4.78881, 0, 1.01986, 0, -0.0783875, -1.82865, 4.39514, 21.7364 )
 
-[node name="Items" type="Node" parent="Models"]
+[node name="Items" type="Spatial" parent="Models"]
 
 [node name="balance" parent="Models/Items" instance=ExtResource( 73 )]
 transform = Transform( 0.129428, 0, 7.99895, 0, 8, 0, -7.99895, 0, 0.129428, 54.3047, 0, 41.3398 )
@@ -1469,7 +1470,7 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 118.275, -1.53017, 51.7405 )
 [node name="woodenbarrels" parent="Models/Items" instance=ExtResource( 119 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 316.046, 8.8673, 97.8648 )
 
-[node name="Lights" type="Node" parent="Models"]
+[node name="Lights" type="Spatial" parent="Models"]
 
 [node name="lamp_bureau" parent="Models/Lights" instance=ExtResource( 126 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 53.5673, 6.79582, 26.7547 )
