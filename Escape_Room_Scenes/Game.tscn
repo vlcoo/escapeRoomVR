@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=158 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -22,9 +22,9 @@
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=20]
 [ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=21]
 [ext_resource path="res://Assets/3D assets/Caja Domino.fbx" type="PackedScene" id=22]
-[ext_resource path="res://Assets/3D assets/Frame2.fbx" type="PackedScene" id=23]
-[ext_resource path="res://Assets/3D assets/PuzzleBathroom.fbx" type="PackedScene" id=24]
-[ext_resource path="res://Escape_Room_Scenes/Ghost2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
+[ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
+[ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
 [ext_resource path="res://Assets/Ghost/FBX/Ghost/Ghost.FBX" type="PackedScene" id=26]
 [ext_resource path="res://Escape_Room_Scenes/Ghost3.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/bar.fbx" type="PackedScene" id=28]
@@ -85,9 +85,54 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/caisseenbois.fbx" type="PackedScene" id=83]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_cube.fbx" type="PackedScene" id=84]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/carton_large.fbx" type="PackedScene" id=85]
-[ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
-[ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
-[ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/chest_end.fbx" type="PackedScene" id=86]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/cheval.fbx" type="PackedScene" id=87]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/clef_domestique.fbx" type="PackedScene" id=88]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/chevaldebois.fbx" type="PackedScene" id=89]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/coffret_maniaque.fbx" type="PackedScene" id=90]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/deco_hall.fbx" type="PackedScene" id=91]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/coffre_lab.fbx" type="PackedScene" id=92]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/eponge.fbx" type="PackedScene" id=93]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/flacon.fbx" type="PackedScene" id=94]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/horloge1.fbx" type="PackedScene" id=95]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/jouets.fbx" type="PackedScene" id=96]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/marteau.fbx" type="PackedScene" id=97]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/medicalbazar.fbx" type="PackedScene" id=98]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/mesureur.fbx" type="PackedScene" id=99]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/microscope.fbx" type="PackedScene" id=100]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/outilschirurgie.fbx" type="PackedScene" id=101]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/pelle.fbx" type="PackedScene" id=102]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/petitbois.fbx" type="PackedScene" id=103]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/plante_balcon.fbx" type="PackedScene" id=104]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/poivriere.fbx" type="PackedScene" id=105]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/posedoutils.fbx" type="PackedScene" id=106]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/pot_de_peinture.fbx" type="PackedScene" id=107]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/saliere.fbx" type="PackedScene" id=108]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/steak.fbx" type="PackedScene" id=109]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/tournevis.fbx" type="PackedScene" id=110]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/tube.fbx" type="PackedScene" id=111]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/tuyau1.fbx" type="PackedScene" id=112]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/tuyauteriegaz_holefiller.fbx" type="PackedScene" id=113]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/ustensiles.fbx" type="PackedScene" id=114]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/vase.fbx" type="PackedScene" id=115]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/valise.fbx" type="PackedScene" id=116]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/vasebrise.fbx" type="PackedScene" id=117]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/vinaigre.fbx" type="PackedScene" id=118]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/items/woodenbarrels.fbx" type="PackedScene" id=119]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/abatjour.fbx" type="PackedScene" id=120]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/ampoule.fbx" type="PackedScene" id=121]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lampe01.fbx" type="PackedScene" id=122]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lampe02.fbx" type="PackedScene" id=123]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lampe.fbx" type="PackedScene" id=124]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_boule.fbx" type="PackedScene" id=125]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_bureau.fbx" type="PackedScene" id=126]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_huile.fbx" type="PackedScene" id=127]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=128]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_muralfleur.fbx" type="PackedScene" id=129]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/luminaire.fbx" type="PackedScene" id=130]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_pied.fbx" type="PackedScene" id=131]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lustre.fbx" type="PackedScene" id=132]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/plafonnier.fbx" type="PackedScene" id=133]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1322,6 +1367,152 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 90.7498, 25.1165, 25.6812 )
 [node name="carton_large" parent="Models/Items" instance=ExtResource( 85 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 90.2797, 25.0332, 30.6647 )
 
+[node name="chest_end" parent="Models/Items" instance=ExtResource( 86 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 61.2663, -0.444138, 8.00115 )
+
+[node name="cheval" parent="Models/Items" instance=ExtResource( 87 )]
+transform = Transform( 0.12569, -0.00988537, 7.99901, 0.627255, 7.97537, 0, -7.97438, 0.627177, 0.126078, 74.3274, 0, 14.884 )
+
+[node name="chevaldebois" parent="Models/Items" instance=ExtResource( 89 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 73.5373, 0, 26.111 )
+
+[node name="clef_domestique" parent="Models/Items" instance=ExtResource( 88 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 36.7949, -14.3989, 45.7063 )
+
+[node name="coffret_maniaque" parent="Models/Items" instance=ExtResource( 90 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 12.0964, -0.984196, 14.6378 )
+
+[node name="coffre_lab" parent="Models/Items" instance=ExtResource( 92 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 96.178, -8.13921, 50.7301 )
+
+[node name="deco_hall" parent="Models/Items" instance=ExtResource( 91 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 213.474, -8.68438, 25.8205 )
+
+[node name="eponge" parent="Models/Items" instance=ExtResource( 93 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 68.3101, -0.558132, 46.2283 )
+
+[node name="flacon" parent="Models/Items" instance=ExtResource( 94 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 83.4862, -1.34293, 22.8677 )
+
+[node name="horloge1" parent="Models/Items" instance=ExtResource( 95 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 74.7172, -15.0216, 7.83466 )
+
+[node name="jouets" parent="Models/Items" instance=ExtResource( 96 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 92.2056, -32.1161, 118.755 )
+
+[node name="marteau" parent="Models/Items" instance=ExtResource( 97 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 27.6728, -1.83281, 45.4941 )
+
+[node name="medicalbazar" parent="Models/Items" instance=ExtResource( 98 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 99.0319, -11.104, 49.2981 )
+
+[node name="mesureur" parent="Models/Items" instance=ExtResource( 99 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 75.9476, -0.205774, 46.8731 )
+
+[node name="microscope" parent="Models/Items" instance=ExtResource( 100 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 132.853, -0.848383, 66.2777 )
+
+[node name="outilschirurgie" parent="Models/Items" instance=ExtResource( 101 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 120.114, -7.51465, 0.899338 )
+
+[node name="pelle" parent="Models/Items" instance=ExtResource( 102 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 183.644, 18.2821, 48.6249 )
+
+[node name="petitbois" parent="Models/Items" instance=ExtResource( 103 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 257.525, -0.687106, 17.9382 )
+
+[node name="plante_balcon" parent="Models/Items" instance=ExtResource( 104 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 34.763, -1.61895, 52.8126 )
+
+[node name="poivriere" parent="Models/Items" instance=ExtResource( 105 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 91.1033, -0.790762, 44.5926 )
+
+[node name="posedoutils" parent="Models/Items" instance=ExtResource( 106 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 145.926, -0.44564, 22.7732 )
+
+[node name="pot_de_peinture" parent="Models/Items" instance=ExtResource( 107 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 126.404, -1.2544, 47.1323 )
+
+[node name="saliere" parent="Models/Items" instance=ExtResource( 108 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 126.866, -0.90225, 38.2156 )
+
+[node name="steak" parent="Models/Items" instance=ExtResource( 109 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 114.359, -0.70015, 32.778 )
+
+[node name="tournevis" parent="Models/Items" instance=ExtResource( 110 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 63.6945, -0.677649, 41.3394 )
+
+[node name="tube" parent="Models/Items" instance=ExtResource( 111 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 130.291, -11.6521, 43.4946 )
+
+[node name="tuyau1" parent="Models/Items" instance=ExtResource( 112 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 117.074, -7.48011, -121.173 )
+
+[node name="tuyauteriegaz_holefiller" parent="Models/Items" instance=ExtResource( 113 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 138.739, 2.36063, 66.7119 )
+
+[node name="ustensiles" parent="Models/Items" instance=ExtResource( 114 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 223.244, -8.35345, 13.8533 )
+
+[node name="valise" parent="Models/Items" instance=ExtResource( 116 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 137.492, -1.82342, 50.1656 )
+
+[node name="vase" parent="Models/Items" instance=ExtResource( 115 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 181.488, -1.48864, 56.1438 )
+
+[node name="vasebrise" parent="Models/Items" instance=ExtResource( 117 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 153.229, -1.07151, 34.7786 )
+
+[node name="vinaigre" parent="Models/Items" instance=ExtResource( 118 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 118.275, -1.53017, 51.7405 )
+
+[node name="woodenbarrels" parent="Models/Items" instance=ExtResource( 119 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 316.046, 8.8673, 97.8648 )
+
+[node name="Lights" type="Node" parent="Models"]
+
+[node name="lamp_bureau" parent="Models/Lights" instance=ExtResource( 126 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 53.5673, 6.79582, 26.7547 )
+
+[node name="abatjour" parent="Models/Lights" instance=ExtResource( 120 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 211.548, -21.0683, 61.8219 )
+
+[node name="ampoule" parent="Models/Lights" instance=ExtResource( 121 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 47.3492, -4.81657, 54.1323 )
+
+[node name="lampe01" parent="Models/Lights" instance=ExtResource( 122 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 146.855, -19.7893, 51.5486 )
+
+[node name="lampe02" parent="Models/Lights" instance=ExtResource( 123 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 153.771, -19.2261, 50.6353 )
+
+[node name="lampe" parent="Models/Lights" instance=ExtResource( 124 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 99.2641, -18.3269, 40.4118 )
+
+[node name="lamp_boule" parent="Models/Lights" instance=ExtResource( 125 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 58.3813, -10.353, 41.0852 )
+
+[node name="lamp_huile" parent="Models/Lights" instance=ExtResource( 127 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 118.444, 23.7471, 20.6575 )
+
+[node name="lamp_murale_boule" parent="Models/Lights" instance=ExtResource( 128 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 53.6626, -5.66019, 30.5264 )
+
+[node name="lamp_muralfleur" parent="Models/Lights" instance=ExtResource( 129 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 45.4622, -13.4134, 42.6547 )
+
+[node name="lamp_pied" parent="Models/Lights" instance=ExtResource( 131 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 32.1611, 7.08631, 10.7461 )
+
+[node name="luminaire" parent="Models/Lights" instance=ExtResource( 130 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 205.006, -18.7454, 9.19978 )
+
+[node name="lustre" parent="Models/Lights" instance=ExtResource( 132 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 169.622, -26.5199, 0 )
+
+[node name="plafonnier" parent="Models/Lights" instance=ExtResource( 133 )]
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 64.6953, 1.34275, 32.5467 )
+
 [node name="Frame" parent="Models" instance=ExtResource( 23 )]
 transform = Transform( 2.63115, 0, 0, 0, 2.12044, 0, 0, 0, 1, 5.97479, 2.10549, 24.5968 )
 
@@ -1345,11 +1536,12 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.40852, -0.700815, 30 )
 
 [node name="Jessie_Ghost" parent="Models" instance=ExtResource( 27 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 11.6108, -1.7292, 27.5125 )
+
 [node name="Caja Domino" parent="." instance=ExtResource( 22 )]
 transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, 10.333, 0.230514, 24.8456 )
 
 [node name="testament" parent="." instance=ExtResource( 24 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.63531, 2.14647, 30.6705 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.0886, 2.68605, 30.9577 )
 
 [node name="paternityTest" parent="." instance=ExtResource( 25 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.65876, 3.92189, 30.5225 )
