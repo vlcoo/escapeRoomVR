@@ -4,6 +4,13 @@ var current_area
 
 
 func _ready():
+	var VR = ARVRServer.find_interface("OpenVR");
+	if VR and VR.initialize():
+		get_viewport().arvr = true
+		get_viewport().hdr = false
+		OS.vsync_enabled = false
+		Engine.iterations_per_second = 90
+	
 	current_area = $Terrain
 
 

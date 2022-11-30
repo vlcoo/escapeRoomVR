@@ -73,19 +73,19 @@ func _ready():
 	# warning-ignore-all:return_value_discarded
 	
 	# Get the teleport raycast node and assign it to the teleport_raycast variable.
-	teleport_raycast = get_node("RayCast")
-	
-	# Get the teleport mesh and assign it to the teleport_mesh variable.
-	#
-	# The teleport mesh is a child of the game scene so it is not effected changes in the VR controller
-	# and so the teleport mesh can be used by both VR controllers.
-	teleport_mesh = get_tree().root.get_node("Game/Teleport_Mesh")
-	
-	# Set teleport_button_down variable to false.
-	teleport_button_down = false
-	# Make the teleport meshes invisible.
-	teleport_mesh.visible = false
-	teleport_raycast.visible = false
+#	teleport_raycast = get_node("RayCast")
+#
+#	# Get the teleport mesh and assign it to the teleport_mesh variable.
+#	#
+#	# The teleport mesh is a child of the game scene so it is not effected changes in the VR controller
+#	# and so the teleport mesh can be used by both VR controllers.
+#	teleport_mesh = get_tree().root.get_node("Game/Teleport_Mesh")
+#
+#	# Set teleport_button_down variable to false.
+#	teleport_button_down = false
+#	# Make the teleport meshes invisible.
+#	teleport_mesh.visible = false
+#	teleport_raycast.visible = false
 	
 	# Get the grab area node, the grab raycast node, and the grab position node. Assign these nodes to
 	# their respective variables.
@@ -284,9 +284,9 @@ func button_pressed(button_index):
 	elif button_index == 1:
 		# Call the _on_button_pressed_menu function.
 		_on_button_pressed_menu()
-	
-	elif button_index == 14:
-		$"../..".diag_ui.get_node("DialogNode").next_event(false)
+#
+#	elif button_index == 14:
+#		$"../..".diag_ui.get_node("DialogNode").next_event(false)
 		
 		
 

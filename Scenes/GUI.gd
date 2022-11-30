@@ -7,7 +7,7 @@ export (NodePath) var gui_viewport_path;
 var gui_viewport = null;
 
 
-func _ready():
+func render_viewport():
 	# Get the viewport at the exported NodePath and assign it to gui_viewport
 	gui_viewport = get_node(gui_viewport_path)
 	# Wait two frames so the Viewport node has time to initialize and render to a texture
