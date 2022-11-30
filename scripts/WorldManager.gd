@@ -3,7 +3,6 @@ extends Spatial
 var current_area
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	current_area = $Terrain
 
