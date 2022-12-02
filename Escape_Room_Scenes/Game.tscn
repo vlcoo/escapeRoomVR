@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=2]
+[gd_scene load_steps=186 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -144,6 +144,9 @@
 [ext_resource path="res://Assets/Textures/22.jpg" type="Texture" id=142]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wall_Stucco2_2x2_1K_albedo.png" type="Texture" id=143]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wall_Stucco2_2x2_1K_normal.png" type="Texture" id=144]
+[ext_resource path="res://Assets/Textures/Fabric_Carpet_001_ambientOcclusion.jpg" type="Texture" id=145]
+[ext_resource path="res://Assets/Textures/Rug_006_basecolor.jpg" type="Texture" id=146]
+[ext_resource path="res://Assets/Textures/Fabric_Carpet_001_normal.jpg" type="Texture" id=147]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -274,6 +277,25 @@ albedo_texture = ExtResource( 141 )
 
 [sub_resource type="SpatialMaterial" id=38]
 albedo_texture = ExtResource( 142 )
+
+[sub_resource type="SpatialMaterial" id=41]
+albedo_texture = ExtResource( 146 )
+metallic_specular = 1.0
+roughness_texture = ExtResource( 147 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 147 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 145 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+
+[sub_resource type="Environment" id=40]
+background_mode = 1
+background_energy = 0.0
+ambient_light_color = Color( 0.0901961, 0.121569, 0.2, 1 )
+ambient_light_energy = 0.8
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
@@ -597,7 +619,38 @@ environment = SubResource( 12 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.223386, 0.830958, -0.509517, 0, 0.522726, 0.852501, 0.97473, -0.190437, 0.11677, 0, 19.163, 0 )
+light_color = Color( 0.533333, 0.560784, 0.635294, 1 )
+light_energy = 0.854
+light_indirect_energy = 2.797
+light_specular = 0.0
 shadow_enabled = true
+shadow_color = Color( 0.258824, 0.152941, 0.152941, 1 )
+shadow_bias = -0.187
+shadow_reverse_cull_face = true
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 0.339522, 0.928841, 0.148256, 0.124826, -0.200719, 0.971664, 0.932278, -0.311395, -0.184092, 169.548, 6.7972, 31.7812 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 3.796
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 10.8439
+spot_angle = 35.4694
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 0.317346, 0.937982, 0.139579, -0.934817, 0.334164, -0.120216, -0.159402, -0.0923306, 0.982887, 178.194, 6.74065, 41.7083 )
+light_color = Color( 0.741176, 0.72549, 0.545098, 1 )
+light_energy = 5.095
+omni_range = 2.49572
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 0.317346, 0.937982, 0.139579, -0.296738, -0.0415755, 0.954054, 0.900688, -0.344183, 0.265141, 178.939, 7.67365, 43.4428 )
+light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
+light_energy = 2.899
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 13.0625
+spot_angle = 36.0813
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0.177191, 7 )
@@ -690,6 +743,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5851, 1.50581, 27.2947 )
 transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -7.61642, 1.39338, -25.72 )
 
 [node name="Teleport_Mesh" type="MeshInstance" parent="."]
+visible = false
 mesh = SubResource( 13 )
 material/0 = SubResource( 14 )
 
@@ -1804,7 +1858,7 @@ height = 1.83523
 material = SubResource( 38 )
 
 [node name="lit_double2" parent="Dormitory" instance=ExtResource( 48 )]
-transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 177.696, -1.25733, 32.8554 )
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 177.696, -1.25733, 29.0469 )
 
 [node name="chaise3" parent="Dormitory" instance=ExtResource( 36 )]
 transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 96.1406, -11.2518, 14.6507 )
@@ -1817,9 +1871,6 @@ transform = Transform( 0.0356249, 0, 2.79977, 0, 2.8, 0, -2.79977, 0, 0.0356249,
 
 [node name="penderie3" parent="Dormitory" instance=ExtResource( 55 )]
 transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 204.299, -12.0323, 61.5489 )
-
-[node name="plafonnier2" parent="Dormitory" instance=ExtResource( 133 )]
-transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 154.175, 5.92496, 35.6282 )
 
 [node name="petitbureau2" parent="Dormitory" instance=ExtResource( 58 )]
 transform = Transform( -3.2, 0, -2.79753e-07, 0, 3.2, 0, 2.79753e-07, 0, -3.2, 169.131, -1.12619, 33.6512 )
@@ -1835,3 +1886,39 @@ transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922,
 
 [node name="mappemonde2" parent="Dormitory" instance=ExtResource( 50 )]
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 167.551, -5.41873, 32.4524 )
+
+[node name="pendule2" parent="Dormitory" instance=ExtResource( 57 )]
+transform = Transform( 3.1988, 0.0043812, -0.0876084, -0.00453251, 3.19999, -0.00546358, 0.0876006, 0.00558564, 3.1988, 188.653, -0.637209, 41.0053 )
+
+[node name="Rug" type="CSGBox" parent="Dormitory"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.917842, 182.765, -0.725174, 38.6281 )
+width = 3.70451
+height = 0.002
+depth = 6.5391
+material = SubResource( 41 )
+
+[node name="Rug2" type="CSGBox" parent="Dormitory"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.917842, 179.407, -0.725174, 38.6281 )
+width = 3.70451
+height = 0.002
+depth = 6.5391
+material = SubResource( 41 )
+
+[node name="Rug3" type="CSGBox" parent="Dormitory"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.917842, 175.898, -0.725174, 38.6281 )
+width = 3.70451
+height = 0.002
+depth = 6.5391
+material = SubResource( 41 )
+
+[node name="lamp_murale_boule2" parent="Dormitory" instance=ExtResource( 128 )]
+transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 153.765, -0.411436, 37.7427 )
+
+[node name="vinaigre2" parent="Dormitory" instance=ExtResource( 118 )]
+transform = Transform( 0.751912, 3.11041, 0, -3.11041, 0.751912, 0, 0, 0, 3.2, 178.38, 21.3086, 25.3836 )
+
+[node name="plante_balcon2" parent="Dormitory" instance=ExtResource( 104 )]
+transform = Transform( 2.83032, 0, 0, 0, 3.2, 0, 0, 0, 2.57706, 157.788, -1.2685, 25.5538 )
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource( 40 )
