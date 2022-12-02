@@ -310,6 +310,7 @@ material/0 = SubResource( 2 )
 [node name="StaticBody" type="StaticBody" parent="World/Floor_Main"]
 
 [node name="CollisionShape" type="CollisionShape" parent="World/Floor_Main/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Floor_Main2" type="MeshInstance" parent="World"]
