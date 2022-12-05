@@ -1,4 +1,4 @@
-[gd_scene load_steps=186 format=2]
+[gd_scene load_steps=188 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -147,6 +147,7 @@
 [ext_resource path="res://Assets/Textures/Fabric_Carpet_001_ambientOcclusion.jpg" type="Texture" id=145]
 [ext_resource path="res://Assets/Textures/Rug_006_basecolor.jpg" type="Texture" id=146]
 [ext_resource path="res://Assets/Textures/Fabric_Carpet_001_normal.jpg" type="Texture" id=147]
+[ext_resource path="res://Assets/Textures/374131_11.jpg" type="Texture" id=148]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -291,6 +292,9 @@ ao_texture = ExtResource( 145 )
 ao_on_uv2 = false
 ao_texture_channel = 0
 
+[sub_resource type="SpatialMaterial" id=42]
+albedo_texture = ExtResource( 148 )
+
 [sub_resource type="Environment" id=40]
 background_mode = 1
 background_energy = 0.0
@@ -310,7 +314,6 @@ material/0 = SubResource( 2 )
 [node name="StaticBody" type="StaticBody" parent="World/Floor_Main"]
 
 [node name="CollisionShape" type="CollisionShape" parent="World/Floor_Main/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Floor_Main2" type="MeshInstance" parent="World"]
@@ -621,7 +624,7 @@ environment = SubResource( 12 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.223386, 0.830958, -0.509517, 0, 0.522726, 0.852501, 0.97473, -0.190437, 0.11677, 0, 19.163, 0 )
 light_color = Color( 0.533333, 0.560784, 0.635294, 1 )
-light_energy = 0.854
+light_energy = 4.817
 light_indirect_energy = 2.797
 light_specular = 0.0
 shadow_enabled = true
@@ -1920,6 +1923,215 @@ transform = Transform( 0.751912, 3.11041, 0, -3.11041, 0.751912, 0, 0, 0, 3.2, 1
 
 [node name="plante_balcon2" parent="Dormitory" instance=ExtResource( 104 )]
 transform = Transform( 2.83032, 0, 0, 0, 3.2, 0, 0, 0, 2.57706, 157.788, -1.2685, 25.5538 )
+
+[node name="Dining room" type="Node" parent="."]
+
+[node name="Wall10" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 203.829, -1.2104, 29.2615 )
+material = SubResource( 29 )
+
+[node name="Wall12" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 203.829, -1.2104, 39.3237 )
+material = SubResource( 30 )
+
+[node name="Wall34" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 212.208, -1.2104, 39.3237 )
+material = SubResource( 31 )
+
+[node name="Wall39" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 212.208, -1.2104, 29.2928 )
+material = SubResource( 34 )
+
+[node name="Wall43" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 220.584, -1.2104, 39.3237 )
+material = SubResource( 35 )
+
+[node name="Wall44" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 220.584, -1.2104, 29.2873 )
+material = SubResource( 37 )
+
+[node name="Wall35" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 202.017, 1.36266, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall40" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 206.894, 1.36266, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall45" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 211.766, 1.36266, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall46" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 216.644, 1.36266, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall47" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 221.841, 1.36266, 24.3516 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 42 )
+
+[node name="Wall48" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 202.017, 6.30037, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall49" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 206.894, 6.30037, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall50" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 211.766, 6.30037, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall51" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 216.644, 6.30037, 24.3516 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall52" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 221.841, 6.30037, 24.3516 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 42 )
+
+[node name="Wall53" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 202.017, 1.36266, 44.3082 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall54" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 207.437, 1.36266, 44.3082 )
+height = 1.83523
+depth = 2.40973
+material = SubResource( 42 )
+
+[node name="Wall55" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 216.522, 1.36266, 44.3144 )
+height = 1.83523
+depth = 2.28911
+material = SubResource( 42 )
+
+[node name="Wall56" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 221.841, 1.36266, 44.3082 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 42 )
+
+[node name="Wall57" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 202.017, 6.30037, 44.3082 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall60" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 211.91, 7.40172, 44.3082 )
+height = 1.02021
+depth = 1.55158
+material = SubResource( 42 )
+
+[node name="Wall61" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 221.841, 6.30037, 44.3082 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 42 )
+
+[node name="Wall62" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.591, 1.36266, 26.7948 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall63" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.557, 1.36266, 31.6721 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall64" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.524, 1.36266, 36.544 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall65" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000622095, 0, 2.67389, 224.49, 1.36266, 41.6534 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall66" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.591, 6.30037, 26.7948 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall67" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.557, 6.30037, 31.6721 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall68" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 224.524, 6.30037, 36.544 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall69" type="CSGBox" parent="Dining room"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000622095, 0, 2.67389, 224.49, 6.30037, 41.6534 )
+height = 1.83523
+material = SubResource( 42 )
+
+[node name="Wall58" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 207.185, 6.30037, 44.3082 )
+height = 1.83523
+depth = 2.41924
+material = SubResource( 42 )
+
+[node name="Wall59" type="CSGBox" parent="Dining room"]
+transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 216.456, 6.30037, 44.3082 )
+height = 1.83523
+depth = 2.20956
+material = SubResource( 42 )
+
+[node name="dining_table2" parent="Dining room" instance=ExtResource( 38 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 265.994, -1.07492, 55.6454 )
+
+[node name="lustre2" parent="Dining room" instance=ExtResource( 132 )]
+transform = Transform( 2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 234.016, -5.5602, 25.7315 )
+
+[node name="SpotLight3" type="SpotLight" parent="Dining room"]
+transform = Transform( 0.347602, 0.936668, 0.0427352, -0.0577731, -0.0240954, 0.998039, 0.935861, -0.349389, 0.0457386, 211.117, 10.4028, 33.6758 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 9.961
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 10.8439
+spot_angle = 58.9513
+
+[node name="chaisepatron2" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( 0.284684, 0, -3.18731, 0, 3.2, 0, 3.18731, 0, 0.284684, 198.007, -0.950768, 83.354 )
+
+[node name="chaisepatron3" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( 0.351372, 0, -3.18065, 0, 3.2, 0, 3.18065, 0, 0.351372, 192.88, -0.950768, 83.354 )
+
+[node name="chaisepatron4" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( 0.284684, 0, -3.18731, 0, 3.2, 0, 3.18731, 0, 0.284684, 187.33, -0.908034, 82.7175 )
+
+[node name="chaisepatron5" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( -0.00793105, 0, 3.19999, 0, 3.2, 0, -3.19999, 0, -0.00793105, 227.103, -0.950768, -13.9897 )
+
+[node name="chaisepatron6" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( -0.0749449, 0, 3.19912, 0, 3.2, 0, -3.19912, 0, -0.0749449, 232.21, -0.950768, -15.4685 )
+
+[node name="chaisepatron7" parent="Dining room" instance=ExtResource( 33 )]
+transform = Transform( -0.00793105, 0, 3.19999, 0, 3.2, 0, -3.19999, 0, -0.00793105, 237.685, -0.908034, -14.473 )
+
+[node name="flacon2" parent="Dining room" instance=ExtResource( 94 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 201.372, 1.64263, 18.6486 )
+
+[node name="flacon3" parent="Dining room" instance=ExtResource( 94 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 194.08, 1.64263, 21.6316 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
