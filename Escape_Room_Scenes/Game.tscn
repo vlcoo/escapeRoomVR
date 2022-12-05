@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=2]
+[gd_scene load_steps=200 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -148,10 +148,17 @@
 [ext_resource path="res://Assets/Textures/Rug_006_basecolor.jpg" type="Texture" id=146]
 [ext_resource path="res://Assets/Textures/Fabric_Carpet_001_normal.jpg" type="Texture" id=147]
 [ext_resource path="res://Assets/Textures/374131_11.jpg" type="Texture" id=148]
-[ext_resource path="res://Assets/Kitchen Asset/FBX/Board/Board.fbx" type="PackedScene" id=149]
+[ext_resource path="res://Escape_Room_Scenes/Board2.tscn" type="PackedScene" id=149]
 [ext_resource path="res://Assets/Textures/alfombra.jpg" type="Texture" id=150]
-[ext_resource path="res://Assets/Kitchen Asset/FBX/Spoon/Spoon.fbx" type="PackedScene" id=151]
-[ext_resource path="res://Assets/Kitchen Asset/FBX/Apple/Apple.fbx" type="PackedScene" id=152]
+[ext_resource path="res://Escape_Room_Scenes/Bottle.tscn" type="PackedScene" id=151]
+[ext_resource path="res://Escape_Room_Scenes/Fork.tscn" type="PackedScene" id=152]
+[ext_resource path="res://Escape_Room_Scenes/Glass.tscn" type="PackedScene" id=153]
+[ext_resource path="res://Escape_Room_Scenes/KnifeKitchen.tscn" type="PackedScene" id=154]
+[ext_resource path="res://Escape_Room_Scenes/WaterMElon.tscn" type="PackedScene" id=155]
+[ext_resource path="res://Escape_Room_Scenes/CornFlakes.tscn" type="PackedScene" id=156]
+[ext_resource path="res://Escape_Room_Scenes/Plate1.tscn" type="PackedScene" id=157]
+[ext_resource path="res://Escape_Room_Scenes/Lemon.tscn" type="PackedScene" id=158]
+[ext_resource path="res://Escape_Room_Scenes/Knife2.tscn" type="PackedScene" id=159]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -650,6 +657,12 @@ spot_angle = 35.4694
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 0.317346, 0.937982, 0.139579, -0.934817, 0.334164, -0.120216, -0.159402, -0.0923306, 0.982887, 178.194, 6.74065, 41.7083 )
+light_color = Color( 0.741176, 0.72549, 0.545098, 1 )
+light_energy = 5.095
+omni_range = 2.49572
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 0.317346, 0.937982, 0.139579, -0.934817, 0.334164, -0.120215, -0.159402, -0.0923305, 0.982887, 211.987, 4.68903, 43.4854 )
 light_color = Color( 0.741176, 0.72549, 0.545098, 1 )
 light_energy = 5.095
 omni_range = 2.49572
@@ -1895,15 +1908,6 @@ transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 144.32, 2.00143, 33.6205
 [node name="operation_door2" parent="Dormitory" instance=ExtResource( 54 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 177.519, -1.21055, 44.1462 )
 
-[node name="Board" parent="Dormitory" instance=ExtResource( 149 )]
-transform = Transform( -0.0958434, 0, 1.99456, 0, 1.3, 0, -1.29646, 0, -0.147451, 208.94, 1.70005, 31.8423 )
-
-[node name="Apple" parent="Dormitory" instance=ExtResource( 152 )]
-transform = Transform( -0.0221177, 0, 0.299184, 0, 0.3, 0, -0.299184, 0, -0.0221177, 209.491, 2.02913, 31.7829 )
-
-[node name="operation_door3" parent="Dormitory" instance=ExtResource( 54 )]
-transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 177.519, -1.21055, 44.1462 )
-
 [node name="mappemonde2" parent="Dormitory" instance=ExtResource( 50 )]
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 167.551, -5.41873, 32.4524 )
 
@@ -2149,14 +2153,77 @@ transform = Transform( -0.0749449, 0, 3.19912, 0, 3.2, 0, -3.19912, 0, -0.074944
 [node name="chaisepatron7" parent="Dining room" instance=ExtResource( 33 )]
 transform = Transform( -0.00793105, 0, 3.19999, 0, 3.2, 0, -3.19999, 0, -0.00793105, 237.685, -0.908034, -14.473 )
 
-[node name="flacon2" parent="Dining room" instance=ExtResource( 94 )]
-transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 201.372, 1.64263, 18.6486 )
+[node name="Board2" parent="Dining room" instance=ExtResource( 149 )]
+transform = Transform( 1.61582, 0, 1.17862, 0, 2, 0, -1.17862, 0, 1.61582, 210, 1.62087, 32.0991 )
 
-[node name="Spoon" parent="Dining room" instance=ExtResource( 151 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 206.791, 2.79678, 34.899 )
+[node name="Fork" parent="Dining room" instance=ExtResource( 152 )]
+transform = Transform( -0.282887, 0, -0.41228, 0, 0.5, 0, 0.41228, 0, -0.282887, 206.762, 1.70318, 35.5677 )
 
-[node name="flacon3" parent="Dining room" instance=ExtResource( 94 )]
-transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 194.08, 1.64263, 21.6316 )
+[node name="Fork2" parent="Dining room" instance=ExtResource( 152 )]
+transform = Transform( -0.232096, 0, 0.442867, 0, 0.5, 0, -0.442867, 0, -0.232096, 206.762, 1.70412, 31.2743 )
+
+[node name="Fork3" parent="Dining room" instance=ExtResource( 152 )]
+transform = Transform( 0.111429, 0, 0.487425, 0, 0.5, 0, -0.487425, 0, 0.111429, 214.405, 1.61112, 31.2743 )
+
+[node name="Glass" parent="Dining room" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 205.822, 2.0513, 34.7196 )
+
+[node name="Glass2" parent="Dining room" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 207.392, 1.89787, 31.17 )
+
+[node name="Glass3" parent="Dining room" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 212.133, 2.09411, 32.5377 )
+
+[node name="Glass4" parent="Dining room" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 209.898, 1.99723, 36.2056 )
+
+[node name="CornFlakes" parent="Dining room" instance=ExtResource( 156 )]
+transform = Transform( -0.997033, 0, 0.0769801, 0, 1, 0, -0.0769801, 0, -0.997033, 208.457, 2.53529, 35.388 )
+
+[node name="Glass5" parent="Dining room" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 215.987, 2.51606, 36.2213 )
+
+[node name="KnifeKitchen" parent="Dining room" instance=ExtResource( 154 )]
+transform = Transform( 2, 0, 0, 0, 0.176606, 1.99219, 0, -1.99219, 0.176606, 210.15, 1.70532, 32.3895 )
+
+[node name="Plate1" parent="Dining room" instance=ExtResource( 157 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 205.35, 1.72504, 31.4503 )
+
+[node name="Plate2" parent="Dining room" instance=ExtResource( 157 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 205.35, 1.72504, 35.4848 )
+
+[node name="Plate3" parent="Dining room" instance=ExtResource( 157 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 213.766, 1.72504, 35.4848 )
+
+[node name="Plate4" parent="Dining room" instance=ExtResource( 157 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 215.209, 1.72504, 31.6796 )
+
+[node name="Lemon" parent="Dining room" instance=ExtResource( 158 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 211.221, 1.954, 30.6988 )
+
+[node name="Lemon2" parent="Dining room" instance=ExtResource( 158 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 204.909, 1.97789, 35.6179 )
+
+[node name="Knife2" parent="Dining room" instance=ExtResource( 159 )]
+transform = Transform( 0.640592, 0.767693, -0.0170186, 0, 0.0221631, 0.999754, 0.767881, -0.640435, 0.0141975, 203.934, 1.73086, 31.7938 )
+
+[node name="Knife3" parent="Dining room" instance=ExtResource( 159 )]
+transform = Transform( -0.107461, -0.993965, 0.0220347, 0, 0.0221631, 0.999754, -0.994209, 0.107435, -0.00238168, 212.5, 1.73086, 35.5232 )
+
+[node name="Plate5" parent="Dining room" instance=ExtResource( 157 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 210.29, 1.72504, 35.0879 )
+
+[node name="Bottle" parent="Dining room" instance=ExtResource( 151 )]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 217.303, 2.71966, 34.6491 )
+
+[node name="WaterMElon" parent="Dining room" instance=ExtResource( 155 )]
+transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228, 216.973, 2.13253, 32.2723 )
+
+[node name="operation_door3" parent="Dining room" instance=ExtResource( 54 )]
+transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 211.743, -1.17416, 44.4499 )
+
+[node name="lamp_murale_boule3" parent="Dining room" instance=ExtResource( 128 )]
+transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 187.166, -0.411436, 37.7427 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )

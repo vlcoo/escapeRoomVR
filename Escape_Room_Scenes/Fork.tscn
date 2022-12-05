@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Kitchen Asset/FBX/Fork/Materials/Fork_DefaultMaterial_AlbedoTransparency.tga" type="Texture" id=1]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/Fork/Materials/Fork_DefaultMaterial_Normal.tga" type="Texture" id=2]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/Fork/Fork.fbx" type="PackedScene" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
+
+[node name="Fork" instance=ExtResource( 3 )]
+
+[node name="￐ﾘ￐ﾺ￐ﾾ￑ﾁ￑ﾄ￐ﾵ￑ﾀ￐ﾰ" parent="RootNode" index="0"]
+material/0 = SubResource( 1 )
