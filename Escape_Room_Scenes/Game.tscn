@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=2]
+[gd_scene load_steps=214 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -167,6 +167,7 @@
 [ext_resource path="res://Assets/Textures/panoramatapete-epifita-tres-tintas-barcelona.jpg" type="Texture" id=165]
 [ext_resource path="res://Assets/Textures/iris-apfel-birds-of-a-feather-A-RC-IA004-57_720x720.png" type="Texture" id=166]
 [ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=167]
+[ext_resource path="res://Escape_Room_Scenes/Televisor_90.tscn" type="PackedScene" id=168]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1513,7 +1514,7 @@ transform = Transform( 18, 0, 0, 0, 18, 0, 0, 0, 18, 53.2871, 0, 37.5281 )
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 70.7356, 0, 43.8166 )
 
 [node name="book01" parent="Models/Items" instance=ExtResource( 82 )]
-transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 53.106, -10.1946, 29.7193 )
+transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 61.3222, -10.1946, 29.7193 )
 
 [node name="book02" parent="Models/Items" instance=ExtResource( 79 )]
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 54.0963, -10.6793, 26.7969 )
@@ -2676,25 +2677,79 @@ depth = 2.55629
 material = SubResource( 48 )
 
 [node name="3Seat3" parent="Lounge" instance=ExtResource( 167 )]
-transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 284.786, -1.12588, 38.5092 )
+transform = Transform( 0.0279188, 0, -1.69977, 0, 1.7, 0, 1.69977, 0, 0.0279188, 276.301, -1.12588, 34.19 )
 
 [node name="3Seat4" parent="Lounge" instance=ExtResource( 167 )]
-transform = Transform( -1.69455, 0, -0.136043, 0, 1.7, 0, 0.136043, 0, -1.69455, 284.786, -1.12588, 28.2371 )
+transform = Transform( -1.69455, 0, -0.136043, 0, 1.7, 0, 0.136043, 0, -1.69455, 283.386, -1.12588, 26.8685 )
 
 [node name="lustre4" parent="Lounge" instance=ExtResource( 132 )]
-transform = Transform( 2, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 308.878, -4.88652, 25.7315 )
+transform = Transform( 2, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 304.86, -4.88652, 25.7315 )
 
 [node name="SpotLight7" type="SpotLight" parent="Lounge"]
-transform = Transform( 0.347602, 0.936668, 0.0427352, -0.0577731, -0.0240954, 0.998039, 0.935861, -0.349389, 0.0457386, 285.979, 8.98547, 33.6758 )
+transform = Transform( 0.347602, 0.936668, 0.0427352, -0.0577731, -0.0240954, 0.998039, 0.935861, -0.349389, 0.0457386, 281.961, 10.2338, 33.6758 )
 light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
 light_energy = 9.961
 light_indirect_energy = 16.0
 light_specular = 16.0
-spot_range = 12.8067
+spot_range = 13.8387
 spot_angle = 58.9513
 
 [node name="operation_door5" parent="Lounge" instance=ExtResource( 54 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 285.389, -1.17416, 44.4499 )
+
+[node name="table_basse3" parent="Lounge" instance=ExtResource( 69 )]
+transform = Transform( 2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 301.363, -0.872056, 49.3393 )
+
+[node name="buffet2" parent="Lounge" instance=ExtResource( 31 )]
+transform = Transform( 0.328436, 0, -3.1831, 0, 3.2, 0, 3.1831, 0, 0.328436, 280.607, -0.925314, 41.9469 )
+
+[node name="SpotLight8" type="SpotLight" parent="Lounge"]
+transform = Transform( 0.347602, 0.936668, 0.0427352, -0.70548, 0.231241, 0.669944, 0.617633, -0.263023, 0.74118, 292.417, 7.94412, 43.1077 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 9.961
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 14.4489
+spot_angle = 55.3213
+
+[node name="lamp_murale_boule6" parent="Lounge" instance=ExtResource( 128 )]
+transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 288.669, -0.411436, 68.9497 )
+
+[node name="Televisor_91" parent="Lounge" instance=ExtResource( 168 )]
+transform = Transform( 2, 0, 0, 0, 0.0417802, -1.99956, 0, 1.99956, 0.0417802, 276.043, 4, 45.3137 )
+
+[node name="book03" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -3.19861, 0, -0.0943739, 0, 3.2, 0, 0.0943739, 0, -3.19861, 279.179, -1.30955, 47.4236 )
+
+[node name="book04" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -3.19861, 0, -0.0943739, 0, 3.2, 0, 0.0943739, 0, -3.19861, 278.965, -1.30955, 47.4236 )
+
+[node name="book05" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -3.19861, 0, -0.0943739, 0, 3.2, 0, 0.0943739, 0, -3.19861, 278.724, -1.30955, 47.4236 )
+
+[node name="book06" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -3.19861, 0, -0.0943739, 0, 3.2, 0, 0.0943739, 0, -3.19861, 278.495, -1.30955, 47.4236 )
+
+[node name="book07" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -3.19861, 0, -0.0943739, 0, 3.2, 0, 0.0943739, 0, -3.19861, 278.268, -1.30955, 47.4236 )
+
+[node name="book08" parent="Lounge" instance=ExtResource( 82 )]
+transform = Transform( -2.79263, 1.56027, -0.0823955, 1.55959, 2.79384, 0.0460153, 0.0943739, 0, -3.19861, 275.893, -0.458395, 47.4715 )
+
+[node name="table_cuisine2" parent="Lounge" instance=ExtResource( 70 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 292.09, -0.669621, 33.5507 )
+
+[node name="chair2" parent="Lounge" instance=ExtResource( 163 )]
+transform = Transform( 0.998084, 0, -0.0618673, 0, 1, 0, 0.0618673, 0, 0.998084, 291.715, -0.794324, 27.8673 )
+
+[node name="chair3" parent="Lounge" instance=ExtResource( 163 )]
+transform = Transform( -0.99932, 0, -0.0368529, 0, 1, 0, 0.0368529, 0, -0.99932, 291.715, -1.03798, 38.9059 )
+
+[node name="chair4" parent="Lounge" instance=ExtResource( 163 )]
+transform = Transform( -0.0395215, 0, -0.999218, 0, 1, 0, 0.999218, 0, -0.0395215, 295.838, -1.03798, 35.0614 )
+
+[node name="chair5" parent="Lounge" instance=ExtResource( 163 )]
+transform = Transform( -0.0395215, 0, -0.999218, 0, 1, 0, 0.999218, 0, -0.0395215, 295.838, -1.03798, 31.1289 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
