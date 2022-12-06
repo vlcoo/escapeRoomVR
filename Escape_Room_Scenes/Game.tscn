@@ -1,4 +1,4 @@
-[gd_scene load_steps=204 format=2]
+[gd_scene load_steps=208 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CGTuts_OceanHDRI_Freebie_001.hdr" type="Texture" id=2]
@@ -161,6 +161,9 @@
 [ext_resource path="res://Escape_Room_Scenes/Knife2.tscn" type="PackedScene" id=159]
 [ext_resource path="res://Assets/Textures/7310_2_Boras_Tapete_Eastern_Simplicity_3132.jpg" type="Texture" id=160]
 [ext_resource path="res://Assets/Textures/423313.jpg" type="Texture" id=161]
+[ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat4.fbx" type="PackedScene" id=162]
+[ext_resource path="res://Assets/Furniture/Source/Mesh/chair.fbx" type="PackedScene" id=163]
+[ext_resource path="res://Assets/Textures/europeana-TjegK_z-0j8-unsplash.jpg" type="Texture" id=164]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -310,6 +313,9 @@ albedo_texture = ExtResource( 148 )
 
 [sub_resource type="SpatialMaterial" id=43]
 albedo_texture = ExtResource( 150 )
+
+[sub_resource type="SpatialMaterial" id=46]
+albedo_texture = ExtResource( 164 )
 
 [sub_resource type="SpatialMaterial" id=44]
 albedo_texture = ExtResource( 160 )
@@ -2239,6 +2245,12 @@ transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027,
 transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 240.566, -1.2104, 29.2615 )
 material = SubResource( 29 )
 
+[node name="Painting" type="CSGBox" parent="Library"]
+transform = Transform( -0.0814318, -0.0817444, 0.965842, 0.015998, -0.00685799, 4.92083, -0.00206153, 3.17574, 0.0354875, 260.729, 3.29154, 38.2559 )
+height = 1.7332
+depth = 0.845448
+material = SubResource( 46 )
+
 [node name="Wall12" type="CSGBox" parent="Library"]
 transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, 240.566, -1.2104, 39.3237 )
 material = SubResource( 30 )
@@ -2433,7 +2445,7 @@ light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
 light_energy = 9.961
 light_indirect_energy = 16.0
 light_specular = 16.0
-spot_range = 10.8439
+spot_range = 12.8067
 spot_angle = 58.9513
 
 [node name="SpotLight5" type="SpotLight" parent="Library"]
@@ -2447,6 +2459,15 @@ spot_angle = 58.9513
 
 [node name="lamp_murale_boule4" parent="Library" instance=ExtResource( 128 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 256.801, -0.411436, 60.3758 )
+
+[node name="chair" parent="Library" instance=ExtResource( 163 )]
+transform = Transform( 0.998084, 0, -0.0618673, 0, 1, 0, 0.0618673, 0, 0.998084, 242.957, 0, 26.8333 )
+
+[node name="3Seat4" parent="Library" instance=ExtResource( 162 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 247.925, 0, 38.3018 )
+
+[node name="3Seat5" parent="Library" instance=ExtResource( 162 )]
+transform = Transform( -0.0468624, 0, 0.998901, 0, 1, 0, -0.998901, 0, -0.0468624, 252.899, 0, 33.0108 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
