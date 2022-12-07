@@ -1944,7 +1944,7 @@ transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922,
 transform = Transform( 1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 167.551, -5.41873, 32.4524 )
 
 [node name="pendule2" parent="Dormitory" instance=ExtResource( 57 )]
-transform = Transform( 3.1988, 0.0043812, -0.0876084, -0.00453251, 3.19999, -0.00546358, 0.0876006, 0.00558564, 3.1988, 188.653, -0.637209, 41.0053 )
+transform = Transform( 3.1988, 0.0043812, -0.0876084, -0.00453251, 3.19999, -0.00546358, 0.0876006, 0.00558564, 3.1988, 188.653, -1.18484, 41.0053 )
 
 [node name="Rug" type="CSGBox" parent="Dormitory"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.917842, 182.765, -0.725174, 38.6281 )
@@ -1971,7 +1971,7 @@ material = SubResource( 41 )
 transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 153.765, -0.411436, 37.7427 )
 
 [node name="vinaigre2" parent="Dormitory" instance=ExtResource( 118 )]
-transform = Transform( 0.751912, 3.11041, 0, -3.11041, 0.751912, 0, 0, 0, 3.2, 178.38, 21.3086, 25.3836 )
+transform = Transform( 0.751912, 3.11041, 0, -3.11041, 0.751912, 0, 0, 0, 3.2, 178.38, 21.1558, 25.3836 )
 
 [node name="plante_balcon2" parent="Dormitory" instance=ExtResource( 104 )]
 transform = Transform( 2.83032, 0, 0, 0, 3.2, 0, 0, 0, 2.57706, 157.788, -1.2685, 25.5538 )
@@ -2491,13 +2491,13 @@ transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 244.435, -0.411436, 68.9497 )
 
 [node name="chair" parent="Library" instance=ExtResource( 163 )]
-transform = Transform( 0.998084, 0, -0.0618673, 0, 1, 0, 0.0618673, 0, 0.998084, 242.957, 0, 26.8333 )
+transform = Transform( 0.998084, 0, -0.0618673, 0, 1, 0, 0.0618673, 0, 0.998084, 242.957, -0.747488, 26.8333 )
 
 [node name="3Seat4" parent="Library" instance=ExtResource( 162 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 247.925, 0, 38.3018 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 247.925, -0.700513, 38.3018 )
 
 [node name="3Seat5" parent="Library" instance=ExtResource( 162 )]
-transform = Transform( -0.0468624, 0, 0.998901, 0, 1, 0, -0.998901, 0, -0.0468624, 252.899, 0, 33.0108 )
+transform = Transform( -0.0468624, 0, 0.998901, 0, 1, 0, -0.998901, 0, -0.0468624, 252.899, -0.726472, 33.0108 )
 
 [node name="operation_door4" parent="Library" instance=ExtResource( 54 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 248.462, -1.17416, 44.4499 )
