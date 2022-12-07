@@ -105,7 +105,7 @@
 			"character": "character-1669756551.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Let’s start with the easiest.\n\nWhat were you doing in the mansion yesterday?"
+			"text": "Let’s start with the basics.\n\nWhat were you doing in the mansion yesterday?"
 		},
 		{
 			"character": "character-1668598946.json",
@@ -147,7 +147,61 @@
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Yeah , he is a good man."
+			"text": "Yeah , he is a good man at heart."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What do you mean by “at heart”?\n\nWhat happened after dinner?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well… actually my intention that night was talking with Jessie about something when I saw Nicole’s handbag on the opposite side.\n\nIt was half-opened and I could see a small jar of pills. I could notice at first sight that it was a kind of drug."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are you sure it was Nicole’s handbag?\n\nI understand that she is a very healthy girl. I don’t think she is into that."
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah , I am pretty sure."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay , so what happened after that?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I went to look for her in the kitchen but she was not there anymore.\n\nHowever, Pedro was there, handling some suspicious pills in his hands.\n\nI couldn’t believe what I was seeing. I had never imagined Pedro doing that.\n\nI left the room stealthily so he could not see me and I went to look for Nicole again. The last thing I remember is me entering the balcony."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Have you ever had any problem with any of the guests?"
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, never. "
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, I think that’s enough for now. Thanks a lot , Jurgen"
 		}
 	],
 	"metadata": {
