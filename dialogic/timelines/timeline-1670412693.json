@@ -1,0 +1,272 @@
+{
+	"events": [
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello?\n\n. . . ."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Is someone there?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes. Hello ."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Who are you?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’m [player_name] and and I am here to solve the mystery of the 3 murders’ case."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=5 level=10]What?[/shake]\n\n3 murders??"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, last night 3 murders were committed."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh my god! How can that be possible?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am wondering the same but It seems it was one person of the mansion."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No way!\n\nWho are the other dead people?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Margarita and Jurgen."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can’t believe it. Who can have something against them? "
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don’t know yet but I have already talked with them and I would like to ask you about that."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "About what?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What was your relationship with Margarita?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We were classmates and good friends, that’s why I invited her yesterday."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, I see. Did you invite anyone else?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, I invited Nicole and my best friend too."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Who is your best friend?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Heidi."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You look very sad."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, we didn’t end up well and now I am not going to see her never again…"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, Margarita told me you argued yesterday. What happened?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I was in my room when Heidi showed up. She looked worried and angry at the same time. "
+		},
+		{
+			"character": "character-1668599051.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What did she talk about?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am not sure. She was so nervous that she could barely speak.\n\nShe said something about a crime she saw in a newspaper in which Nathan was allegedly stated to have committed a crime."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A crime? Hmm..."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah , I couldn’t believe my eyes."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And why do you think she was that mad at you?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We were a little bit distant the last two weeks because I have been very busy and I didn’t have much time to hang out with her."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But I don't think that's a valid reason to be angry with someone and much less if it's  your best friend."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah… I know. \n\nMaybe I haven't been that honest with her lately."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What do you mean?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I was kind of dating someone I wasn’t supposed to and I didn’t tell her."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't know. They preferred to keep it just between them and I.\n\nI wanted to respect that even though she is my best friend."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think I know what's happening here.\n\nYour friend was right. There is a crime and she was trying to warn you."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What?\n\n[shake rate=5 level=10]No way![/shake] That’s impossible.\n\nHe was always so sweet and gentle. Always had other people’s best interests in mind."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, sometimes appearances can be deceiving.\n\nThe police is investigating his past right now because he is accused of a murder back in California on November 1st but still they need proof."
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I still can’t believe she would do that. I am in shock."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Pull it together. I still more information about how the three of you died.\n\nWhat was the last thing you remember?"
+		},
+		{
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Right after Heidi told me that, I went after Nathan since I was supposed to meet him in the billiard room. I went downstairs and I waited for about 5 minutes but no one was there.\n\nSuddenly everything faded into black and  I fainted."
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, I will make sure to get to the buttom of it."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1670412693.json",
+		"name": "PresentacionJessie"
+	}
+}
