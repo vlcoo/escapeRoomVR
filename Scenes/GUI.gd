@@ -28,3 +28,7 @@ func render_viewport():
 	# contents of the Viewport are visible
 	set_surface_material(0, material)
 
+
+func set_transparent(how: bool):
+	$"../GUI_Board".visible = !how;
+

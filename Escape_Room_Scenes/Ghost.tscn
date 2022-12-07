@@ -1,12 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Ghost/FBX/Ghost/Ghost.FBX" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Ghost/FBX/Ghost/Ghost3.material" type="Material" id=2]
+[ext_resource path="res://scripts/Ghost.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=4]
 
 [node name="Ghost" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "Ghost with generic material that can be reused and recolored."
 }
 
 [node name="Ghost" parent="RootNode" index="1"]
 material/0 = ExtResource( 2 )
+
+[node name="RayCastDialog" type="RayCast" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11105, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 0.7 )
+
+[node name="VRGUI" parent="." index="2" instance=ExtResource( 4 )]
+transform = Transform( -0.6, 0, -5.24537e-08, 4.37114e-08, 0.34641, -0.5, 7.57103e-08, -0.2, -0.866025, 0, 1, 0.293349 )
+
+[node name="Camera" type="Camera" parent="." index="3"]
+transform = Transform( 0.915982, 0.140059, -0.375979, -0.0110098, 0.945513, 0.325397, 0.401068, -0.293919, 0.867615, -0.618678, 1.36518, 1.44336 )
