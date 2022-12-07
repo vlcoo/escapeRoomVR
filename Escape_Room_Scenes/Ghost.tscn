@@ -21,6 +21,3 @@ cast_to = Vector3( 0, 0, 0.7 )
 
 [node name="VRGUI" parent="." index="2" instance=ExtResource( 4 )]
 transform = Transform( -0.6, 0, -5.24537e-08, 4.37114e-08, 0.34641, -0.5, 7.57103e-08, -0.2, -0.866025, 0, 1, 0.293349 )
-
-[node name="Camera" type="Camera" parent="." index="3"]
-transform = Transform( 0.915982, 0.140059, -0.375979, -0.0110098, 0.945513, 0.325397, 0.401068, -0.293919, 0.867615, -0.618678, 1.36518, 1.44336 )
