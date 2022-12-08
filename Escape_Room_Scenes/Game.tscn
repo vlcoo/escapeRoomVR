@@ -1,6 +1,7 @@
-[gd_scene load_steps=215 format=2]
+[gd_scene load_steps=221 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Left_Controller.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Right_Controller.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Movement_Vignette.tscn" type="PackedScene" id=5]
@@ -169,6 +170,10 @@
 [ext_resource path="res://Escape_Room_Scenes/Televisor_90.tscn" type="PackedScene" id=168]
 [ext_resource path="res://Assets/Textures/TexturesCom_Pavement_MarbleTiles_2.6x2.6_1K_albedo.png" type="Texture" id=169]
 [ext_resource path="res://Assets/Textures/-1000288360-210831-15320701051-IMAGE-P000000001000288360.png" type="Texture" id=170]
+[ext_resource path="res://Assets/BathroomPack/Meshes/ToiletRollHolder.FBX" type="PackedScene" id=171]
+[ext_resource path="res://Assets/BathroomPack/Meshes/ToiletBrush.FBX" type="PackedScene" id=172]
+[ext_resource path="res://Assets/BathroomPack/Meshes/ToiletRoll.FBX" type="PackedScene" id=173]
+[ext_resource path="res://Assets/BathroomPack/Meshes/Toilet.FBX" type="PackedScene" id=174]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -326,6 +331,9 @@ albedo_texture = ExtResource( 169 )
 
 [sub_resource type="SpatialMaterial" id=50]
 albedo_texture = ExtResource( 170 )
+
+[sub_resource type="SpatialMaterial" id=51]
+albedo_texture = ExtResource( 2 )
 
 [sub_resource type="Environment" id=40]
 background_mode = 1
@@ -1459,7 +1467,7 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 308.925, -27.6211, 102.354 )
 transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 253.662, -28.1856, 90.346 )
 
 [node name="ferguson" parent="Models/Furniture" instance=ExtResource( 134 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 85.3852, 4.37584, 89.709 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 91.5996, 4.37584, 89.709 )
 
 [node name="Puzzles" type="Spatial" parent="Models"]
 
@@ -2875,6 +2883,26 @@ transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2
 height = 1.83523
 material = SubResource( 50 )
 
+[node name="Wall145" type="CSGBox" parent="Bathroom"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 321.643, 1.36266, 37.0256 )
+height = 1.83523
+material = SubResource( 50 )
+
+[node name="Wall146" type="CSGBox" parent="Bathroom"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 321.643, 6.34668, 37.0256 )
+height = 1.83523
+material = SubResource( 50 )
+
+[node name="Wall147" type="CSGBox" parent="Bathroom"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 321.643, 1.36266, 41.9131 )
+height = 1.83523
+material = SubResource( 50 )
+
+[node name="Wall148" type="CSGBox" parent="Bathroom"]
+transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000570843, 0, 2.45359, 321.643, 6.34668, 41.9131 )
+height = 1.83523
+material = SubResource( 50 )
+
 [node name="Wall138" type="CSGBox" parent="Bathroom"]
 transform = Transform( 0.083012, 0, -0.0168724, 0, 2.71996, 0, 0.000622095, 0, 2.67389, 337.342, 1.36266, 41.6534 )
 height = 1.83523
@@ -2913,7 +2941,76 @@ depth = 2.20956
 material = SubResource( 50 )
 
 [node name="etagere2" parent="Bathroom" instance=ExtResource( 41 )]
-transform = Transform( 0.0841568, 0, 3.19889, 0, 3.2, 0, -3.19889, 0, 0.0841568, 325.644, -1.2239, 25.3065 )
+transform = Transform( 3.19823, 0, -0.106319, 0, 3.2, 0, 0.106319, 0, 3.19823, 336.575, -1.2239, 27.2586 )
+
+[node name="evier3" parent="Bathroom" instance=ExtResource( 42 )]
+transform = Transform( -0.0419428, 0, 3.19972, 0, 3.2, 0, -3.19972, 0, -0.0419428, 330.897, -1.23114, 26.0783 )
+
+[node name="evier4" parent="Bathroom" instance=ExtResource( 43 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 335.543, -1.23114, 34.0525 )
+
+[node name="operation_door6" parent="Bathroom" instance=ExtResource( 54 )]
+transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 324.704, -1.17416, 44.2172 )
+
+[node name="SpotLight10" type="SpotLight" parent="Bathroom"]
+transform = Transform( 0.347602, 0.936668, 0.0427354, -0.1562, 0.0129057, 0.987641, 0.92454, -0.349981, 0.150794, 333.94, 12.5337, 35.5653 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 9.961
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 15.8083
+spot_angle = 35.9264
+
+[node name="lamp_murale_boule8" parent="Bathroom" instance=ExtResource( 128 )]
+transform = Transform( -0.231967, 3.18952, -0.114724, 0.505104, -0.0768896, -3.15895, -3.15136, -0.2471, -0.497876, 332.231, -3.33075, 58.9071 )
+
+[node name="SpotLight11" type="SpotLight" parent="Bathroom"]
+transform = Transform( 0.347602, 0.936668, 0.0427354, -0.1562, 0.0129057, 0.987641, 0.92454, -0.349981, 0.150794, 319.308, 12.1113, 41.9324 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 9.961
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 15.8083
+spot_angle = 35.9264
+
+[node name="lamp_murale_boule9" parent="Bathroom" instance=ExtResource( 128 )]
+transform = Transform( -0.231967, 3.18952, -0.114724, 0.505104, -0.0768896, -3.15895, -3.15136, -0.2471, -0.497876, 317.599, -3.75313, 65.2742 )
+
+[node name="alfombra4" type="CSGBox" parent="Bathroom"]
+transform = Transform( 0.000956649, 7.54576, -0.163398, -0.0830133, 0.0112985, -1.07251e-07, 2.15985e-05, 0.170447, 7.23371, 330.813, -0.82413, 33.3585 )
+height = 0.862186
+depth = 1.44281
+material = SubResource( 51 )
+
+[node name="Toilet" parent="Bathroom" instance=ExtResource( 174 )]
+transform = Transform( -1.49782, 0, -0.0807522, 0, 1.5, 0, 0.0807522, 0, -1.49782, 336.023, -0.981389, 39.7972 )
+
+[node name="ToiletBrush" parent="Bathroom" instance=ExtResource( 172 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 334.415, 2.78329, 41.7045 )
+
+[node name="ToiletRollHolder" parent="Bathroom" instance=ExtResource( 171 )]
+transform = Transform( -2.99828, 0, 0.101663, 0, 3, 0, -0.101663, 0, -2.99828, 336.186, 2.60987, 36.5862 )
+
+[node name="ToiletRoll" parent="Bathroom" instance=ExtResource( 173 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 336.992, 4.2158, 27.576 )
+
+[node name="ToiletRoll2" parent="Bathroom" instance=ExtResource( 173 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 337.312, 4.2158, 27.9432 )
+
+[node name="ToiletRoll3" parent="Bathroom" instance=ExtResource( 173 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 337.052, 4.2158, 28.3676 )
+
+[node name="ToiletRoll4" parent="Bathroom" instance=ExtResource( 173 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 337.243, 4.2158, 26.7661 )
+
+[node name="ToiletRoll5" parent="Bathroom" instance=ExtResource( 173 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 337.243, 4.2158, 26.0974 )
+
+[node name="tabledop2" parent="Bathroom" instance=ExtResource( 67 )]
+transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 315.7, -0.982779, 39.5742 )
+
+[node name="plantravaiUpl2" parent="Bathroom" instance=ExtResource( 60 )]
+transform = Transform( 3.19979, 0, -0.0369159, 0, 3.2, 0, 0.0369159, 0, 3.19979, 318.532, -5.91238, 38.7001 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
