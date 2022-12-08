@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=2]
+[gd_scene load_steps=228 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -176,6 +176,9 @@
 [ext_resource path="res://Assets/BathroomPack/Meshes/Toilet.FBX" type="PackedScene" id=174]
 [ext_resource path="res://Assets/Textures/papel-pintado-jardin-floral-verde-trends_TRD_2400_4744.jpg" type="Texture" id=175]
 [ext_resource path="res://Assets/Textures/427400.jpg" type="Texture" id=176]
+[ext_resource path="res://Escape_Room_Scenes/toaster.tscn" type="PackedScene" id=177]
+[ext_resource path="res://Escape_Room_Scenes/dish-rack.tscn" type="PackedScene" id=178]
+[ext_resource path="res://Escape_Room_Scenes/plate.tscn" type="PackedScene" id=179]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -3251,7 +3254,37 @@ spot_range = 10.8439
 spot_angle = 58.9513
 
 [node name="lamp_murale_boule7" parent="Kitchen" instance=ExtResource( 128 )]
-transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 366.807, -0.411436, 65.9527 )
+transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 369.173, 3.9215, 67.5135 )
+
+[node name="toaster" parent="Kitchen" instance=ExtResource( 177 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 371.346, 2.73529, 33.8319 )
+
+[node name="plate" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 356, 2.2, 35.6 )
+
+[node name="plate2" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 354.499, 2.2, 30.4738 )
+
+[node name="plate3" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 354.499, 2.2, 34.1102 )
+
+[node name="plate4" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 370.609, 2.3, 26.549 )
+
+[node name="plate5" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 370.609, 2.43827, 26.549 )
+
+[node name="plate6" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 370.609, 2.55776, 26.4021 )
+
+[node name="dish-rack" parent="Kitchen" instance=ExtResource( 178 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 367.322, -0.191468, 26.0003 )
+
+[node name="plate7" parent="Kitchen" instance=ExtResource( 179 )]
+transform = Transform( 1.28356, -4.83244, 0, 4.83244, 1.28356, 0, 0, 0, 5, 367.459, 3.24298, 26.2619 )
+
+[node name="CornFlakes" parent="Kitchen" instance=ExtResource( 156 )]
+transform = Transform( -0.633138, 0, -0.774039, 0, 1, 0, 0.774039, 0, -0.633138, 356.37, 2.87289, 31.7122 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
