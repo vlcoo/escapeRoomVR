@@ -1,4 +1,4 @@
-[gd_scene load_steps=267 format=2]
+[gd_scene load_steps=270 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -190,6 +190,8 @@
 [ext_resource path="res://Assets/Textures/parkettkaiser-skaben-tapete-jungle-dschungeltapete-palmentapete-gruen-194573_r.png" type="Texture" id=188]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=189]
 [ext_resource path="res://Escape_Room_Scenes/Stairs2.tscn" type="PackedScene" id=190]
+[ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=191]
+[ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=192]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -440,6 +442,9 @@ albedo_texture = ExtResource( 189 )
 
 [sub_resource type="SpatialMaterial" id=82]
 albedo_texture = ExtResource( 189 )
+
+[sub_resource type="SpatialMaterial" id=83]
+albedo_texture = ExtResource( 192 )
 
 [sub_resource type="Environment" id=40]
 background_mode = 1
@@ -6080,13 +6085,40 @@ spot_angle = 58.9513
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 324.431, -0.411436, 23.1187 )
 
 [node name="SpotLight8" type="SpotLight" parent="Billiard room"]
-transform = Transform( 0.307218, 0.941785, 0.136594, -0.247855, -0.0593954, 0.966975, 0.918795, -0.330928, 0.215179, 349.042, 10.2886, 28.3026 )
+transform = Transform( 0.307218, 0.941785, 0.136594, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 349.042, 10.2886, 28.3026 )
 light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
 light_energy = 2.899
 light_indirect_energy = 16.0
 light_specular = 16.0
 spot_range = 25.4727
 spot_angle = 36.0813
+
+[node name="Billiard" parent="Billiard room" instance=ExtResource( 191 )]
+transform = Transform( 0.00551501, 0, 4, 0, 4, 0, -4, 0, 0.00551501, 341.197, -0.840996, 57.6992 )
+
+[node name="alfombra3" type="CSGBox" parent="Billiard room"]
+transform = Transform( -2.81182e-06, -0.0222631, -7.23553, -0.0830133, 0.0112985, -1.07251e-07, 0.000956889, 7.54766, -0.0213425, 347.916, -0.82413, 38.0035 )
+height = 1.83523
+depth = 2.55629
+material = SubResource( 83 )
+
+[node name="bookshelf7" parent="Billiard room" instance=ExtResource( 30 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 343.266, -1.03627, 47.0316 )
+
+[node name="bookshelf8" parent="Billiard room" instance=ExtResource( 30 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 347.563, -1.03627, 47.0316 )
+
+[node name="bookshelf9" parent="Billiard room" instance=ExtResource( 30 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 351.931, -1.03627, 47.0316 )
+
+[node name="3Seat5" parent="Billiard room" instance=ExtResource( 167 )]
+transform = Transform( -0.938955, 0, 0.00164967, 0, 1.4, 0, 0.0471841, 0, -1.39848, 354.334, -1.12588, 33.5085 )
+
+[node name="3Seat6" parent="Billiard room" instance=ExtResource( 167 )]
+transform = Transform( -0.0172505, 0, 1.39989, 0, 1.4, 0, -1.39989, 0, -0.0172505, 359.267, -1.12588, 39.7566 )
+
+[node name="table_basse3" parent="Billiard room" instance=ExtResource( 69 )]
+transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29999, 335.352, -0.872056, 24.2358 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
