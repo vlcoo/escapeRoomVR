@@ -1,4 +1,4 @@
-[gd_scene load_steps=266 format=2]
+[gd_scene load_steps=267 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -189,6 +189,7 @@
 [ext_resource path="res://Assets/Metal Barrels/Textures/barrel2_blue_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=187]
 [ext_resource path="res://Assets/Textures/parkettkaiser-skaben-tapete-jungle-dschungeltapete-palmentapete-gruen-194573_r.png" type="Texture" id=188]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=189]
+[ext_resource path="res://Escape_Room_Scenes/Stairs2.tscn" type="PackedScene" id=190]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -5529,6 +5530,21 @@ material = SubResource( 35 )
 [node name="Wall54" type="CSGBox" parent="Stairs"]
 transform = Transform( -3.48666e-09, -4.04231, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.2653, 357.196, -1.2104, -6.94674 )
 material = SubResource( 37 )
+
+[node name="model" parent="Stairs" instance=ExtResource( 190 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 351.278, 2.66434, -3.11413 )
+
+[node name="lamp_murale_boule7" parent="Stairs" instance=ExtResource( 128 )]
+transform = Transform( 1.03236, 3.02694, -0.108877, 0, -0.115027, -3.19793, -3.0289, 1.03169, -0.0371092, 337.745, -0.411436, 24.9725 )
+
+[node name="SpotLight9" type="SpotLight" parent="Stairs"]
+transform = Transform( 0.307218, 0.941785, 0.136594, -0.247855, -0.0593955, 0.966975, 0.918795, -0.330928, 0.215179, 353.325, 10.2886, 3.26736 )
+light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
+light_energy = 2.899
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 25.4727
+spot_angle = 36.0813
 
 [node name="Corridor11" type="Node" parent="."]
 
