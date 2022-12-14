@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Bullet_Impact_22.ogg-50ca25e97e01302dd843b467c756f55
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

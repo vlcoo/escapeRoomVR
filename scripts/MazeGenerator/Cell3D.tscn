@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Cell3D.gd" type="Script" id=1]
+[ext_resource path="res://scripts/MazeGenerator/Cell3D.gd" type="Script" id=1]
 
 [node name="Cell3D" type="Spatial"]
 script = ExtResource( 1 )

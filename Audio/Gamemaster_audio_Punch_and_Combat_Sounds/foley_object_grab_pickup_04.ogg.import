@@ -11,5 +11,5 @@ dest_files=[ "res://.import/foley_object_grab_pickup_04.ogg-7765544b6b897c73c74c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

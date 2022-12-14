@@ -11,5 +11,5 @@ dest_files=[ "res://.import/punch_grit_wet_impact_05.ogg-bfdee28397697017f0c7705
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

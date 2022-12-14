@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Rock_Impact_Slide_Wood_Cave_MONO_04.ogg-5ea5300b1a2b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
