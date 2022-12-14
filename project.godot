@@ -92,10 +92,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="VR Starter Tutorial Complete"
+config/name="Las bizarras aventuras de Margarita VR"
 run/main_scene="res://Escape_Room_Scenes/Game.tscn"
 run/low_processor_mode=true
-config/icon="res://icon.png"
+config/icon="res://Assets/Characters/Pedro.png"
+
+[autoload]
+
+Global="*res://scripts/MazeGenerator/Global.gd"
 
 [display]
 

@@ -31,8 +31,8 @@ func _ready():
 	rect_position = Vector2.ZERO
 	
 	# Get the right and left controllers and assign them to the proper variables.
-	controller_one = get_parent().get_node("LeftController")
-	controller_two = get_parent().get_node("RightController")
+	controller_one = get_parent().get_node("Left_Controller")
+	controller_two = get_parent().get_node("Right_Controller")
 	
 	# Make the vignette invisible by default.
 	visible = false
