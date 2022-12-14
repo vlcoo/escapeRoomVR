@@ -1,4 +1,4 @@
-[gd_scene load_steps=270 format=2]
+[gd_scene load_steps=271 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -192,6 +192,7 @@
 [ext_resource path="res://Escape_Room_Scenes/Stairs2.tscn" type="PackedScene" id=190]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=191]
 [ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=192]
+[ext_resource path="res://Escape_Room_Scenes/PhoneClue.tscn" type="PackedScene" id=193]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -1407,6 +1408,23 @@ stream = ExtResource( 15 )
 volume_db = -10.0
 autoplay = true
 
+[node name="Clues" type="Node" parent="."]
+
+[node name="testament" parent="Clues" instance=ExtResource( 24 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.0886, 2.68605, 30.9577 )
+
+[node name="paternityTest" parent="Clues" instance=ExtResource( 25 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.65876, 3.92189, 30.5225 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="boardingPass" parent="Clues" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11624, 2.31405, 34.7679 )
+
+[node name="PhoneClue2" parent="Clues" instance=ExtResource( 193 )]
+transform = Transform( -0.00359188, 0, -0.599989, -0.591769, -0.0989769, 0.00354267, -0.0989751, 0.59178, 0.000592521, 52.4854, 0.787128, 7.44083 )
+
 [node name="Models" type="Spatial" parent="."]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 53.0539, -0.637209, 0 )
 
@@ -1792,18 +1810,6 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 11.6108, -1.7292, 27.5125 )
 
 [node name="Caja Domino" parent="." instance=ExtResource( 22 )]
 transform = Transform( 0.0259676, 0, -0.999663, 0, 1, 0, 0.999663, 0, 0.0259676, 10.333, 0.230514, 24.8456 )
-
-[node name="testament" parent="." instance=ExtResource( 24 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.0886, 2.68605, 30.9577 )
-
-[node name="paternityTest" parent="." instance=ExtResource( 25 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.65876, 3.92189, 30.5225 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="boardingPass" parent="." instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11624, 2.31405, 34.7679 )
 
 [node name="Wall1" type="CSGBox" parent="."]
 transform = Transform( 0.083014, 0, 0, 0, 4.20693, 0, 0, 0, 5.01485, 80.07, 2.86573, 32.7605 )
