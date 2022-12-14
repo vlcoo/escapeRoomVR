@@ -1,4 +1,4 @@
-[gd_scene load_steps=271 format=2]
+[gd_scene load_steps=272 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -447,11 +447,11 @@ albedo_texture = ExtResource( 189 )
 [sub_resource type="SpatialMaterial" id=83]
 albedo_texture = ExtResource( 192 )
 
+[sub_resource type="ProceduralSky" id=84]
+
 [sub_resource type="Environment" id=40]
-background_mode = 1
-background_energy = 0.0
-ambient_light_color = Color( 0.0901961, 0.121569, 0.2, 1 )
-ambient_light_energy = 0.8
+background_sky = SubResource( 84 )
+ambient_light_color = Color( 0, 0, 0, 0 )
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
