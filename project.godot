@@ -95,7 +95,7 @@ _global_script_class_icons={
 config/name="Las bizarras aventuras de Margarita VR"
 run/main_scene="res://Escape_Room_Scenes/Game.tscn"
 run/low_processor_mode=true
-config/icon="res://Assets/Characters/Pedro.png"
+config/icon="res://Assets/Characters/pedro.png"
 
 [autoload]
 
