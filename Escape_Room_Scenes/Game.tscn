@@ -1,4 +1,4 @@
-[gd_scene load_steps=272 format=2]
+[gd_scene load_steps=273 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -1413,22 +1413,22 @@ autoplay = true
 [node name="Clues" type="Node" parent="."]
 
 [node name="testament" parent="Clues" instance=ExtResource( 24 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 10.0886, 2.68605, 30.9577 )
+transform = Transform( -0.25568, 1.1341, -1.6274, -1.97629, -0.00497596, 0.307026, 0.17005, 1.64736, 1.12129, 298.727, -0.704725, 41.3143 )
 
 [node name="paternityTest" parent="Clues" instance=ExtResource( 25 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 9.65876, 3.92189, 30.5225 )
+transform = Transform( 0.658668, 1.22679, 0.145366, -1.22526, 0.627703, 0.254392, 0.157743, -0.246908, 1.369, 398.711, 1.99375, -8.17635 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="boardingPass" parent="Clues" instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11624, 2.31405, 34.7679 )
+transform = Transform( -0.0407379, 0.240914, -0.969691, -0.918137, 0.373827, 0.131447, 0.394164, 0.895664, 0.205963, 295.191, 2.62484, -36.8992 )
 
 [node name="PhoneClue2" parent="Clues" instance=ExtResource( 193 )]
-transform = Transform( -0.00359188, 0, -0.599989, -0.591769, -0.0989769, 0.00354267, -0.0989751, 0.59178, 0.000592521, 52.4854, 0.787128, 7.44083 )
+transform = Transform( 0.424957, 0.0566181, -0.419768, -0.0787814, 0.594805, 0.00047163, 0.416178, 0.0547825, 0.428712, 289.97, 2.11216, -40.9775 )
 
 [node name="poison2" parent="Clues" instance=ExtResource( 194 )]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 54.4278, -0.67979, 10.2125 )
+transform = Transform( -0.0411055, -0.057111, 0.187213, -0.190145, 0.0570256, -0.0243531, -0.0464255, -0.182993, -0.0660171, 408.454, -0.596375, -32.8007 )
 
 [node name="Models" type="Spatial" parent="."]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 53.0539, -0.637209, 0 )
@@ -3033,7 +3033,7 @@ transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29
 [node name="SpotLight4" type="SpotLight" parent="Library"]
 transform = Transform( -0.34484, -0.937694, -0.0426001, -0.0577731, -0.0240954, 0.998039, -0.936882, 0.346625, -0.0458644, 297.733, 8.98547, 39.9501 )
 light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+light_energy = 0.42
 light_indirect_energy = 16.0
 light_specular = 16.0
 spot_range = 12.8067
