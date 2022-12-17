@@ -90,8 +90,8 @@ func _ready():
 	# Get the grab area node, the grab raycast node, and the grab position node. Assign these nodes to
 	# their respective variables.
 	grab_area = get_node("Area")
-	grab_raycast = get_node("Grab_Cast")
-	grab_pos_node = get_node("Grab_Pos")
+	grab_raycast = $GrabCast
+	grab_pos_node = get_node("GrabPos")
 	
 	# Set the VR controller's initial grab mode to Area, and make the grab_raycast node invisible.
 	grab_mode = "AREA"
@@ -99,8 +99,8 @@ func _ready():
 	
 	# Connect the Area signals for the Sleep_Area node to the sleep_area_entered and sleep_area_exited functions
 	# (This makes it where RigidBody nodes cannot sleep when nearby the VR controller)
-	get_node("Sleep_Area").connect("body_entered", self, "sleep_area_entered")
-	get_node("Sleep_Area").connect("body_exited", self, "sleep_area_exited")
+	get_node("SleepArea").connect("body_entered", self, "sleep_area_entered")
+	get_node("SleepArea").connect("body_exited", self, "sleep_area_exited")
 	
 	# Get the MeshInstance node for the hand and assign it to the hand_mesh variable.
 	hand_mesh = get_node("Hand")
