@@ -1,4 +1,4 @@
-[gd_scene load_steps=273 format=2]
+[gd_scene load_steps=274 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
@@ -194,6 +194,7 @@
 [ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=192]
 [ext_resource path="res://Escape_Room_Scenes/PhoneClue.tscn" type="PackedScene" id=193]
 [ext_resource path="res://Assets/poison-bottle/source/poison.fbx" type="PackedScene" id=194]
+[ext_resource path="res://Assets/Postcard5.fbx" type="PackedScene" id=195]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -6159,3 +6160,6 @@ transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
+
+[node name="Postcard5" parent="." instance=ExtResource( 195 )]
+transform = Transform( 0.0882007, 0.996102, -0.000794268, -0.937537, 0.0827456, -0.337901, -0.336518, 0.0305477, 0.941181, 296.518, 0.903428, 2.82445 )
