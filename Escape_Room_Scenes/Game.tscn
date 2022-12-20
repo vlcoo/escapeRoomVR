@@ -1588,19 +1588,16 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 91.5996, 4.37584, 89.709 )
 [node name="Puzzles" type="Spatial" parent="Models"]
 
 [node name="Puzzle_Domino" parent="Models/Puzzles" instance=ExtResource( 21 )]
-transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 15.3564, 4.35939, 21.3993 )
+transform = Transform( -2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 612.812, 11.0801, 72.798 )
 
 [node name="Puzzle_MorseCode1" parent="Models/Puzzles" instance=ExtResource( 18 )]
-transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 3.19063, 4.36479, 21.6017 )
+transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 2.97368, 4.36479, 21.6017 )
 
 [node name="Puzzle_MorseCode2" parent="Models/Puzzles" instance=ExtResource( 19 )]
-transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 6.71407, 4.43136, 21.5389 )
-__meta__ = {
-"_edit_lock_": true
-}
+transform = Transform( -2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 865.423, 11.0891, 19.9196 )
 
 [node name="PuzzleBathroom" parent="Models/Puzzles" instance=ExtResource( 24 )]
-transform = Transform( 0.237061, 0, -4.91868, 0, 4.78881, 0, 1.01986, 0, -0.0783875, -1.82865, 4.39514, 21.7364 )
+transform = Transform( 0.237061, 0, -4.91868, 0, 4.78881, 0, 1.01986, 0, -0.0783875, -1.82864, 4.39514, 21.7364 )
 
 [node name="Items" type="Spatial" parent="Models"]
 
@@ -1799,7 +1796,7 @@ transform = Transform( 0.0186194, 0, -0.716783, 0, 1, 0, 0.892207, 0, 0.0231763,
 transform = Transform( -0.000538591, -0.0168553, -1.97885, -2.06489, 0.200223, 0, 0.158079, 4.94713, -0.0122376, -6.28034, 4.95654, 22.1436 )
 
 [node name="Puzzle_Roman_Numbers" parent="Models" instance=ExtResource( 20 )]
-transform = Transform( 5.86509e-08, 0, -4.61008, 0, 4.95484, 0, 2.84434, 0, 3.17923e-08, 11.0269, 4.43947, 22.1105 )
+transform = Transform( -2.18557e-07, 0, 6, 0, 6, 0, -5, 0, -2.62268e-07, 864.812, 11.7557, 69.9548 )
 
 [node name="Padlock" parent="Models" instance=ExtResource( 17 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.624717, 0.643499, 25.2142 )
