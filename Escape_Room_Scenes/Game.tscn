@@ -1413,7 +1413,7 @@ autoplay = true
 [node name="Clues" type="Node" parent="."]
 
 [node name="testament" parent="Clues" instance=ExtResource( 24 )]
-transform = Transform( -0.25568, 1.1341, -1.6274, -1.97629, -0.00497596, 0.307026, 0.17005, 1.64736, 1.12129, 298.727, -0.704725, 41.3143 )
+transform = Transform( 0.285877, 0.700449, 1.85139, -1.97629, -0.00496707, 0.307041, 0.112131, -1.87333, 0.691432, 298.727, -0.704725, 41.3143 )
 
 [node name="paternityTest" parent="Clues" instance=ExtResource( 25 )]
 transform = Transform( 0.658668, 1.22679, 0.145366, -1.22526, 0.627703, 0.254392, 0.157743, -0.246908, 1.369, 398.711, 1.99375, -8.17635 )
@@ -1425,10 +1425,10 @@ __meta__ = {
 transform = Transform( -0.0407379, 0.240914, -0.969691, -0.918137, 0.373827, 0.131447, 0.394164, 0.895664, 0.205963, 295.191, 2.62484, -36.8992 )
 
 [node name="PhoneClue2" parent="Clues" instance=ExtResource( 193 )]
-transform = Transform( 0.424957, 0.0566181, -0.419768, -0.0787814, 0.594805, 0.00047163, 0.416178, 0.0547825, 0.428712, 289.97, 2.11216, -40.9775 )
+transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.00047163, 0.275909, 0.0363186, 0.284219, 289.97, 2.11216, -40.9775 )
 
 [node name="poison2" parent="Clues" instance=ExtResource( 194 )]
-transform = Transform( -0.0411055, -0.057111, 0.187213, -0.190145, 0.0570256, -0.0243531, -0.0464255, -0.182993, -0.0660171, 408.454, -0.596375, -32.8007 )
+transform = Transform( 0.183858, 0.0214691, -0.0757335, 0.0787165, -0.0512824, 0.176561, -0.000465836, -0.192118, -0.0555931, 408.127, -0.672775, -32.8007 )
 
 [node name="Models" type="Spatial" parent="."]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 53.0539, -0.637209, 0 )
@@ -1588,7 +1588,7 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 91.5996, 4.37584, 89.709 )
 [node name="Puzzles" type="Spatial" parent="Models"]
 
 [node name="Puzzle_Domino" parent="Models/Puzzles" instance=ExtResource( 21 )]
-transform = Transform( -2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 612.812, 11.0801, 72.798 )
+transform = Transform( -2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 738.693, 11.0801, 72.1719 )
 
 [node name="Puzzle_MorseCode1" parent="Models/Puzzles" instance=ExtResource( 18 )]
 transform = Transform( -2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 2.97368, 4.36479, 21.6017 )
@@ -1790,7 +1790,7 @@ transform = Transform( 8, 0, 0, 0, 8, 0, 0, 0, 8, 64.6953, 1.34275, 32.5467 )
 transform = Transform( 2.63115, 0, 0, 0, 2.12044, 0, 0, 0, 1, 5.97479, 2.10549, 24.5968 )
 
 [node name="Domino_Box" parent="Models" instance=ExtResource( 22 )]
-transform = Transform( 0.0186194, 0, -0.716783, 0, 1, 0, 0.892207, 0, 0.0231763, -3.46816, 0.230514, 25.0666 )
+transform = Transform( 0.0186194, 0, -0.716783, 0, 1, 0, 0.892207, 0, 0.0231763, 750.379, 4.22327, 99.8028 )
 
 [node name="Clock" parent="Models" instance=ExtResource( 16 )]
 transform = Transform( -0.000538591, -0.0168553, -1.97885, -2.06489, 0.200223, 0, 0.158079, 4.94713, -0.0122376, -6.28034, 4.95654, 22.1436 )
@@ -1799,7 +1799,16 @@ transform = Transform( -0.000538591, -0.0168553, -1.97885, -2.06489, 0.200223, 0
 transform = Transform( -2.18557e-07, 0, 6, 0, 6, 0, -5, 0, -2.62268e-07, 864.812, 11.7557, 69.9548 )
 
 [node name="Padlock" parent="Models" instance=ExtResource( 17 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.624717, 0.643499, 25.2142 )
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 7.5117, 0.643499, 25.2142 )
+
+[node name="Padlock2" parent="Models" instance=ExtResource( 17 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 737.19, 5.94659, 72.1348 )
+
+[node name="Padlock3" parent="Models" instance=ExtResource( 17 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 863.23, 6.47055, 69.9046 )
+
+[node name="Padlock4" parent="Models" instance=ExtResource( 17 )]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 867.026, 6.1386, 19.6446 )
 
 [node name="Margarita_Ghost" parent="Models" instance=ExtResource( 26 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -8.4865, -0.853674, 29.5567 )
@@ -6113,7 +6122,7 @@ spot_angle = 58.9513
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 324.431, -0.411436, 23.1187 )
 
 [node name="SpotLight8" type="SpotLight" parent="Billiard room"]
-transform = Transform( 0.307218, 0.941785, 0.136594, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 349.042, 10.2886, 28.3026 )
+transform = Transform( 0.307218, 0.941785, 0.136595, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 349.042, 10.2886, 27.8631 )
 light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
 light_energy = 2.899
 light_indirect_energy = 16.0
