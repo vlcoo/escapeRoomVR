@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/WorldManager.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/RightController.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/LeftController.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Areas/MainMenu.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CylinderMesh" id=1]
@@ -9,12 +10,12 @@ top_radius = 0.2
 bottom_radius = 0.5
 height = 0.2
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=8]
 flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 0.460938, 0.633606, 1, 0.431373 )
 
-[sub_resource type="CylinderMesh" id=3]
+[sub_resource type="CylinderMesh" id=9]
 top_radius = 0.01
 bottom_radius = 0.1
 height = 0.8
@@ -41,22 +42,16 @@ transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107,
 [node name="PlayerCamera" type="ARVRCamera" parent="ViewportContainer/Viewport/ARVROrigin"]
 current = true
 
-[node name="LeftController" parent="ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 2 )]
+[node name="LeftController" parent="ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 3 )]
 
 [node name="RightController" parent="ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 2 )]
-controller_id = 2
 
 [node name="TeleportMesh" type="MeshInstance" parent="."]
 visible = false
 mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+material/0 = SubResource( 8 )
 
 [node name="TeleportPointy" type="MeshInstance" parent="TeleportMesh"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679908, 0 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 2 )
-
-[connection signal="button_pressed" from="ViewportContainer/Viewport/ARVROrigin/LeftController" to="ViewportContainer/Viewport/ARVROrigin/LeftController" method="_on_LeftController_button_pressed"]
-[connection signal="button_release" from="ViewportContainer/Viewport/ARVROrigin/LeftController" to="ViewportContainer/Viewport/ARVROrigin/LeftController" method="_on_LeftController_button_release"]
-[connection signal="button_pressed" from="ViewportContainer/Viewport/ARVROrigin/RightController" to="ViewportContainer/Viewport/ARVROrigin/LeftController" method="_on_RightController_button_pressed"]
-[connection signal="button_release" from="ViewportContainer/Viewport/ARVROrigin/RightController" to="ViewportContainer/Viewport/ARVROrigin/RightController" method="_on_RightController_button_release"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 8 )
