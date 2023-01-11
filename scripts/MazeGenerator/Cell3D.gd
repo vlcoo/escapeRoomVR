@@ -5,9 +5,11 @@ extends Spatial
 # var a = 2
 # var b = "text"
 var open_paths: int = 0
+var nono: Spatial
+
 
 func unlock():
-	$Unlocked.set_visible(true)
+	$PathsNew/Unlocked.set_visible(true)
 
 func add_bin_path(path):
 	open_paths |= path
@@ -15,22 +17,36 @@ func add_bin_path(path):
 
 func update_visuals() -> void:
 	if(open_paths & Global.OPEN_PATHS.RIGHT):
-		$RightPath.visible = true
+		$PathsNew/RightPath.visible = true
 	if(open_paths & Global.OPEN_PATHS.LEFT):
-		$LeftPath.visible = true
+		$PathsNew/LeftPath.visible = true
 	if(open_paths & Global.OPEN_PATHS.UP):
-		$UpPath.visible = true
+		$PathsNew/UpPath.visible = true
 	if(open_paths & Global.OPEN_PATHS.DOWN):
-		$DownPath.visible = true
+		$PathsNew/DownPath.visible = true
 
 func dead_cell():
-	$Unlocked.material.albedo_color = Color.red
+	pass;
+#	$PathsNew/Unlocked.material.albedo_color = Color.red
 
 func essential_cell():
-	$Unlocked.material.albedo_color = Color.green
+	$PathsNew.visible = false
+	$PathsOld.visible = false
+	var newRoom: Spatial = Global.pop_essential_room_rnd()
+	newRoom.set_scale(Vector3(0.20,0.20,0.20))
+	add_child(newRoom)
+	pass;
+func room_cell():
+	$PathsNew.visible = false
+	$PathsOld.visible = false
+	var newRoom: Spatial = Global.pop_normal_room_rnd()
+	newRoom.set_scale(Vector3(0.20,0.20,0.20))
+	add_child(newRoom)
+	pass;
+#	$PathsNew/Unlocked.material.albedo_color = Color.green
 
 func _ready():
-	$Unlocked.material = SpatialMaterial.new()
+#	$PathsNew/Unlocked.material = SpatialMaterial.new()
 	update_visuals()
 
 
