@@ -113,6 +113,8 @@ func teleport():
 func prepare_holding():
 	if held_object == null:
 		pickup_rigidbody()
+	else:
+		throw_rigidbody()
 	hand_pickup_drop_sound.play()
 
 
@@ -176,7 +178,9 @@ func throw_rigidbody():
 func _on_LeftController_button_pressed(button):
 	input_map_L[button] = true
 	
-	if button == Global.INPUT_BUTTONS.TRIGGER:
+	if button == Global.INPUT_BUTTONS.SIDE:
+		prepare_holding()
+	elif button == Global.INPUT_BUTTONS.TRIGGER:
 		prepare_teleport()
 
 
@@ -185,6 +189,8 @@ func _on_RightController_button_pressed(button):
 	
 	if button == Global.INPUT_BUTTONS.SIDE:
 		prepare_holding()
+	elif button == Global.INPUT_BUTTONS.TRIGGER:
+		prepare_teleport()
 
 
 func _on_LeftController_button_release(button):
@@ -197,8 +203,8 @@ func _on_LeftController_button_release(button):
 func _on_RightController_button_release(button):
 	input_map_R[button] = false
 	
-	if button == Global.INPUT_BUTTONS.SIDE:
-		throw_rigidbody()
+	if button == Global.INPUT_BUTTONS.TRIGGER:
+		teleport()
 
 
 func sleep_area_entered(body):
