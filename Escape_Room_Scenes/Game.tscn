@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Left_Controller.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Right_Controller.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LeftController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/RightController.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Movement_Vignette.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Timer.gd" type="Script" id=7]
 [ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]

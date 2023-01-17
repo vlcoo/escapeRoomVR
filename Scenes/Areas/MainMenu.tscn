@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/TerrainBlocks/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TerrainBlocks/Woodboard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Areas/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Interactables/Melon.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Postcard5.fbx" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/WaterMelon/WaterMElon.fbx" type="PackedScene" id=7]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.187705, 0.492055, 0.425645 )
+
+[sub_resource type="CapsuleShape" id=2]
 
 [node name="Terrain" type="Spatial"]
 script = ExtResource( 4 )
@@ -36,3 +44,23 @@ spot_angle = 60.1726
 
 [node name="PlayerSpawn" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56858, 0, 4.55749 )
+
+[node name="VR_Interactable_Rigidbody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.389341, 2.0239 )
+
+[node name="Postcard5" parent="VR_Interactable_Rigidbody" instance=ExtResource( 6 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="VR_Interactable_Rigidbody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199133, 5.96046e-08, 0.0856993 )
+shape = SubResource( 1 )
+
+[node name="VR_Interactable_Rigidbody2" type="RigidBody" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.797696, 1.55781 )
+script = ExtResource( 5 )
+
+[node name="WaterMElon" parent="VR_Interactable_Rigidbody2" instance=ExtResource( 7 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="VR_Interactable_Rigidbody2"]
+shape = SubResource( 2 )
+
+[editable path="VR_Interactable_Rigidbody2/WaterMElon"]
