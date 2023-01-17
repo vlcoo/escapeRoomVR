@@ -1,9 +1,6 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://scripts/Areas/MainMenu.gd" type="Script" id=4]
+[gd_scene format=2]
 
 [node name="Terrain" type="Spatial"]
-script = ExtResource( 4 )
 
 [node name="PlayerSpawn" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56858, 0, 4.55749 )

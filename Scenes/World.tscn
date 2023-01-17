@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/WorldManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/RightController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LeftController.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Areas/MainMenu.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CapsuleShape" id=10]
+radius = 0.822466
+height = 1.55626
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.2
@@ -45,6 +49,13 @@ current = true
 [node name="LeftController" parent="ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 3 )]
 
 [node name="RightController" parent="ViewportContainer/Viewport/ARVROrigin" instance=ExtResource( 2 )]
+
+[node name="Area" type="Area" parent="ViewportContainer/Viewport/ARVROrigin"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="ViewportContainer/Viewport/ARVROrigin/Area"]
+shape = SubResource( 10 )
 
 [node name="TeleportMesh" type="MeshInstance" parent="."]
 visible = false
