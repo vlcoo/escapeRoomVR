@@ -16,7 +16,7 @@ var prior_controller_velocities = []
 var held_object = null
 # A dictionary to hold data for the currently held RigidBody object. This is used to
 # reset a RigidBody's mode, layer, and mask when the object is no longer held.
-var held_object_data = {"mode":RigidBody.MODE_RIGID, "layer":1, "mask":1}
+var held_object_data = {"mode":RigidBody.MODE_RIGID, "layer":1, "mask":1, "rotation":Vector3.ZERO}
 
 # A variable to hold the Area node used to grab objects.
 var grab_area
@@ -79,7 +79,7 @@ func _ready():
 	#
 	# The teleport mesh is a child of the game scene so it is not effected changes in the VR controller
 	# and so the teleport mesh can be used by both VR controllers.
-	teleport_mesh = get_tree().root.get_node("Game/Teleport_Mesh")
+	teleport_mesh = get_tree().root.get_node("World/TeleportMesh")
 
 	# Set teleport_button_down variable to false.
 	teleport_button_down = false
@@ -156,9 +156,6 @@ func _physics_process(delta):
 		# Apply the cached held object's scale. This keeps the object from changing scale when grabbed by
 		# the VR controller.
 		held_object.scale = held_scale
-	
-	# Call the _physics_process_directional_movement function to the player can move using the trackpad/joystick. 
-	_physics_process_directional_movement(delta);
 
 
 # This function does a rough calculate of the VR controller's velocity by calculating the relative changes
@@ -236,8 +233,8 @@ func _physics_process_directional_movement(delta):
 	# of the player camera.
 	# We can use this to move relative to the rotation of the player camera, so that when you push forward
 	# on the joystick/trackpad, you move in the direction that the player camera is facing.
-	var forward_direction = get_parent().get_node("Player_Camera").global_transform.basis.z.normalized()
-	var right_direction = get_parent().get_node("Player_Camera").global_transform.basis.x.normalized()
+	var forward_direction = get_parent().get_node("PlayerCamera").global_transform.basis.z.normalized()
+	var right_direction = get_parent().get_node("PlayerCamera").global_transform.basis.x.normalized()
 	
 	# Because the trackpad and the joystick will both move the player, we can add them together and normalize
 	# the result, giving the combined movement direction
@@ -271,24 +268,18 @@ func button_pressed(button_index):
 	# Other VR controllers may require adjusting the index values for proper button placement.
 	
 	# If the trigger is pressed...
-	if button_index == 15:
+	if button_index == Global.INPUT_BUTTONS.TRIGGER:
 		# Call the _on_button_pressed_trigger function.
 		_on_button_pressed_trigger()
 	
 	# If the grab button is pressed...
-	elif button_index == 2:
+	elif button_index == Global.INPUT_BUTTONS.SIDE:
 		# Call the _on_button_pressed_grab function.
 		_on_button_pressed_grab()
 		
 	# If the menu button on the VR controller is pressed...
-	elif button_index == 1:
-		# Call the _on_button_pressed_menu function.
-		_on_button_pressed_menu()
-#
-#	elif button_index == 14:
-#		$"../..".diag_ui.get_node("DialogNode").next_event(false)
-		
-		
+	elif button_index == Global.INPUT_BUTTONS.MENU:
+		pass
 
 
 # This function is called when the trigger button on the VR controller is pressed.
@@ -309,7 +300,7 @@ func _on_button_pressed_trigger():
 	# If the VR controller IS currently holding something...
 	else:
 		# If the object the VR controller is holding extends VR_Interactable_RigidBody...
-		if held_object is VR_Interactable_Rigidbody:
+		if held_object is VRInteractable:
 			# Call the interact function so the object can do whatever it does when interacted with.
 			held_object.interact()
 
@@ -326,12 +317,15 @@ func _on_button_pressed_grab():
 	# and the grab button is pressed, then we want to attempt to pickup a RigidBody node.
 	if held_object == null:
 		_pickup_rigidbody()
-	# If the VR controller is holding something, then held_object will NOT be null. If this happens
-	# and the grab button is pressed, then we want to drop/throw the held object.
-	else:
-		_throw_rigidbody()
 	
 	# play the pick-up/drop noise
+	hand_pickup_drop_sound.play()
+
+
+func _on_button_released_grab():
+	if held_object != null:
+		_throw_rigidbody()
+	
 	hand_pickup_drop_sound.play()
 
 
@@ -392,6 +386,7 @@ func _pickup_rigidbody():
 		held_object_data["mode"] = held_object.mode
 		held_object_data["layer"] = held_object.collision_layer
 		held_object_data["mask"] = held_object.collision_mask
+		held_object_data["rotation"] = held_object.global_rotation
 		
 		# Set the RigidBody's mode to Static, change it's collision layer to zero, and change it's collision mask
 		# to zero. This will make it where the RigidBody cannot interact with the physics world when held by
@@ -406,7 +401,7 @@ func _pickup_rigidbody():
 		grab_raycast.visible = false
 		
 		# If the held object extends the VR_Interactable_Rigidbody class...
-		if held_object is VR_Interactable_Rigidbody:
+		if held_object is VRInteractable:
 			# Call the held object's picked_up function, and set the controller variable to this VR controller.
 			held_object.controller = self
 			held_object.picked_up()
@@ -428,7 +423,7 @@ func _throw_rigidbody():
 	held_object.apply_impulse(Vector3(0, 0, 0), controller_velocity)
 	
 	# If the held object extends the VR_Interactable_Rigidbody class...
-	if held_object is VR_Interactable_Rigidbody:
+	if held_object is VRInteractable:
 		# Call the held object's dropped function, and set the controller variable to null.
 		held_object.dropped()
 		held_object.controller = null
@@ -443,29 +438,14 @@ func _throw_rigidbody():
 		grab_raycast.visible = true
 
 
-# This function is called when the menu button on the VR controller is pressed.
-func _on_button_pressed_menu():
-	# If the current grab mode is set to Area mode...
-	if grab_mode == "AREA":
-		# Change the grab mode to Raycast mode.
-		grab_mode = "RAYCAST"
-		# If the VR controller is not holding anything, then make the grab_raycast mesh visible.
-		if held_object == null:
-			grab_raycast.visible = true
-	
-	# If the current grab mode is set to Raycast mode...
-	elif grab_mode == "RAYCAST":
-		# Change the grab mode to Area mode.
-		grab_mode = "AREA"
-		# Make the grab_raycast mesh invisible.
-		grab_raycast.visible = false
-
-
 # This function is called when any of the VR buttons are released.
 func button_released(button_index):
 	# If the trigger button is released...
-	if button_index == 15:
+	if button_index == Global.INPUT_BUTTONS.TRIGGER:
 		_on_button_released_trigger()
+	
+	elif button_index == Global.INPUT_BUTTONS.SIDE:
+		_on_button_released_grab()
 
 
 # This function is called when the trigger on the VR controller is released.
@@ -479,7 +459,7 @@ func _on_button_released_trigger():
 			# VR headsets use room tracking, which allows the camera to be offset from the ARVR origin.
 			# To work around this, we just need to figure out the difference in position from the camera
 			# to the ARVR origin node.
-			var camera_offset = get_parent().get_node("Player_Camera").global_transform.origin - get_parent().global_transform.origin
+			var camera_offset = get_parent().get_node("PlayerCamera").global_transform.origin - get_parent().global_transform.origin
 			# However, we do not want to offset according to the player's height, so we remove the difference on the Y axis.
 			# If we did not do this, then the player's head would be level with the ground.
 			camera_offset.y = 0

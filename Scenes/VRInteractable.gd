@@ -1,4 +1,4 @@
-class_name VR_Interactable_Rigidbody
+class_name VRInteractable
 extends RigidBody
 
 # The controller that is currently holding this object, if there is one.

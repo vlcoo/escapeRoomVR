@@ -70,9 +70,9 @@ _global_script_classes=[ {
 "path": "res://scripts/MazeGenerator/MazeGeneratorPoint.gd"
 }, {
 "base": "RigidBody",
-"class": "VR_Interactable_Rigidbody",
+"class": "VRInteractable",
 "language": "GDScript",
-"path": "res://Scenes/VR_Interactable_Rigidbody.gd"
+"path": "res://Scenes/VRInteractable.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -87,7 +87,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "HistoryRow": "",
 "MazeGeneratorPoint": "",
-"VR_Interactable_Rigidbody": ""
+"VRInteractable": ""
 }
 
 [application]
