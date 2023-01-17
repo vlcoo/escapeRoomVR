@@ -100,6 +100,7 @@ transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.0
 transform = Transform( 0.183858, 0.0214691, -0.0757335, 0.0787165, -0.0512824, 0.176561, -0.000465836, -0.192118, -0.0555931, 408.127, -0.672775, -32.8007 )
 
 [node name="Dormitory" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.728, -0.900154, -40.3544 )
 
 [node name="Dining room" parent="." instance=ExtResource( 2 )]
 
