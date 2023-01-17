@@ -46,6 +46,7 @@ albedo_texture = ExtResource( 9 )
 albedo_texture = ExtResource( 11 )
 
 [node name="Billiard room" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Wall11" type="CSGBox" parent="."]
 transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 8.71783, -1.38366, 4.86275 )

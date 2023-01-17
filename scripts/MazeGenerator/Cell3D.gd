@@ -5,7 +5,8 @@ extends Spatial
 # var a = 2
 # var b = "text"
 var open_paths: int = 0
-var nono: Spatial
+var room_degrees: int = 0
+var room_degrees_offset: int = 90
 
 
 func unlock():
@@ -18,12 +19,20 @@ func add_bin_path(path):
 func update_visuals() -> void:
 	if(open_paths & Global.OPEN_PATHS.RIGHT):
 		$PathsNew/RightPath.visible = true
+		room_degrees = 0
+		
 	if(open_paths & Global.OPEN_PATHS.LEFT):
 		$PathsNew/LeftPath.visible = true
+		room_degrees = 180
+		
 	if(open_paths & Global.OPEN_PATHS.UP):
 		$PathsNew/UpPath.visible = true
+		room_degrees = 90
+		
 	if(open_paths & Global.OPEN_PATHS.DOWN):
 		$PathsNew/DownPath.visible = true
+		room_degrees = 270
+		
 
 func dead_cell():
 	pass;
@@ -35,6 +44,7 @@ func essential_cell():
 	var newRoom: Spatial = Global.pop_essential_room_rnd()
 	newRoom.set_scale(Vector3(0.20,0.20,0.20))
 	add_child(newRoom)
+	newRoom.rotation_degrees.y = room_degrees_offset + room_degrees
 	pass;
 func room_cell():
 	$PathsNew.visible = false
@@ -42,6 +52,7 @@ func room_cell():
 	var newRoom: Spatial = Global.pop_normal_room_rnd()
 	newRoom.set_scale(Vector3(0.20,0.20,0.20))
 	add_child(newRoom)
+	newRoom.rotation_degrees.y = room_degrees_offset + room_degrees
 	pass;
 #	$PathsNew/Unlocked.material.albedo_color = Color.green
 

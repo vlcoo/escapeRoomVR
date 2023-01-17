@@ -48,6 +48,7 @@ albedo_texture = ExtResource( 13 )
 albedo_texture = ExtResource( 12 )
 
 [node name="Library" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Wall10" type="CSGBox" parent="."]
 transform = Transform( 3.62864e-09, 4.20691, 0.0147921, 0.083014, -1.83891e-07, 0, 1.07033e-11, 0.012409, -5.01483, 8.31191, -1.2104, 4.92868 )
