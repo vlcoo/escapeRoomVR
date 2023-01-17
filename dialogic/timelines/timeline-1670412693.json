@@ -1,6 +1,27 @@
 {
 	"events": [
 		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
 			"character": "character-1668598873.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -261,7 +282,28 @@
 			"character": "character-1669756551.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okay, I will make sure to get to the buttom of it."
+			"text": "Okay, I will make sure to get to the bottom of it."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1668598873.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
 		}
 	],
 	"metadata": {
