@@ -94,7 +94,7 @@ func prepare_teleport():
 			teleport_mesh.visible = true
 			teleport_raycast.visible = true
 	else:
-		if held_object is VR_Interactable_Rigidbody:
+		if held_object is VRInteractable:
 			held_object.interact()
 
 
@@ -148,7 +148,7 @@ func pickup_rigidbody():
 		hand_mesh.visible = false
 		grab_raycast.visible = false
 		
-		if held_object is VR_Interactable_Rigidbody:
+		if held_object is VRInteractable:
 			held_object.controller = self
 			held_object.picked_up()
 
@@ -162,7 +162,7 @@ func throw_rigidbody():
 	held_object.collision_mask = held_object_data["mask"]
 	held_object.apply_impulse(Vector3(0, 0, 0), controller_velocity)
 	
-	if held_object is VR_Interactable_Rigidbody:
+	if held_object is VRInteractable:
 		held_object.dropped()
 		held_object.controller = null
 	

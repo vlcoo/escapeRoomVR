@@ -202,6 +202,7 @@ func _physics_process_update_controller_velocity(delta):
 
 # This function handles moving the player when the joystick/touchpad is changed.
 func _physics_process_directional_movement(delta):
+	return
 	# NOTE: These joystick axis index values are based on the Windows-Mixed-Reality VR controller.
 	# Other VR controllers may require adjusting the joystick index values.
 	
@@ -276,11 +277,41 @@ func button_pressed(button_index):
 	elif button_index == Global.INPUT_BUTTONS.SIDE:
 		# Call the _on_button_pressed_grab function.
 		_on_button_pressed_grab()
+	
+	elif button_index == Global.INPUT_BUTTONS.TOUCHPAD:
+		_on_button_pressed_touchpad()
 		
 	# If the menu button on the VR controller is pressed...
 	elif button_index == Global.INPUT_BUTTONS.MENU:
-		pass
+		var a = InputEventAction.new()
+		a.action = "ui_accept"
+		a.pressed = true
+		Input.parse_input_event(a)
 
+# handling UI navigation...
+func _on_button_pressed_touchpad():
+	var trackpad_vector = Vector2(-get_joystick_axis(Global.INPUT_AXIS.TOUCHPAD_X), get_joystick_axis(Global.INPUT_AXIS.TOUCHPAD_Y))
+	if trackpad_vector.length() < CONTROLLER_DEADZONE:
+		return
+	
+	simulate_key_based_on_vector2(trackpad_vector)
+
+func simulate_key_based_on_vector2(vector: Vector2):
+	var a = InputEventAction.new()
+	
+	if abs(vector.x) > abs(vector.y):
+		if vector.x > 0:
+			a.action = "ui_right"
+		else:
+			a.action = "ui_left"
+	else:
+		if vector.y > 0:
+			a.action = "ui_up"
+		else:
+			a.action = "ui_down"
+	
+	a.pressed = true
+	Input.parse_input_event(a)
 
 # This function is called when the trigger button on the VR controller is pressed.
 func _on_button_pressed_trigger():
