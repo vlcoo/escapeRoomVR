@@ -22,6 +22,14 @@
 			"z_index": 4
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/1.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -35,7 +43,7 @@
 		},
 		{
 			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
+			"hide_dialogbox": false,
 			"wait_seconds": 1
 		},
 		{
@@ -43,6 +51,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Excuse me?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/2.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -57,6 +73,14 @@
 			"text": "Yes, my German is so bad unfortunately.\n\nMy name is [player_name] and I have been hired to solve the mystery of the 3 murders’ case."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/3.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -67,6 +91,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yeah , I can see that.\n\nYour last name is Müller, isn’t it?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/4.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -81,6 +113,14 @@
 			"text": "I have already talked with Margarita. Did you know her?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/5.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -91,6 +131,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yes, she was."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/6.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -105,6 +153,14 @@
 			"text": "Yes, unfortunately."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/7.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -115,6 +171,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yes , that’s what I am trying to find out. Can I ask you some questions?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/8.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -129,6 +193,14 @@
 			"text": "Let’s start with the basics.\n\nWhat were you doing in the mansion yesterday?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/9.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -139,6 +211,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Is Pedro Sanchez your boss?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/10.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -153,6 +233,14 @@
 			"text": "Yeah, I know.\n\nWhy did he invite you? Did you have a meeting?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/11.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -163,6 +251,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Oh so you got along very well with him."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/12.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -177,6 +273,14 @@
 			"text": "What do you mean by “at heart”?\n\nWhat happened after dinner?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/13.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -187,6 +291,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Are you sure it was Nicole’s handbag?\n\nI understand that she is a very healthy girl. I don’t think she is into that."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/14.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
@@ -201,16 +313,46 @@
 			"text": "Okay , so what happened after that?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/15.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668598946.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I went to look for her in the kitchen but she was not there anymore.\n\nHowever, Pedro was there, handling some suspicious pills in his hands.\n\nI couldn’t believe what I was seeing. I had never imagined Pedro doing that.\n\nI left the room stealthily so he could not see me and I went to look for Nicole again. The last thing I remember is me entering the balcony."
+			"text": "I went to look for her in the kitchen but she was not there anymore.\n\nHowever, Pedro was there, handling some suspicious pills in his hands.\n\nI couldn’t believe what I was seeing. I had never imagined Pedro doing that."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/16.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668598946.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I left the room stealthily so he could not see me and I went to look for Nicole again. The last thing I remember is me entering the balcony."
 		},
 		{
 			"character": "character-1669756551.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Have you ever had any problem with any of the guests?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Jurgen/17.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668598946.json",
