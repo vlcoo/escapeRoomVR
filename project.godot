@@ -100,10 +100,6 @@ config/icon="res://Assets/Characters/pedro.png"
 [autoload]
 
 Global="*res://scripts/MazeGenerator/Global.gd"
-
-[autoload]
-
-Global="*res://scripts/MazeGenerator/Global.gd"
 Errors="*res://scripts/MazeGenerator/errors.gd"
 
 [display]
