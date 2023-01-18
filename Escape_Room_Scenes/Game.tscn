@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TerrainBlocks/Dining room.tscn" type="PackedScene" id=2]
@@ -14,9 +14,10 @@
 [ext_resource path="res://Scenes/TerrainBlocks/Billiard room.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/TerrainBlocks/Lounge.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/TerrainBlocks/Kitchen.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=15]
+[ext_resource path="res://Assets/3D assets/MorseCode1.fbx" type="PackedScene" id=15]
 [ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=16]
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=17]
+[ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=18]
 [ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
 [ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
@@ -114,9 +115,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.728, -0.900154, -40.3544 )
 
 [node name="Lounge" parent="." instance=ExtResource( 13 )]
 
+[node name="MorseCode1" parent="Lounge" instance=ExtResource( 15 )]
+transform = Transform( -0.494672, -2.08689, -2.05766, 4.93884, -0.0246882, 0, -0.437833, -1.8471, 2.32478, 346.238, 0.394577, -42.0827 )
+
 [node name="Bathroom" parent="." instance=ExtResource( 8 )]
 
-[node name="Dominos" parent="Bathroom" instance=ExtResource( 15 )]
+[node name="Dominos" parent="Bathroom" instance=ExtResource( 18 )]
 transform = Transform( -0.141319, 0, 2.99667, 0, 3, 0, -2.99667, 0, -0.141319, 399.051, 3.13873, 28.1509 )
 
 [node name="Kitchen" parent="." instance=ExtResource( 14 )]
