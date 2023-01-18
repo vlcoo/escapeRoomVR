@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/bookshelf.fbx" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=6]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=7]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=8]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lustre.fbx" type="PackedScene" id=9]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_basse.fbx" type="PackedScene" id=10]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=11]
@@ -482,11 +482,10 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 82 )
 
-[node name="operation_door5" type="Spatial" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.224446, 0, -3.19212, 0, 3.2, 0, 3.19212, 0, 0.224446, 348.965, -1.17416, 28.9209 )
-
-[node name="lustre4" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="lustre4" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.29999, 0, 0.00826951, 0, 2.3, 0, -0.00826951, 0, -2.29999, 326.14, -4.88652, 46.4598 )
+
+[node name="operation_door" parent="." instance=ExtResource( 8 )]
 
 [node name="SpotLight7" type="SpotLight" parent="."]
 transform = Transform( -0.344235, -0.937918, -0.0425705, -0.0577731, -0.0240954, 0.998039, -0.937104, 0.346019, -0.0458919, 349.067, 8.98547, 38.5979 )
@@ -497,7 +496,7 @@ light_specular = 16.0
 spot_range = 12.8067
 spot_angle = 58.9513
 
-[node name="lamp_murale_boule6" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="lamp_murale_boule6" parent="." instance=ExtResource( 7 )]
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 324.431, -0.411436, 23.1187 )
 
 [node name="SpotLight8" type="SpotLight" parent="."]
@@ -509,7 +508,7 @@ light_specular = 16.0
 spot_range = 25.4727
 spot_angle = 36.0813
 
-[node name="Billiard" type="Spatial" parent="." instance=ExtResource( 11 )]
+[node name="Billiard" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.00551501, 0, 4, 0, 4, 0, -4, 0, 0.00551501, 341.197, -0.840996, 57.6992 )
 
 [node name="alfombra3" type="CSGBox" parent="."]
@@ -518,20 +517,20 @@ height = 1.83523
 depth = 2.55629
 material = SubResource( 83 )
 
-[node name="bookshelf7" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="bookshelf7" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 343.266, -1.03627, 47.0316 )
 
-[node name="bookshelf8" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="bookshelf8" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 347.563, -1.03627, 47.0316 )
 
-[node name="bookshelf9" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="bookshelf9" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 351.931, -1.03627, 47.0316 )
 
-[node name="3Seat5" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="3Seat5" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.938955, 0, 0.00164967, 0, 1.4, 0, 0.0471841, 0, -1.39848, 354.334, -1.12588, 33.5085 )
 
-[node name="3Seat6" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="3Seat6" parent="." instance=ExtResource( 6 )]
 transform = Transform( -0.0172505, 0, 1.39989, 0, 1.4, 0, -1.39989, 0, -0.0172505, 359.267, -1.12588, 39.7566 )
 
-[node name="table_basse3" type="Spatial" parent="." instance=ExtResource( 10 )]
+[node name="table_basse3" parent="." instance=ExtResource( 10 )]
 transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29999, 335.352, -0.872056, 24.2358 )
