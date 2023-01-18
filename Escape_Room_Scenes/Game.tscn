@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TerrainBlocks/Dining room.tscn" type="PackedScene" id=2]
@@ -14,9 +14,6 @@
 [ext_resource path="res://Scenes/TerrainBlocks/Billiard room.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/TerrainBlocks/Lounge.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/TerrainBlocks/Kitchen.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=15]
-[ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=16]
-[ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=17]
 [ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
 [ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
@@ -102,9 +99,6 @@ transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.0
 [node name="poison2" parent="Clues" instance=ExtResource( 194 )]
 transform = Transform( 0.183858, 0.0214691, -0.0757335, 0.0787165, -0.0512824, 0.176561, -0.000465836, -0.192118, -0.0555931, 408.127, -0.672775, -32.8007 )
 
-[node name="MorseCode2" parent="Clues" instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 345.984, 11.7536, -22.3033 )
-
 [node name="Dormitory" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.728, -0.900154, -40.3544 )
 
@@ -116,24 +110,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.728, -0.900154, -40.3544 )
 
 [node name="Bathroom" parent="." instance=ExtResource( 8 )]
 
-[node name="Dominos" parent="Bathroom" instance=ExtResource( 15 )]
-transform = Transform( -0.141319, 0, 2.99667, 0, 3, 0, -2.99667, 0, -0.141319, 399.051, 3.13873, 28.1509 )
-
 [node name="Kitchen" parent="." instance=ExtResource( 14 )]
 
 [node name="Garage" parent="." instance=ExtResource( 9 )]
-
-[node name="RomanNumbers" parent="Garage" instance=ExtResource( 17 )]
-transform = Transform( 0.141215, 0, -2.99667, 0, 3, 0, 2.99667, 0, 0.141215, 399.187, 2.91487, 8.1106 )
 
 [node name="Stairs" parent="." instance=ExtResource( 10 )]
 
 [node name="CorridorTemplate" parent="." instance=ExtResource( 11 )]
 
 [node name="Billiard room" parent="." instance=ExtResource( 12 )]
-
-[node name="MorseCode2" parent="Billiard room" instance=ExtResource( 16 )]
-transform = Transform( -0.217156, 0, 2.99213, 0, 3, 0, -2.99213, 0, -0.217156, 348.745, 3.86483, 28.746 )
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
