@@ -18,3 +18,27 @@ enum OPEN_PATHS {
 	LEFT	= 1 << 2, #0100
 	UP		= 1 << 3  #1000
 }
+
+var AVAILABLE_NORMAL_ROOMS: Array = []
+var AVAILABLE_ESSENTIAL_ROOMS: Array = []
+
+func push_normal_room(pck_scn: PackedScene):
+	AVAILABLE_NORMAL_ROOMS.append(pck_scn);
+	pass
+	
+func push_normal_room_array(pck_scn_arr: Array):
+	AVAILABLE_NORMAL_ROOMS.append_array(pck_scn_arr);
+	pass
+	
+func push_essential_room(pck_scn: PackedScene):
+	AVAILABLE_ESSENTIAL_ROOMS.append(pck_scn);
+	
+func push_essential_room_array(pck_scn_arr: Array):
+	AVAILABLE_ESSENTIAL_ROOMS.append_array(pck_scn_arr);
+	
+	
+func pop_essential_room_rnd() -> Spatial:
+	return AVAILABLE_ESSENTIAL_ROOMS.pop_at(randi()%AVAILABLE_ESSENTIAL_ROOMS.size()).instance()
+	
+func pop_normal_room_rnd() -> Spatial:
+	return AVAILABLE_NORMAL_ROOMS.pop_at(randi()%AVAILABLE_NORMAL_ROOMS.size()).instance()

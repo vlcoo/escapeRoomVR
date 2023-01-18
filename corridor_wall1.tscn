@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Corridors/corridor_wall1.material" type="Material" id=1]
+[ext_resource path="res://Assets/Corridors/corridor_wall1.fbx" type="PackedScene" id=2]
+
+[node name="corridor_wall1" instance=ExtResource( 2 )]
+
+[node name="bannister_01" parent="RootNode" index="0"]
+material/0 = ExtResource( 1 )

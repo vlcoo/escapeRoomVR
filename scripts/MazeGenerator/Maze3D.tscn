@@ -1,9 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Maze3D.gd" type="Script" id=1]
+[ext_resource path="res://scripts/MazeGenerator/Maze3D.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Maze/Essential/Billiard room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Maze/Normal/Dining room.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Maze/Essential/Bathroom.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Maze/Essential/Garage.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Maze/Normal/Dormitory.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Maze/Normal/Library.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Maze/Normal/Lounge.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Maze/Normal/Kitchen.tscn" type="PackedScene" id=9]
 
 [node name="Maze3D" type="Spatial"]
 script = ExtResource( 1 )
+essential_rooms = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ]
+normal_rooms = [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.99996, -0.00715236, 0.00538688, -0.00314831, 0.282351, 0.959306, -0.0083823, -0.959284, 0.282317, 9.43365, 16.1136, 16.612 )
+transform = Transform( 0.99996, -0.00715237, 0.00538688, -0.00314831, 0.282351, 0.959306, -0.0083823, -0.959284, 0.282317, 5.23255, 10.6872, 12.0017 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 16, 0 )
+light_energy = 0.4
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( 4.37114e-08, 7.54979e-08, -1, -1, 7.54979e-08, -4.37114e-08, 7.54979e-08, 1, 7.54979e-08, 0, 16, 0 )
+light_energy = 0.4
+
+[node name="DirectionalLight3" type="DirectionalLight" parent="."]
+transform = Transform( -1.19209e-07, 4.37114e-08, 1, 1, 7.54979e-08, 1.19209e-07, -7.54979e-08, 1, -4.37114e-08, 0, 16, 0 )
+light_energy = 0.4
+
+[node name="DirectionalLight4" type="DirectionalLight" parent="."]
+transform = Transform( 1, 4.37114e-08, -1.91069e-15, 0, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 16, 0 )
+light_energy = 0.4
+
+[node name="DirectionalLight5" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, 0, 16, 0 )
+light_energy = 0.4
+
+[node name="DirectionalLight6" type="DirectionalLight" parent="."]
+transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 16, 0 )
+light_energy = 0.4
