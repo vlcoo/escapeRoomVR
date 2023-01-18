@@ -17,12 +17,14 @@ func _ready():
 		OS.vsync_enabled = false
 		Engine.iterations_per_second = 90
 	
-	current_area = $Terrain
+	load_area("res://scripts/MazeGenerator/Maze3D.tscn", false)
 
 
-func load_area(which):
-	var new_area = load(which)
-	add_child(new_area)
-	$Viewport/ARVROrigin.translation = new_area.get_node("PlayerSpawn").translation
-	current_area = new_area
-	remove_child(current_area)
+func load_area(which, also_remove_current: bool = true):
+	var scene_trs = load(which)
+	var scene = scene_trs.instance()
+	add_child(scene)
+	$ViewportContainer/Viewport/ARVROrigin.translation = scene.get_node("PlayerSpawn").translation
+	if also_remove_current:
+		remove_child(current_area)
+	current_area = scene

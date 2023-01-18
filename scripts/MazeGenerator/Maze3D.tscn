@@ -41,3 +41,6 @@ light_energy = 0.4
 [node name="DirectionalLight6" type="DirectionalLight" parent="."]
 transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 16, 0 )
 light_energy = 0.4
+
+[node name="PlayerSpawn" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30 )
