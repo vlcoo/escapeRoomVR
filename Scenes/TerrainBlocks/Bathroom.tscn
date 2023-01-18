@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/tabledop.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Assets/BathroomPack/Meshes/ToiletBrush.FBX" type="PackedScene" id=12]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=13]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=14]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/BathroomPack/Meshes/Toilet.FBX" type="PackedScene" id=15]
 
 [sub_resource type="SpatialMaterial" id=49]
@@ -353,17 +353,16 @@ height = 1.83523
 depth = 2.29625
 material = SubResource( 63 )
 
-[node name="etagere2" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="etagere2" parent="." instance=ExtResource( 6 )]
 transform = Transform( -3.19945, 0, 0.0589738, 0, 3.2, 0, -0.0589738, 0, -3.19945, 387.745, -1.2239, 45.3714 )
 
-[node name="evier3" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="evier3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.0892938, 0, -3.19875, 0, 3.2, 0, 3.19875, 0, 0.0892938, 393.44, -1.23114, 46.4676 )
 
-[node name="evier4" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="evier4" parent="." instance=ExtResource( 7 )]
 transform = Transform( -3.19965, 0, -0.0473597, 0, 3.2, 0, 0.0473597, 0, -3.19965, 388.676, -1.23114, 38.563 )
 
-[node name="operation_door6" type="Spatial" parent="." instance=ExtResource( 14 )]
-transform = Transform( 0.283127, 0, -3.18745, 0, 3.2, 0, 3.18745, 0, 0.283127, 399.364, -1.17416, 28.239 )
+[node name="operation_door" parent="." instance=ExtResource( 14 )]
 
 [node name="SpotLight10" type="SpotLight" parent="."]
 transform = Transform( -0.361247, -0.931386, -0.0449622, -0.1562, 0.0129059, 0.987641, -0.919294, 0.363806, -0.150145, 390.257, 12.5337, 37.0266 )
@@ -383,10 +382,10 @@ light_specular = 16.0
 spot_range = 15.8083
 spot_angle = 35.9264
 
-[node name="lamp_murale_boule8" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="lamp_murale_boule8" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.15895, 3.14758, 0.294278, 0.496124, 391.62, -3.33075, 13.6621 )
 
-[node name="lamp_murale_boule10" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="lamp_murale_boule10" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.15895, 3.14758, 0.294278, 0.496124, 401.837, -3.87461, 3.50917 )
 
 [node name="SpotLight11" type="SpotLight" parent="."]
@@ -398,7 +397,7 @@ light_specular = 16.0
 spot_range = 15.8083
 spot_angle = 35.9264
 
-[node name="lamp_murale_boule9" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="lamp_murale_boule9" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.15895, 3.14758, 0.294278, 0.496124, 406.156, -3.75313, 7.07914 )
 
 [node name="alfombra4" type="CSGBox" parent="."]
@@ -407,32 +406,32 @@ height = 0.862186
 depth = 1.44281
 material = SubResource( 51 )
 
-[node name="Toilet" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="Toilet" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1.49646, 0, 0.102911, 0, 1.5, 0, -0.102911, 0, 1.49646, 388.111, -0.981389, 32.826 )
 
-[node name="ToiletBrush" type="Spatial" parent="." instance=ExtResource( 12 )]
+[node name="ToiletBrush" parent="." instance=ExtResource( 12 )]
 transform = Transform( -3.99956, 0, -0.0591997, 0, 4, 0, 0.0591997, 0, -3.99956, 389.691, 2.78329, 30.8951 )
 
-[node name="ToiletRollHolder" type="Spatial" parent="." instance=ExtResource( 8 )]
+[node name="ToiletRollHolder" parent="." instance=ExtResource( 8 )]
 transform = Transform( 2.99946, 0, -0.0572776, 0, 3, 0, 0.0572776, 0, 2.99946, 387.996, 2.60987, 36.0391 )
 
-[node name="ToiletRoll" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="ToiletRoll" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.99967, 0, -0.0443998, 0, 3, 0, 0.0443998, 0, -2.99967, 387.323, 4.2158, 45.0602 )
 
-[node name="ToiletRoll2" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="ToiletRoll2" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.99967, 0, -0.0443998, 0, 3, 0, 0.0443998, 0, -2.99967, 386.998, 4.2158, 44.6978 )
 
-[node name="ToiletRoll3" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="ToiletRoll3" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.99967, 0, -0.0443998, 0, 3, 0, 0.0443998, 0, -2.99967, 387.252, 4.2158, 44.2696 )
 
-[node name="ToiletRoll4" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="ToiletRoll4" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.99967, 0, -0.0443998, 0, 3, 0, 0.0443998, 0, -2.99967, 387.084, 4.2158, 45.8737 )
 
-[node name="ToiletRoll5" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="ToiletRoll5" parent="." instance=ExtResource( 9 )]
 transform = Transform( -2.99967, 0, -0.0443998, 0, 3, 0, 0.0443998, 0, -2.99967, 387.094, 4.2158, 46.5424 )
 
-[node name="tabledop2" type="Spatial" parent="." instance=ExtResource( 11 )]
+[node name="tabledop2" parent="." instance=ExtResource( 11 )]
 transform = Transform( -3.19965, 0, -0.0473597, 0, 3.2, 0, 0.0473597, 0, -3.19965, 408.435, -0.982779, 32.7482 )
 
-[node name="plantravaiUpl2" type="Spatial" parent="." instance=ExtResource( 10 )]
+[node name="plantravaiUpl2" parent="." instance=ExtResource( 10 )]
 transform = Transform( -3.19999, 0, -0.0104448, 0, 3.2, 0, 0.0104448, 0, -3.19999, 405.617, -6.53404, 33.6641 )

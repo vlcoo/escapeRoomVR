@@ -9,7 +9,7 @@
 [ext_resource path="res://Assets/Metal Barrels/Textures/barrel4_yellow_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Metal Barrels/Textures/red_barrel_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=8]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=9]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=10]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Realistic Car/Model/Car.fbx" type="PackedScene" id=11]
 
 [sub_resource type="SpatialMaterial" id=54]
@@ -422,8 +422,7 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 64 )
 
-[node name="operation_door8" type="Spatial" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 398.888, -1.17416, 7.84036 )
+[node name="operation_door" parent="." instance=ExtResource( 10 )]
 
 [node name="SpotLight9" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427352, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503238, 397.932, 8.09914, 7.38824 )
@@ -452,7 +451,7 @@ mesh = ExtResource( 4 )
 skeleton = NodePath("../lamp_murale_boule8")
 material/0 = SubResource( 57 )
 
-[node name="lamp_murale_boule8" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="lamp_murale_boule8" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 394.246, -0.539683, 32.1247 )
 
 [node name="barrel_LP" type="MeshInstance" parent="."]
@@ -461,7 +460,7 @@ mesh = ExtResource( 4 )
 skeleton = NodePath("../Car")
 material/0 = SubResource( 56 )
 
-[node name="Car" type="Spatial" parent="." instance=ExtResource( 11 )]
+[node name="Car" parent="." instance=ExtResource( 11 )]
 transform = Transform( -1.83147, 0, -2.37607, 0, 3, 0, 2.37607, 0, -1.83147, 403.602, 0.479049, -5.05264 )
 
 [node name="SpotLight13" type="SpotLight" parent="."]
@@ -473,5 +472,5 @@ light_specular = 16.0
 spot_range = 19.7832
 spot_angle = 35.9264
 
-[node name="lamp_murale_boule11" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="lamp_murale_boule11" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.15895, 3.14758, 0.294278, 0.496124, 401.837, -3.87461, -15.0474 )

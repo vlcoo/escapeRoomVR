@@ -11,7 +11,7 @@
 [ext_resource path="res://Escape_Room_Scenes/Glass.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Escape_Room_Scenes/Board2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=11]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=12]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Escape_Room_Scenes/Fork.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Postcard5.fbx" type="PackedScene" id=14]
 [ext_resource path="res://Escape_Room_Scenes/Knife2.tscn" type="PackedScene" id=15]
@@ -414,10 +414,10 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 77 )
 
-[node name="dining_table2" type="Spatial" parent="." instance=ExtResource( 20 )]
+[node name="dining_table2" parent="." instance=ExtResource( 20 )]
 transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 352.293, -1.07492, 20.6003 )
 
-[node name="lustre2" type="Spatial" parent="." instance=ExtResource( 19 )]
+[node name="lustre2" parent="." instance=ExtResource( 19 )]
 transform = Transform( 2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 320.315, -5.5602, -9.31364 )
 
 [node name="SpotLight3" type="SpotLight" parent="."]
@@ -429,95 +429,94 @@ light_specular = 16.0
 spot_range = 10.8439
 spot_angle = 58.9513
 
-[node name="chaisepatron2" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron2" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.284684, 0, -3.18731, 0, 3.2, 0, 3.18731, 0, 0.284684, 284.306, -0.950768, 48.3089 )
 
-[node name="chaisepatron3" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.351372, 0, -3.18065, 0, 3.2, 0, 3.18065, 0, 0.351372, 279.179, -0.950768, 48.3089 )
 
-[node name="chaisepatron4" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron4" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.284684, 0, -3.18731, 0, 3.2, 0, 3.18731, 0, 0.284684, 273.629, -0.908034, 47.6724 )
 
-[node name="chaisepatron5" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron5" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.00793105, 0, 3.19999, 0, 3.2, 0, -3.19999, 0, -0.00793105, 313.402, -0.950768, -49.0348 )
 
-[node name="chaisepatron6" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron6" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0749449, 0, 3.19912, 0, 3.2, 0, -3.19912, 0, -0.0749449, 318.509, -0.950768, -50.5136 )
 
-[node name="chaisepatron7" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="chaisepatron7" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.00793105, 0, 3.19999, 0, 3.2, 0, -3.19999, 0, -0.00793105, 323.984, -0.908034, -49.5181 )
 
-[node name="Board2" type="Spatial" parent="." instance=ExtResource( 10 )]
+[node name="Board2" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1.61582, 0, 1.17862, 0, 2, 0, -1.17862, 0, 1.61582, 296.299, 1.62087, -2.94604 )
 
-[node name="Fork" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="Fork" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.282887, 0, -0.41228, 0, 0.5, 0, 0.41228, 0, -0.282887, 293.061, 1.70318, 0.522519 )
 
-[node name="Fork2" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="Fork2" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.232096, 0, 0.442867, 0, 0.5, 0, -0.442867, 0, -0.232096, 293.061, 1.70412, -3.77084 )
 
-[node name="Fork3" type="Spatial" parent="." instance=ExtResource( 13 )]
+[node name="Fork3" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.111429, 0, 0.487425, 0, 0.5, 0, -0.487425, 0, 0.111429, 300.704, 1.61112, -3.77084 )
 
-[node name="Glass" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="Glass" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 292.121, 2.0513, -0.325582 )
 
-[node name="Glass2" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="Glass2" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 293.691, 1.89787, -3.87514 )
 
-[node name="Glass3" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="Glass3" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.432, 2.09411, -2.50744 )
 
-[node name="Glass4" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="Glass4" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 296.197, 1.99723, 1.16042 )
 
-[node name="CornFlakes" type="Spatial" parent="." instance=ExtResource( 18 )]
+[node name="CornFlakes" parent="." instance=ExtResource( 18 )]
 transform = Transform( -0.997033, 0, 0.0769801, 0, 1, 0, -0.0769801, 0, -0.997033, 294.756, 2.53529, 0.342818 )
 
-[node name="Glass5" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="Glass5" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 302.286, 2.51606, 1.17612 )
 
-[node name="KnifeKitchen" type="Spatial" parent="." instance=ExtResource( 8 )]
+[node name="KnifeKitchen" parent="." instance=ExtResource( 8 )]
 transform = Transform( 2, 0, 0, 0, 0.176606, 1.99219, 0, -1.99219, 0.176606, 296.449, 1.70532, -2.65564 )
 
-[node name="Plate1" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="Plate1" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 291.649, 1.72504, -3.59484 )
 
-[node name="Plate2" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="Plate2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 291.649, 1.72504, 0.439619 )
 
-[node name="Plate3" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="Plate3" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 300.065, 1.72504, 0.439619 )
 
-[node name="Plate4" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="Plate4" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 301.508, 1.72504, -3.36554 )
 
-[node name="Lemon" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="Lemon" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 297.52, 1.954, -4.34634 )
 
-[node name="Lemon2" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="Lemon2" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 291.208, 1.97789, 0.572719 )
 
-[node name="Knife2" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="Knife2" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.640592, 0.767693, -0.0170186, 0, 0.0221631, 0.999754, 0.767881, -0.640435, 0.0141975, 290.233, 1.73086, -3.25134 )
 
-[node name="Knife3" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="Knife3" parent="." instance=ExtResource( 15 )]
 transform = Transform( -0.107461, -0.993965, 0.0220347, 0, 0.0221631, 0.999754, -0.994209, 0.107435, -0.00238168, 298.799, 1.73086, 0.478019 )
 
-[node name="Plate5" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="operation_door" parent="." instance=ExtResource( 12 )]
+
+[node name="Plate5" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 296.589, 1.72504, 0.0427189 )
 
-[node name="Bottle" type="Spatial" parent="." instance=ExtResource( 16 )]
+[node name="Bottle" parent="." instance=ExtResource( 16 )]
 transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 303.602, 2.71966, -0.396081 )
 
-[node name="WaterMElon" type="Spatial" parent="." instance=ExtResource( 17 )]
+[node name="WaterMElon" parent="." instance=ExtResource( 17 )]
 transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228, 303.272, 2.13253, -2.77284 )
 
-[node name="operation_door3" type="Spatial" parent="." instance=ExtResource( 12 )]
-transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 298.042, -1.17416, 9.40472 )
-
-[node name="lamp_murale_boule3" type="Spatial" parent="." instance=ExtResource( 11 )]
+[node name="lamp_murale_boule3" parent="." instance=ExtResource( 11 )]
 transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 273.465, -0.411436, 2.69752 )
 
-[node name="Postcard5" type="Spatial" parent="." instance=ExtResource( 14 )]
+[node name="Postcard5" parent="." instance=ExtResource( 14 )]
 transform = Transform( 0.0882007, 0.996102, -0.000794268, -0.937537, 0.0827456, -0.337901, -0.336518, 0.0305477, 0.941181, 296.518, 0.903428, 2.82445 )

@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/plantravail.fbx" type="PackedScene" id=10]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=12]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=13]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Escape_Room_Scenes/CornFlakes.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Escape_Room_Scenes/plate.tscn" type="PackedScene" id=15]
 
@@ -348,16 +348,15 @@ height = 1.83523
 depth = 2.25706
 material = SubResource( 66 )
 
-[node name="operation_door7" type="Spatial" parent="." instance=ExtResource( 13 )]
-transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 399.09, -1.17416, -32.2187 )
+[node name="operation_door" parent="." instance=ExtResource( 13 )]
 
-[node name="evier3" type="Spatial" parent="." instance=ExtResource( 5 )]
+[node name="evier3" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0419428, 0, 3.19972, 0, 3.2, 0, -3.19972, 0, -0.0419428, 402.526, -0.637209, -50.0954 )
 
-[node name="plantravail2" type="Spatial" parent="." instance=ExtResource( 10 )]
+[node name="plantravail2" parent="." instance=ExtResource( 10 )]
 transform = Transform( 3.19961, 0, 0.0499281, 0, 3.2, 0, -0.0499281, 0, 3.19961, 408.78, -0.659973, -45.9849 )
 
-[node name="poele2" type="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="poele2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 2.99992, 0, -0.0217815, 0, 3, 0, 0.0217815, 0, 2.99992, 410.136, -1.4281, -36.1317 )
 
 [node name="alfombra5" type="CSGBox" parent="."]
@@ -366,25 +365,25 @@ height = 1.06488
 depth = 1.71446
 material = SubResource( 53 )
 
-[node name="table_cuisine2" type="Spatial" parent="." instance=ExtResource( 11 )]
+[node name="table_cuisine2" parent="." instance=ExtResource( 11 )]
 transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 393.805, -0.551939, -43.0062 )
 
-[node name="tabouret4" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret4" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 401.215, -12.416, -10.8771 )
 
-[node name="tabouret5" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret5" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 401.215, -12.416, -21.6229 )
 
-[node name="tabouret6" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret6" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 397.932, -12.416, -18.4511 )
 
-[node name="tabouret7" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret7" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 397.932, -12.416, -14.6264 )
 
-[node name="tabouret8" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret8" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 404.571, -12.416, -14.6264 )
 
-[node name="tabouret9" type="Spatial" parent="." instance=ExtResource( 9 )]
+[node name="tabouret9" parent="." instance=ExtResource( 9 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 404.577, -12.416, -18.2001 )
 
 [node name="SpotLight7" type="SpotLight" parent="."]
@@ -396,7 +395,7 @@ light_specular = 16.0
 spot_range = 10.8439
 spot_angle = 58.9513
 
-[node name="lamp_murale_boule6" type="Spatial" parent="." instance=ExtResource( 12 )]
+[node name="lamp_murale_boule6" parent="." instance=ExtResource( 12 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 389.833, -0.411436, -8.58152 )
 
 [node name="SpotLight8" type="SpotLight" parent="."]
@@ -408,37 +407,37 @@ light_specular = 16.0
 spot_range = 10.8439
 spot_angle = 58.9513
 
-[node name="lamp_murale_boule7" type="Spatial" parent="." instance=ExtResource( 12 )]
+[node name="lamp_murale_boule7" parent="." instance=ExtResource( 12 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 407.762, -1.38405, -11.1225 )
 
-[node name="toaster" type="Spatial" parent="." instance=ExtResource( 6 )]
+[node name="toaster" parent="." instance=ExtResource( 6 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 409.841, 2.73529, -42.604 )
 
-[node name="plate" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 394.495, 2.2, -40.8359 )
 
-[node name="plate2" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate2" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 392.994, 2.2, -45.9621 )
 
-[node name="plate3" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate3" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 392.994, 2.2, -42.3257 )
 
-[node name="plate4" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate4" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 409.104, 2.3, -49.8869 )
 
-[node name="plate5" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate5" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 409.104, 2.43827, -49.8869 )
 
-[node name="plate6" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate6" parent="." instance=ExtResource( 15 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 409.104, 2.55776, -50.0338 )
 
-[node name="dish-rack" type="Spatial" parent="." instance=ExtResource( 8 )]
+[node name="dish-rack" parent="." instance=ExtResource( 8 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 405.817, -0.191468, -50.4356 )
 
-[node name="plate7" type="Spatial" parent="." instance=ExtResource( 15 )]
+[node name="plate7" parent="." instance=ExtResource( 15 )]
 transform = Transform( 1.28356, -4.83244, 0, 4.83244, 1.28356, 0, 0, 0, 5, 405.954, 3.24298, -50.174 )
 
-[node name="CornFlakes" type="Spatial" parent="." instance=ExtResource( 14 )]
+[node name="CornFlakes" parent="." instance=ExtResource( 14 )]
 transform = Transform( -0.633138, 0, -0.774039, 0, 1, 0, 0.774039, 0, -0.633138, 394.865, 2.87289, -44.7237 )
 
 [node name="SpotLight11" type="SpotLight" parent="."]
@@ -450,5 +449,5 @@ light_specular = 16.0
 spot_range = 14.6238
 spot_angle = 28.4278
 
-[node name="lamp_murale_boule10" type="Spatial" parent="." instance=ExtResource( 12 )]
+[node name="lamp_murale_boule10" parent="." instance=ExtResource( 12 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, 394.357, 0.605063, -6.78814 )
