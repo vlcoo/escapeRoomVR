@@ -414,6 +414,7 @@ material = SubResource( 48 )
 transform = Transform( 0.0279188, 0, -1.69977, 0, 1.7, 0, 1.69977, 0, 0.0279188, 339.152, -1.12588, -41.3808 )
 
 [node name="operation_door" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1.27431e-07, 0, 3.20658, 0, 3.08867, 0, -2.91527, 0, -1.40164e-07, 348.3, -1.15156, -31.2875 )
 
 [node name="3Seat4" parent="." instance=ExtResource( 8 )]
 transform = Transform( -1.69455, 0, -0.136043, 0, 1.7, 0, 0.136043, 0, -1.69455, 346.237, -1.12588, -48.7023 )

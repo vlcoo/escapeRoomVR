@@ -106,6 +106,9 @@ transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1
 height = 1.83523
 material = SubResource( 42 )
 
+[node name="operation_door" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.102638, 0, -3.3139, 0, 3.138, 0, 0.999521, 0, 0.0309572, 298.603, -1.09747, 9.40166 )
+
 [node name="Wall47" type="CSGBox" parent="."]
 transform = Transform( -3.62866e-09, 0, 2.45365, 0, 2.71996, 0, -0.083014, 0, -1.07252e-07, 308.14, 1.36266, -10.6935 )
 height = 1.83523
@@ -503,8 +506,6 @@ transform = Transform( 0.640592, 0.767693, -0.0170186, 0, 0.0221631, 0.999754, 0
 
 [node name="Knife3" parent="." instance=ExtResource( 15 )]
 transform = Transform( -0.107461, -0.993965, 0.0220347, 0, 0.0221631, 0.999754, -0.994209, 0.107435, -0.00238168, 298.799, 1.73086, 0.478019 )
-
-[node name="operation_door" parent="." instance=ExtResource( 12 )]
 
 [node name="Plate5" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 296.589, 1.72504, 0.0427189 )

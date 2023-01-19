@@ -423,6 +423,7 @@ depth = 2.20956
 material = SubResource( 64 )
 
 [node name="operation_door" parent="." instance=ExtResource( 10 )]
+transform = Transform( -0.215105, 0, -2.94253, 0, 3.15012, 0, 1.11112, 0, -0.0812253, 399.317, -0.946189, 7.8817 )
 
 [node name="SpotLight9" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427352, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503238, 397.932, 8.09914, 7.38824 )

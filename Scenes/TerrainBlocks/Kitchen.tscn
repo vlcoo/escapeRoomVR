@@ -349,6 +349,7 @@ depth = 2.25706
 material = SubResource( 66 )
 
 [node name="operation_door" parent="." instance=ExtResource( 13 )]
+transform = Transform( -5.68365e-07, -7.74114e-13, -3.50885, -1.84945e-08, 3.29587, 0, -0.204042, -2.77906e-07, 9.77399e-06, 399.422, -1.15128, -31.8261 )
 
 [node name="evier3" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0419428, 0, 3.19972, 0, 3.2, 0, -3.19972, 0, -0.0419428, 402.526, -0.637209, -50.0954 )
