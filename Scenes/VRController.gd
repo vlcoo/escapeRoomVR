@@ -283,8 +283,8 @@ func button_pressed(button_index):
 		
 	# If the menu button on the VR controller is pressed...
 	elif button_index == Global.INPUT_BUTTONS.MENU:
-		var a = InputEventAction.new()
-		a.action = "ui_accept"
+		var a = InputEventKey.new()
+		a.scancode = KEY_ENTER
 		a.pressed = true
 		Input.parse_input_event(a)
 
@@ -301,16 +301,15 @@ func simulate_key_based_on_vector2(vector: Vector2):
 	
 	if abs(vector.x) > abs(vector.y):
 		if vector.x > 0:
-			a.action = "ui_right"
-		else:
 			a.action = "ui_left"
+		else:
+			a.action = "ui_right"
 	else:
 		if vector.y > 0:
 			a.action = "ui_up"
 		else:
 			a.action = "ui_down"
 	
-	print(a.action)
 	a.pressed = true
 	Input.parse_input_event(a)
 

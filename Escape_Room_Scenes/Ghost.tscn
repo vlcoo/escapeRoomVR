@@ -9,6 +9,7 @@
 extents = Vector3( 0.694596, 0.716729, 0.370835 )
 
 [node name="Ghost" instance=ExtResource( 1 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "Ghost with generic material that can be reused and recolored."

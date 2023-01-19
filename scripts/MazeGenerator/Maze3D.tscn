@@ -1,7 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/MazeGenerator/Maze3D.gd" type="Script" id=1]
-
 [ext_resource path="res://Scenes/Maze/Essential/Billiard room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Maze/Normal/Dining room.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Maze/Essential/Bathroom.tscn" type="PackedScene" id=4]
@@ -11,8 +10,8 @@
 [ext_resource path="res://Scenes/Maze/Normal/Lounge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Maze/Normal/Kitchen.tscn" type="PackedScene" id=9]
 
-
 [node name="Maze3D" type="Spatial"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 script = ExtResource( 1 )
 essential_rooms = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ]
 normal_rooms = [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ]
@@ -45,4 +44,4 @@ transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e
 light_energy = 0.4
 
 [node name="PlayerSpawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 16 )

@@ -111,6 +111,7 @@ func make_maze():
 			dead_cells[current_pos] = true
 			save_log('Dead cell found\n')
 		_debug_print()
+		yield(get_tree(),"idle_frame")
 		
 func _debug_print():
 	return

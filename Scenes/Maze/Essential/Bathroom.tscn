@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/plantravaiUpl.fbx" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/Textures/-1000288360-210831-15320701051-IMAGE-P000000001000288360.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Textures/TexturesCom_Pavement_MarbleTiles_2.6x2.6_1K_albedo.png" type="Texture" id=15]
+[ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=16]
 
 [sub_resource type="SpatialMaterial" id=49]
 albedo_texture = ExtResource( 15 )
@@ -437,3 +438,7 @@ transform = Transform( -3.19965, 0, -0.0473597, 0, 3.2, 0, 0.0473597, 0, -3.1996
 
 [node name="plantravaiUpl2" parent="." instance=ExtResource( 2 )]
 transform = Transform( -3.19999, 0, -0.0104448, 0, 3.2, 0, 0.0104448, 0, -3.19999, 6.7542, -6.53404, -4.74894 )
+
+[node name="Ghost" parent="." instance=ExtResource( 16 )]
+transform = Transform( -3.31165, 0, -2.24342, 0, 4, 0, 2.24342, 0, -3.31165, -2.77376e-07, 0, 3.17281 )
+diag_timeline_name = "PresentacionMargarita"
