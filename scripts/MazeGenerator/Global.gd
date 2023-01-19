@@ -18,3 +18,6 @@ enum OPEN_PATHS {
 	LEFT	= 1 << 2, #0100
 	UP		= 1 << 3  #1000
 }
+
+func load_world_area(which):
+	$"../World".load_area(which)

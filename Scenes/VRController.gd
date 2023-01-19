@@ -310,6 +310,7 @@ func simulate_key_based_on_vector2(vector: Vector2):
 		else:
 			a.action = "ui_down"
 	
+	print(a.action)
 	a.pressed = true
 	Input.parse_input_event(a)
 

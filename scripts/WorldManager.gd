@@ -17,12 +17,12 @@ func _ready():
 		OS.vsync_enabled = false
 		Engine.iterations_per_second = 90
 	
-	current_area = $Terrain
+	load_area("res://Scenes/Areas/MainMenu.tscn")
 
 
 func load_area(which):
-	var new_area = load(which)
+	var new_area = load(which).instance()
 	add_child(new_area)
-	$Viewport/ARVROrigin.translation = new_area.get_node("PlayerSpawn").translation
-	current_area = new_area
+	$ViewportContainer/Viewport/ARVROrigin.translation = new_area.get_node("PlayerSpawn").translation
 	remove_child(current_area)
+	current_area = new_area
