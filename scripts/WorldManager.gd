@@ -20,9 +20,12 @@ func _ready():
 	load_area("res://Scenes/Areas/MainMenu.tscn")
 
 
-func load_area(which):
-	var new_area = load(which).instance()
-	add_child(new_area)
-	$ViewportContainer/Viewport/ARVROrigin.translation = new_area.get_node("PlayerSpawn").translation
-	remove_child(current_area)
-	current_area = new_area
+func load_area(which, also_remove_current: bool = true):
+	var scene_trs = load(which)
+	var scene = scene_trs.instance()
+	add_child(scene)
+	$ViewportContainer/Viewport/ARVROrigin.translation = scene.get_node("PlayerSpawn").translation
+	if also_remove_current:
+		remove_child(current_area)
+	current_area = scene
+

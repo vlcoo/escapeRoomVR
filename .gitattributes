@@ -1,0 +1,4 @@
+*.png filter=lfs diff=lfs merge=lfs -text
+Assets/Corridors/corridor_wall1.png filter=lfs diff=lfs merge=lfs -text
+Assets/Corridors/*.png filter=lfs diff=lfs merge=lfs -text
+**.png filter=lfs diff=lfs merge=lfs -text

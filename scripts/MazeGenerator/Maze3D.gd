@@ -5,26 +5,31 @@ extends Spatial
 # var a: int = 2
 # var b: String = "text"
 
-var _mazeGeneratorPoint_tscn = preload('res://MazeGeneratorPoint.tscn')
-var _mazeGeneratorPoint: MazeGeneratorPoint
-var _cell_tscn = preload('res://Cell3D.tscn')
+var _mazeGeneratorPoint_tscn = preload('res://scripts/MazeGenerator/MazeGeneratorPoint.tscn')
+var _mazeGeneratorPoint
+var _cell_tscn = preload('res://scripts/MazeGenerator/Cell3D.tscn')
 
 
 var cells: Dictionary = {}
 
+export(Array) var essential_rooms: Array = []
+export(Array) var normal_rooms: Array = []
+
+
+
 export var cell_texture: Texture
-onready var cell_size: Vector2 = Vector2(4,4)
+onready var cell_size: Vector2 = Vector2(2.3,3.2)
 
 var board_size: Vector2 = Vector2(5, 5)
 var starting_cell: Vector2 = Vector2(2, 2)
 var first_time_dead_cells: Array = []
+var essential_cells: Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_cells()
-	for x in range(3):
-		for y in range(3):
-			first_time_dead_cells.append(Vector2(2*x,2*y))
-	first_time_dead_cells.erase(Vector2(2,2))
+	setup_rooms()
+	
+	
 	print(first_time_dead_cells)
 	_mazeGeneratorPoint = _mazeGeneratorPoint_tscn.instance()
 	_mazeGeneratorPoint.setup(self, cell_size, board_size, starting_cell, first_time_dead_cells)
@@ -35,6 +40,18 @@ func _ready() -> void:
 	_mazeGeneratorPoint.make_maze()
 	pass # Replace with function body.
 
+func setup_rooms():
+	Global.push_essential_room_array(essential_rooms)
+	Global.push_normal_room_array(normal_rooms)
+	
+	randomize_essential_cells()
+	
+func randomize_essential_cells() :
+	var dead_cells_poppable: Array = first_time_dead_cells.duplicate()
+	for iterations in range(essential_rooms.size()):
+		essential_cells.append(dead_cells_poppable.pop_at(randi()%dead_cells_poppable.size()))
+
+
 func calculate_cell_center(cell_pos: Vector2) -> Vector3:
 	var center: Vector2 = cell_size * cell_pos + cell_size/2
 	return Vector3(center.x, 0, center.y)
@@ -44,8 +61,11 @@ func _on_mazeGen_visit_cell(cell_pos: Vector2):
 	pass
 
 func _on_mazeGen_found_dead_cell(cell_pos: Vector2):
-	if(first_time_dead_cells.find(cell_pos) != -1): 
+	if(essential_cells.find(cell_pos) != -1):
 		cells[cell_pos].essential_cell()
+		return
+	elif(first_time_dead_cells.find(cell_pos) != -1): 
+		cells[cell_pos].room_cell()
 		return
 	cells[cell_pos].dead_cell()
 
@@ -92,6 +112,12 @@ func setup_cells():
 			add_child(newCell)
 			newCell.translation = calculate_cell_center(cell_pos)
 			cells[cell_pos] = newCell
+			
+	for x in range(3):
+		for y in range(3):
+			first_time_dead_cells.append(Vector2(2*x,2*y))
+	first_time_dead_cells.erase(Vector2(2,2))
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
