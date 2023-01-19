@@ -28,4 +28,3 @@ func load_area(which, also_remove_current: bool = true):
 	if also_remove_current:
 		remove_child(current_area)
 	current_area = scene
-
