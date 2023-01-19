@@ -1,21 +1,16 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Fonts/Mistery Curse Personal Use.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/PumpkinNight-ZV8Bz.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/UI/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://addons/dialogic/Documentation/Theme/Font/NotoSans-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/lightning-gff49ddf19_1920.jpg" type="Texture" id=4]
-
-[sub_resource type="DynamicFont" id=6]
-size = 87
-outline_size = 36
-outline_color = Color( 0.227451, 0.196078, 0.196078, 0 )
-font_data = ExtResource( 1 )
+[ext_resource path="res://Assets/Captura_de_pantalla_2023-01-18_130427.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=8]
 size = 32
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.0352941, 0.00784314, 0.00784314, 1 )
 draw_center = false
 border_width_left = 4
 border_width_top = 4
@@ -28,21 +23,22 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.0901961, 0.180392, 0.356863, 1 )
+bg_color = Color( 0.164706, 0.164706, 0.164706, 1 )
+border_color = Color( 0.101961, 0.0588235, 0.0588235, 1 )
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.0117647, 0.054902, 0.141176, 1 )
+bg_color = Color( 0.0352941, 0.00784314, 0.00784314, 1 )
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="Theme" id=2]
-Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
 Button/fonts/font = SubResource( 8 )
 Button/styles/focus = SubResource( 9 )
 Button/styles/normal = SubResource( 10 )
@@ -67,60 +63,70 @@ CheckButton/styles/hover_pressed = null
 CheckButton/styles/normal = null
 CheckButton/styles/pressed = null
 
-[sub_resource type="DynamicFont" id=7]
-size = 40
+[sub_resource type="DynamicFont" id=12]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 87
+outline_size = 36
+outline_color = Color( 0.227451, 0.196078, 0.196078, 0 )
 font_data = ExtResource( 1 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-focus_neighbour_left = NodePath("VBoxContainer/Button")
-focus_neighbour_top = NodePath("VBoxContainer/Button")
-focus_neighbour_right = NodePath("VBoxContainer/Button")
-focus_neighbour_bottom = NodePath("VBoxContainer/Button")
-focus_next = NodePath("VBoxContainer/Button")
-focus_previous = NodePath("VBoxContainer/Button")
+focus_neighbour_left = NodePath("Button")
+focus_neighbour_top = NodePath("Button")
+focus_neighbour_right = NodePath("Button")
+focus_neighbour_bottom = NodePath("Button")
+focus_next = NodePath("Button")
+focus_previous = NodePath("Button")
 script = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 73.0
-margin_top = 29.0
-margin_right = 1993.0
-margin_bottom = 1051.0
-rect_scale = Vector2( 1.08833, 1.06203 )
+margin_left = -22.0
+margin_top = -23.0
+margin_right = 1898.0
+margin_bottom = 999.0
+rect_scale = Vector2( 0.935277, 1.07932 )
 texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 402.0
+margin_top = 388.0
+margin_right = 605.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 0, 64.449 )
+size_flags_vertical = 6
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 12 )
+text = "START"
+
+[node name="LabelTitle" type="RichTextLabel" parent="."]
+margin_left = 263.0
+margin_top = 113.0
+margin_right = 775.0
+margin_bottom = 208.0
+grow_horizontal = 2
+rect_min_size = Vector2( 512, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center]Who killed us"
+text = "Who killed us?"
+fit_content_height = true
+scroll_active = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -128.0
+margin_top = -72.0
 margin_right = 128.0
+margin_bottom = -72.0
 grow_horizontal = 2
-
-[node name="LabelTitle" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 60.0
-margin_right = 512.0
-margin_bottom = 238.0
-grow_horizontal = 2
-rect_min_size = Vector2( 512, 0 )
-size_flags_horizontal = 3
-size_flags_vertical = 6
-custom_colors/default_color = Color( 0.207843, 0.192157, 0.423529, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
-custom_fonts/normal_font = SubResource( 6 )
-bbcode_enabled = true
-bbcode_text = "[center]Who killed the guests"
-text = "Who killed the guests"
-fit_content_height = true
-scroll_active = false
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 419.0
-margin_right = 512.0
-margin_bottom = 483.0
-rect_min_size = Vector2( 0, 64 )
-size_flags_vertical = 6
-theme = SubResource( 2 )
-custom_fonts/font = SubResource( 7 )
-text = "Start"
