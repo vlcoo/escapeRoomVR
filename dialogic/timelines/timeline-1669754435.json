@@ -22,10 +22,32 @@
 			"z_index": 4
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/1.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good night!\n\n What brought you here?"
+			"text": "Good night!"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/2.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What brought you here?"
 		},
 		{
 			"character": "character-1669756551.json",
@@ -34,10 +56,80 @@
 			"text": "My name is [player_name] and I have been hired to solve the mystery of the 3 murders' case."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/3.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[wave]Cool![/wave] Let me introduce myself.\n\nI am Margarita and I'm one of the victims of that night.\n\nI'm glad you came, since not even I know what happened."
+			"text": "[wave]Cool![/wave]"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/4.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Let me introduce myself."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/5.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am Margarita and I'm one of the victims of that night."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/6.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm glad you came, since not even I know what happened. Who were the other victims?"
+		},
+		{
+			"character": "character-1669756551.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Jessie and Nathan but no worries, I am here to help you. "
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/7.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No way! Jessie?!"
 		},
 		{
 			"character": "character-1669756551.json",
@@ -58,6 +150,14 @@
 			"text": "What were you doing in Germany, Margarita?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/8.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -68,6 +168,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Okay, I see. Did you come alone to Germany?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/9.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -82,6 +190,14 @@
 			"text": "That’s really good.\n\nDid you meet a lot of people during your stay?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/10.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -92,6 +208,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Have you ever had problems with any of them?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/11.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -106,6 +230,14 @@
 			"text": "Okay, and do you know if they ever had problems between them?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/12.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -116,6 +248,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "So would you say they were fighting or something?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/13.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -130,6 +270,14 @@
 			"text": "Okay, so maybe Heidi knows more about what really happened, don’t you think?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/14.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -140,6 +288,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Is there anything else you want to tell me about?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/15.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -154,6 +310,14 @@
 			"text": "Are you sure? "
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/16.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -164,6 +328,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "You didn’t tell me that you have a brother..."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/17.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -178,6 +350,14 @@
 			"text": "I heard he was in Berlin for several days and that he intended to visit you."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/18.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -190,6 +370,14 @@
 			"text": "I am not saying that but could you tell me more about that?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/19.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -199,6 +387,14 @@
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
 			"wait_seconds": 1
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/20.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -213,6 +409,14 @@
 			"text": "Why did he come to the mansion?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/21.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -223,6 +427,14 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "What exactly?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/22.wav",
+			"volume": 0
 		},
 		{
 			"character": "character-1668597865.json",
@@ -237,6 +449,14 @@
 			"text": "Calm down. I am just trying to fit all the facts together in my head. Please answer my questions."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/23.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -249,10 +469,32 @@
 			"text": "I am so sorry for your loss. "
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/24.wav",
+			"volume": 0
+		},
+		{
 			"character": "character-1668597865.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Thanks.\n\nSo, I went to an isolated room to talk with my brother. He tried to convince me to share half of the inheritance but I refused his offer.\n\nHe has never appreciated what our mother did for us so, for that reason he doesn’t deserve it.\n\nWe argued a lot but finally he gave up and he threw out the testament and left the mansion right after."
+			"text": "Thanks."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Voice Acting",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/Voices/Margarita/25.wav",
+			"volume": 0
+		},
+		{
+			"character": "character-1668597865.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So, I went to an isolated room to talk with my brother. He tried to convince me to share half of the inheritance but I refused his offer.\n\nHe has never appreciated what our mother did for us so, for that reason he doesn’t deserve it.\n\nWe argued a lot but finally he gave up and he threw out the testament and left the mansion right after."
 		},
 		{
 			"character": "character-1669756551.json",
