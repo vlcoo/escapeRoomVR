@@ -283,6 +283,10 @@ func button_pressed(button_index):
 		
 	# If the menu button on the VR controller is pressed...
 	elif button_index == Global.INPUT_BUTTONS.MENU:
+		var a = InputEventKey.new()
+		a.scancode = KEY_ENTER
+		a.pressed = true
+		Input.parse_input_event(a)
 		Dialogic.next_event()
 
 # handling UI navigation...
