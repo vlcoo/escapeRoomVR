@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Assets/Metal Barrels/Textures/barrel3_green_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Metal Barrels/Models/barrel_LP.obj" type="ArrayMesh" id=11]
 [ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=13]
+[ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/VRInteractable.gd" type="Script" id=15]
 
 [sub_resource type="SpatialMaterial" id=54]
 albedo_texture = ExtResource( 5 )
@@ -39,6 +42,9 @@ albedo_texture = ExtResource( 9 )
 
 [sub_resource type="SpatialMaterial" id=56]
 albedo_texture = ExtResource( 7 )
+
+[sub_resource type="BoxShape" id=77]
+extents = Vector3( 0.111198, 0.747048, 0.7375 )
 
 [node name="Garage" type="Spatial"]
 
@@ -426,6 +432,9 @@ material = SubResource( 64 )
 [node name="operation_door8" parent="." instance=ExtResource( 1 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, -0.198723, -1.17416, 7.84036 )
 
+[node name="RomanNumbers" parent="operation_door8" instance=ExtResource( 13 )]
+transform = Transform( -0.8, 6.99382e-08, -3.72529e-09, -6.99382e-08, -0.8, 0, -3.72529e-09, 0, 0.8, -0.0643179, 1.6376, 0.0565613 )
+
 [node name="SpotLight9" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427351, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503237, -1.15472, 8.09914, 7.38824 )
 light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
@@ -480,3 +489,17 @@ transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.158
 [node name="Ghost" parent="." instance=ExtResource( 12 )]
 transform = Transform( 3.37379, 0, 2.14885, 0, 4, 0, -2.14885, 0, 3.37379, -8.04607, 0, -5.41821 )
 diag_timeline_name = "PresentacionJurgen"
+
+[node name="VRInteractable" type="RigidBody" parent="."]
+transform = Transform( 0.470479, 0.876281, 0.103833, -0.875188, 0.448361, 0.181709, 0.112674, -0.176363, 0.977855, 0, 1.994, -8.176 )
+script = ExtResource( 15 )
+
+[node name="paternityTest" parent="VRInteractable" instance=ExtResource( 14 )]
+transform = Transform( 1.4, -4.17233e-08, 1.04308e-08, 4.17233e-08, 1.4, -4.17233e-08, -1.04308e-08, 4.17233e-08, 1.4, 0, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
+transform = Transform( 0.983808, 0.179018, 0.00870416, -0.178697, 0.983469, -0.0292443, -0.0137955, 0.0272157, 0.999534, -0.00631094, -0.0262778, 1.45398 )
+shape = SubResource( 77 )
