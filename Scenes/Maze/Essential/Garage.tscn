@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/Metal Barrels/Textures/barrel4_yellow_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Metal Barrels/Textures/barrel3_green_LP_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Metal Barrels/Models/barrel_LP.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpatialMaterial" id=54]
 albedo_texture = ExtResource( 5 )
@@ -475,3 +476,7 @@ spot_angle = 35.9264
 
 [node name="lamp_murale_boule11" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.278581, -3.18551, 0.12208, 0.505104, -0.0768896, -3.15895, 3.14758, 0.294278, 0.496124, 2.75028, -3.87461, -15.0474 )
+
+[node name="Ghost" parent="." instance=ExtResource( 12 )]
+transform = Transform( 3.37379, 0, 2.14885, 0, 4, 0, -2.14885, 0, 3.37379, -8.04607, 0, -5.41821 )
+diag_timeline_name = "PresentacionJurgen"

@@ -33,7 +33,6 @@ albedo_texture = ExtResource( 14 )
 albedo_texture = ExtResource( 1 )
 
 [node name="Bathroom" type="Spatial"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Wall12" type="CSGBox" parent="."]
 transform = Transform( 3.62826e-09, 4.20647, -0.0742194, 0.083014, -1.83891e-07, 0, -5.37039e-11, -0.0622622, -5.0143, 8.84819, -1.2104, 4.65976 )
