@@ -1,0 +1,183 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Fonts/Charu_Chandan_BloodDrip_Unicode-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Merriweather-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.21.40.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.15.27.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.22.01.jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.17.40.jpg" type="Texture" id=6]
+[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.18.53.jpg" type="Texture" id=7]
+[ext_resource path="res://Escape_Room_Scenes/MurderUI.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Captura_de_pantalla_2023-01-18_130427.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 65
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 2
+outline_color = Color( 0.0317383, 0.00396729, 0.00396729, 1 )
+use_mipmaps = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.490196 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 0.686275 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0156863, 0.0627451, 0.137255, 0.392157 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="MurderUI" type="Node"]
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.90023, 1.0033 )
+texture = ExtResource( 9 )
+
+[node name="Question" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 200.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Who killed the guests?"
+align = 1
+valign = 1
+
+[node name="Nathan2" type="TextureRect" parent="."]
+margin_top = 208.0
+margin_right = 222.0
+margin_bottom = 434.0
+rect_scale = Vector2( 0.764617, 0.782595 )
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="Heidi2" type="TextureRect" parent="."]
+margin_left = 208.0
+margin_top = 208.0
+margin_right = 422.0
+margin_bottom = 419.0
+rect_scale = Vector2( 0.799424, 0.836428 )
+texture = ExtResource( 7 )
+
+[node name="Nicole2" type="TextureRect" parent="."]
+margin_left = 416.0
+margin_top = 208.0
+margin_right = 598.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 0, -0.123 )
+rect_scale = Vector2( 0.914566, 0.979973 )
+texture = ExtResource( 3 )
+
+[node name="Isaías2" type="TextureRect" parent="."]
+margin_left = 624.0
+margin_top = 208.0
+margin_right = 841.0
+margin_bottom = 423.0
+rect_min_size = Vector2( 0, 0.046 )
+rect_scale = Vector2( 0.801672, 0.819327 )
+texture = ExtResource( 6 )
+
+[node name="Pedro2" type="TextureRect" parent="."]
+margin_left = 840.0
+margin_top = 208.0
+margin_right = 1033.0
+margin_bottom = 396.0
+rect_scale = Vector2( 0.942635, 0.935938 )
+texture = ExtResource( 5 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = -24.0
+margin_top = 432.0
+margin_right = 1987.0
+margin_bottom = 502.0
+rect_scale = Vector2( 0.5, 0.7 )
+rect_pivot_offset = Vector2( 60, 0 )
+custom_constants/vseparation = 245
+custom_constants/hseparation = 63
+columns = 5
+
+[node name="Nathan" type="Button" parent="GridContainer"]
+margin_right = 352.0
+margin_bottom = 64.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Nathan  Drake"
+icon_align = 1
+
+[node name="Heidi" type="Button" parent="GridContainer"]
+margin_left = 415.0
+margin_right = 717.0
+margin_bottom = 64.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Heidi Weber"
+icon_align = 1
+
+[node name="Nicole" type="Button" parent="GridContainer"]
+margin_left = 780.0
+margin_right = 1121.0
+margin_bottom = 64.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Nicole Dubois"
+icon_align = 1
+
+[node name="Isaías" type="Button" parent="GridContainer"]
+margin_left = 1184.0
+margin_right = 1600.0
+margin_bottom = 64.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Isaías Fernández"
+icon_align = 1
+
+[node name="Pedro" type="Button" parent="GridContainer"]
+margin_left = 1663.0
+margin_right = 2023.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( -0.011, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Pedro Sánchez"
+icon_align = 1
+
+[connection signal="button_up" from="GridContainer/Nathan" to="." method="_on_Nathan_button_up"]
+[connection signal="button_up" from="GridContainer/Heidi" to="." method="_on_Heidi_button_up"]
+[connection signal="button_up" from="GridContainer/Nicole" to="." method="_on_Nicole_button_up"]
+[connection signal="button_up" from="GridContainer/Isaías" to="." method="_on_Isaas_button_up"]
+[connection signal="button_up" from="GridContainer/Pedro" to="." method="_on_Pedro_button_up"]

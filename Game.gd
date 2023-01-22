@@ -39,3 +39,9 @@ func remove_sphere():
 	if sphere_ui != null:
 		sphere_ui.update_ui(spheres_left)
 
+func game_over():
+	$Timer.stop()
+
+	
+func new_game():
+	$Timer.start()

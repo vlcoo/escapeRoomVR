@@ -1,6 +1,5 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://scripts/Timer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Textures/panoramatapete-epifita-tres-tintas-barcelona.jpg" type="Texture" id=3]
 [ext_resource path="res://Assets/Textures/iris-apfel-birds-of-a-feather-A-RC-IA004-57_720x720.png" type="Texture" id=4]
@@ -496,35 +495,3 @@ transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3
 
 [node name="PhoneDrugDealer" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.0645767, 0.997749, 0.0180715, 0.986644, -0.0611233, -0.150986, -0.149541, 0.0275803, -0.988371, 355.866, 2.17574, -41.2065 )
-
-[node name="Timer" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 1 )
-minutes = 10
-
-[node name="min" type="Label" parent="Timer"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "00"
-
-[node name="sec" type="Label" parent="Timer"]
-margin_left = 37.0
-margin_top = 1.0
-margin_right = 77.0
-margin_bottom = 15.0
-text = "00"
-
-[node name="dsec" type="Label" parent="Timer"]
-margin_left = 76.0
-margin_top = 2.0
-margin_right = 116.0
-margin_bottom = 16.0
-text = "0"
-
-[node name="Timer" type="Timer" parent="Timer"]
-process_mode = 0
-wait_time = 0.1
-autostart = true
-
-[connection signal="timeout" from="Timer/Timer" to="Timer" method="_on_Timer_timeout"]
