@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Textures/parkettkaiser-skaben-tapete-jungle-dschungeltapete-palmentapete-gruen-194573_r.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=11]
+[ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 8 )
@@ -46,7 +48,6 @@ albedo_texture = ExtResource( 9 )
 albedo_texture = ExtResource( 11 )
 
 [node name="Billiard room" type="Spatial"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Wall11" type="CSGBox" parent="."]
 transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 8.71783, -1.38366, 4.86275 )
@@ -486,6 +487,9 @@ material = SubResource( 82 )
 [node name="operation_door5" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.224446, 0, -3.19212, 0, 3.2, 0, 3.19212, 0, 0.224446, 0.376831, -1.34742, -9.96665 )
 
+[node name="MorseCode2" parent="operation_door5" instance=ExtResource( 13 )]
+transform = Transform( -0.800001, 6.99383e-08, 0, -6.99383e-08, -0.8, 0, 0, -1.77636e-15, 0.800001, -0.082674, 1.64132, 0.0439236 )
+
 [node name="lustre4" parent="." instance=ExtResource( 7 )]
 transform = Transform( -2.29999, 0, 0.00826951, 0, 2.3, 0, -0.00826951, 0, -2.29999, -22.4482, -5.05978, 7.57225 )
 
@@ -536,3 +540,7 @@ transform = Transform( -0.0172505, 0, 1.39989, 0, 1.4, 0, -1.39989, 0, -0.017250
 
 [node name="table_basse3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29999, -13.2362, -1.04531, -14.6518 )
+
+[node name="Ghost" parent="." instance=ExtResource( 12 )]
+transform = Transform( -3.59881, 0, 1.74601, 0, 4, 0, -1.74601, 0, -3.59881, -8.58866, 0, 2.76224 )
+diag_timeline_name = "PresentacionJessie"

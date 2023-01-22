@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/petitbureau.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_bureau.fbx" type="PackedScene" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://Assets/Textures/Rug_006_basecolor.jpg" type="Texture" id=19]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=21]
+[ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=22]
+[ext_resource path="res://Escape_Room_Scenes/PhoneClue.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/VRInteractable.gd" type="Script" id=24]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 20 )
@@ -70,6 +73,12 @@ ao_texture_channel = 0
 
 [sub_resource type="BoxShape" id=74]
 extents = Vector3( 13.3065, 0.143351, 10.1839 )
+
+[sub_resource type="BoxShape" id=75]
+extents = Vector3( 1, 0.138379, 0.525801 )
+
+[sub_resource type="BoxShape" id=76]
+extents = Vector3( 0.366487, 0.10891, 0.941737 )
 
 [node name="Dormitory" type="Spatial"]
 
@@ -479,3 +488,23 @@ transform = Transform( -0.196136, 3.19192, -0.11481, 0, -0.115027, -3.19793, -3.
 
 [node name="CollisionShape" type="CollisionShape" parent="TPFloor"]
 shape = SubResource( 74 )
+
+[node name="VRInteractable" type="RigidBody" parent="."]
+script = ExtResource( 24 )
+
+[node name="boardingPass" parent="VRInteractable" instance=ExtResource( 22 )]
+transform = Transform( -0.0407379, 0.240914, -0.969691, -0.918137, 0.373827, 0.131447, 0.394164, 0.895664, 0.205963, 0, 3.91117, 4.32794 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
+transform = Transform( 0.977142, 0, 0.212587, 0, 1, 0, -0.212587, 0, 0.977142, 0.654977, 0.872963, 4.4966 )
+shape = SubResource( 75 )
+
+[node name="VRInteractable2" type="RigidBody" parent="."]
+script = ExtResource( 24 )
+
+[node name="PhoneClue2" parent="VRInteractable2" instance=ExtResource( 23 )]
+transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.00047163, 0.275909, 0.0363186, 0.284219, -7.75877, 3.36312, -0.556202 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable2"]
+transform = Transform( 0.711857, 0.070271, 0.6988, 0.0879863, 0.97822, -0.188, -0.696791, 0.195314, 0.69017, -7.78777, 3.35855, -0.606297 )
+shape = SubResource( 76 )

@@ -287,6 +287,7 @@ func button_pressed(button_index):
 		a.scancode = KEY_ENTER
 		a.pressed = true
 		Input.parse_input_event(a)
+		Dialogic.next_event()
 
 # handling UI navigation...
 func _on_button_pressed_touchpad():
