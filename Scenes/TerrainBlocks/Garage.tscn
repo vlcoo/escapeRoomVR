@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Textures/TexturesCom_Wall_ConcreteBase_2.5x2.5_1K_albedo.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Textures/TexturesCom_Road_Asphalt2_8x7.5_1K_albedo.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=9]
 [ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Realistic Car/Model/Car.fbx" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpatialMaterial" id=54]
 albedo_texture = ExtResource( 2 )
@@ -424,6 +425,9 @@ material = SubResource( 64 )
 
 [node name="operation_door" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.215105, 0, -2.94253, 0, 3.15012, 0, 1.11112, 0, -0.0812253, 399.317, -0.946189, 7.8817 )
+
+[node name="VRGUI" parent="operation_door" instance=ExtResource( 12 )]
+transform = Transform( -0.0310412, 2.59609e-09, -0.900506, -5.02907e-08, -0.550324, 0, -0.764438, 6.39326e-08, -0.0817145, 0.353349, 1.42508, 2.02875 )
 
 [node name="SpotLight9" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427352, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503238, 397.932, 8.09914, 7.38824 )
