@@ -5,6 +5,7 @@ extends Spatial
 # (NOTE: because this NodePath is exported, you will need to set it in the Godot editor!)
 onready var gui_viewport = $GUI
 export (PackedScene) var control_scene = null
+export (NodePath) var initially_focused = null
 var control_node
 var is_activated = false
 
@@ -17,7 +18,26 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	if !is_activated:
+		return
+	
+	var next_focus
+	var focus_owner
+	if Input.is_action_just_pressed("ui_up"):
+		focus_owner = control_node.focuseable_holder.get_focus_owner()
+		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_top)
+	elif Input.is_action_just_pressed("ui_down"):
+		focus_owner = control_node.focuseable_holder.get_focus_owner()
+		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_bottom)
+	elif Input.is_action_just_pressed("ui_left"):
+		focus_owner = control_node.focuseable_holder.get_focus_owner()
+		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_left)
+	elif Input.is_action_just_pressed("ui_right"):
+		focus_owner = control_node.focuseable_holder.get_focus_owner()
+		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_right)
+	
+	if (next_focus != null):
+		next_focus.grab_focus()
 
 
 func render_viewport():
@@ -37,7 +57,7 @@ func render_viewport():
 	material.flags_unshaded = true
 	# Finally, set the material of the MeshInstance to the newly created SpatialMaterial so the
 	# contents of the Viewport are visible
-	$GUI_Board.set_surface_material(0, material)
+	$GUI_Mesh.set_surface_material(0, material)
 
 
 func set_transparent(how: bool):
@@ -46,6 +66,7 @@ func set_transparent(how: bool):
 
 func _on_Area_area_entered(area):
 	is_activated = true
+	# get_node(initially_focused).grab_focus()
 
 
 func _on_Area_area_exited(area):

@@ -47,9 +47,9 @@ transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e
 light_energy = 0.4
 
 [node name="PlayerSpawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 16 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.54794, 1, 8.42311 )
 
 [node name="MurderSolverGUI" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.999123, 0, 0.0418757, 0, 1, 0, -0.0418757, 0, -0.999123, 11.3148, 0.358198, 14.6216 )
+transform = Transform( -0.999123, 0, 0.0418757, 0, 1, 0, -0.0418757, 0, -0.999123, 5.97634, 0.358201, 7.34661 )
 script = ExtResource( 12 )
 control_scene = ExtResource( 11 )
