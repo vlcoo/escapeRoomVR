@@ -365,7 +365,7 @@ transform = Transform( 0.0892938, 0, -3.19875, 0, 3.2, 0, 3.19875, 0, 0.0892938,
 transform = Transform( -3.19965, 0, -0.0473597, 0, 3.2, 0, 0.0473597, 0, -3.19965, -10.1868, -1.23114, 0.14996 )
 
 [node name="operation_door6" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.283127, 0, -3.18745, 0, 3.2, 0, 3.18745, 0, 0.283127, 0.501209, -1.17416, -10.174 )
+transform = Transform( 0.283128, 0, -3.18745, 0, 3.2, 0, 3.18745, 0, 0.283128, 0.501209, -1.17416, -10.174 )
 
 [node name="Dominos" parent="operation_door6" instance=ExtResource( 17 )]
 transform = Transform( -0.8, 6.99382e-08, 0, -6.99382e-08, -0.8, 0, 0, 0, 0.8, -0.146183, 1.64702, 0.0548795 )

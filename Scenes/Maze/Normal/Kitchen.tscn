@@ -53,6 +53,7 @@ radius = 0.429431
 height = 1.07192
 
 [node name="Kitchen" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Wall12" type="CSGBox" parent="."]
 transform = Transform( -3.62866e-09, -4.20693, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.01485, -8.3231, 0.0168014, -4.88198 )
