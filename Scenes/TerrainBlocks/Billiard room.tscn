@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lustre.fbx" type="PackedScene" id=9]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_basse.fbx" type="PackedScene" id=10]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 1 )
@@ -487,6 +488,9 @@ transform = Transform( -2.29999, 0, 0.00826951, 0, 2.3, 0, -0.00826951, 0, -2.29
 
 [node name="operation_door" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.236322, 0, -3.21349, 0, 3.27476, 0, 0.784403, 0, 0.0576856, 348.752, -1.19184, 29.0737 )
+
+[node name="VRGUI" parent="operation_door" instance=ExtResource( 12 )]
+transform = Transform( -4.09782e-08, 0, 0.904207, 0, 0.550325, 0, -0.765068, 0, -2.23517e-08, -1.22361, 1.40515, -1.94244 )
 
 [node name="SpotLight7" type="SpotLight" parent="."]
 transform = Transform( -0.344235, -0.937918, -0.0425705, -0.0577731, -0.0240954, 0.998039, -0.937104, 0.346019, -0.0458919, 349.067, 8.98547, 38.5979 )
