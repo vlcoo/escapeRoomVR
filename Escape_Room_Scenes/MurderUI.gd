@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 
 func _ready():
@@ -7,10 +7,10 @@ func _ready():
 
 func _on_Nathan_button_up():
 	print("You Failed!")
-	
+	 
 
 func _on_Heidi_button_up():
-	 print("You Failed!")
+	print("You Failed!")
 
 
 func _on_Nicole_button_up():

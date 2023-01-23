@@ -38,7 +38,7 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[node name="MurderUI" type="Node"]
+[node name="MurderUI" type="Control"]
 script = ExtResource( 8 )
 
 [node name="ColorRect" type="TextureRect" parent="."]
