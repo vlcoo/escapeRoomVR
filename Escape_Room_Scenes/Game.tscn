@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TerrainBlocks/Dining room.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Assets/3D assets/RomanNumbers.fbx" type="PackedScene" id=17]
 [ext_resource path="res://Assets/3D assets/Dominos.fbx" type="PackedScene" id=18]
 [ext_resource path="res://scripts/Timer.gd" type="Script" id=19]
+[ext_resource path="res://Scenes/UI/CluesScore.gd" type="Script" id=20]
 [ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=23]
 [ext_resource path="res://Assets/3D assets/testament.fbx" type="PackedScene" id=24]
 [ext_resource path="res://Assets/3D assets/paternityTest.fbx" type="PackedScene" id=25]
@@ -142,6 +143,24 @@ transform = Transform( -0.217156, 0, 2.99213, 0, 3, 0, -2.99213, 0, -0.217156, 3
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource( 40 )
+
+[node name="ScoreClues" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="clues" type="RichTextLabel" parent="ScoreClues"]
+margin_left = 853.0
+margin_top = 8.0
+margin_right = 958.0
+margin_bottom = 48.0
+text = "Clues unlocked"
+
+[node name="numberclues" type="RichTextLabel" parent="ScoreClues"]
+margin_left = 963.0
+margin_top = 7.0
+margin_right = 1068.0
+margin_bottom = 47.0
+script = ExtResource( 20 )
 
 [node name="Timer" type="Control" parent="."]
 margin_right = 40.0

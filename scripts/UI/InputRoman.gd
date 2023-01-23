@@ -6,19 +6,14 @@ func _process(delta):
 	if(text.length()>=4):
 		text = text.substr(0,4)
 		
-	if(text == str(1551)):
-		get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
-		
-	if(text.length()==4):
-		if(text != str(1551)):
-			$"../Warning".text = str("Incorrect!")
+
 
 
 	
 
 func _on_Eliminate_pressed():
 	text = text.left(text.length() - 1)
-
+	$"../Warning".text = str("")
 
 func _on_Button_pressed():
 	text+= str("1")
@@ -55,3 +50,13 @@ func _on_Button8_pressed():
 func _on_Button9_pressed():
 	text+= str("9")
 
+
+
+func _on_Enter_pressed():
+		if(text == str(1551)):
+			get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
+			get_node("numberclues").CluesUnlocked =+1
+			
+		if(text.length()==4):
+			if(text != str(1551)):
+				$"../Warning".text = str("Incorrect!")
