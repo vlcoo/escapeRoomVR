@@ -1,17 +1,11 @@
 extends RichTextLabel
 
-
 #export (int) var input = 0
 func _process(delta):
 	if(text.length()>=4):
 		text = text.substr(0,4)
 		
-	if(text == str(4651)):
-		get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
-		
-	if(text.length()==4):
-		if(text != str(4651)):
-			$"../Warning".text = str("Incorrect!")
+	
 
 func _on_But_1_pressed():
 	
@@ -55,3 +49,14 @@ func _on_But_9_pressed():
 
 func _on_Eliminate_pressed():
 	text = text.left(text.length() - 1)
+	$"../Warning".text = str("")
+
+
+func _on_Enter_pressed():
+	if(text == str(4651)):
+		get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
+		get_node("numberclues").CluesUnlocked =+1
+		
+	if(text.length()==4):
+		if(text != str(4651)):
+			$"../Warning".text = str("Incorrect!")
