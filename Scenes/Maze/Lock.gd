@@ -13,6 +13,10 @@ func _ready() -> void:
 
 func unlock() -> void:
 	$AnimationPlayer.play("open");
+	
+func unlock_animation_finished() -> void:
+	pass
+
 
 func activate_gravity() -> void:
 	can_fall = true
@@ -22,7 +26,7 @@ var velocity: float = 0
 export(float) var grav_scale: float = 9.8
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(Input.is_action_pressed("ui_up")):
+	if(Input.is_action_pressed("ui_right")):
 		unlock()
 	if(can_fall):
 		translation.y -= velocity*delta
