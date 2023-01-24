@@ -11,7 +11,6 @@ func _on_But_1_pressed():
 	
 	#set_text(str("1"))
 	text+= str("1")
-		
 
 
 func _on_But_2_pressed():
