@@ -23,15 +23,21 @@ func start_diag():
 func _on_AreaDialog_area_entered(area: Area):
 	if diag_active:
 		return
-	
+	$RootNode/AnimationPlayer.play("Appear")
 	start_diag()
 	diag_active = true
+
+func _on_AnimationPlayer_animation_finished(anim_name: String):
+	if(anim_name == "Appear"):
+		$RootNode/AnimationPlayer.play("Appear")
+	pass
 
 
 func _on_AreaDialog_area_exited(area: Area):
 	if !diag_active:
 		return
 	
+	$RootNode/AnimationPlayer.play_backwards("Appear")
 	for dialog in $VRGUI/GUI.get_children():
 		dialog.queue_free();
 	diag_active = false
