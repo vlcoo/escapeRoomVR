@@ -6,8 +6,8 @@ extends Spatial
 # var b = "text"
 var open_paths: int = 0
 var room_degrees: int = 0
-var room_degrees_offset: int = 90
-
+var room_degrees_offset: int
+var room: Spatial;
 
 func unlock():
 	$PathsNew/Unlocked.set_visible(true)
@@ -33,6 +33,7 @@ func update_visuals() -> void:
 		$PathsNew/DownPath.visible = true
 		room_degrees = 270
 		
+	if(room): room.rotation_degrees.y = room_degrees_offset + room_degrees
 
 func dead_cell():
 	pass;
@@ -41,18 +42,20 @@ func dead_cell():
 func essential_cell():
 	$PathsNew.visible = false
 	$PathsOld.visible = false
-	var newRoom: Spatial = Global.pop_essential_room_rnd()
-	newRoom.set_scale(Vector3(0.20,0.20,0.20))
-	add_child(newRoom)
-	newRoom.rotation_degrees.y = room_degrees_offset + room_degrees
+	room = Global.pop_essential_room_rnd()
+	room.set_scale(Vector3(0.20,0.20,0.20))
+	add_child(room)
+	room_degrees_offset = room.rotation_degrees.y-90;
+	update_visuals()
 	pass;
 func room_cell():
 	$PathsNew.visible = false
 	$PathsOld.visible = false
-	var newRoom: Spatial = Global.pop_normal_room_rnd()
-	newRoom.set_scale(Vector3(0.20,0.20,0.20))
-	add_child(newRoom)
-	newRoom.rotation_degrees.y = room_degrees_offset + room_degrees
+	room = Global.pop_normal_room_rnd()
+	room.set_scale(Vector3(0.20,0.20,0.20))
+	add_child(room)
+	room_degrees_offset = room.rotation_degrees.y-90;
+	update_visuals()
 	pass;
 #	$PathsNew/Unlocked.material.albedo_color = Color.green
 

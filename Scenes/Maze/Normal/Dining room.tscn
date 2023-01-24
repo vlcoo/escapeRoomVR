@@ -54,6 +54,7 @@ albedo_texture = ExtResource( 19 )
 albedo_texture = ExtResource( 19 )
 
 [node name="Dining room" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Spatial" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.968, 0, 0.744 )

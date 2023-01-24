@@ -81,6 +81,7 @@ extents = Vector3( 1, 0.138379, 0.525801 )
 extents = Vector3( 0.366487, 0.10891, 0.941737 )
 
 [node name="Dormitory" type="Spatial"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Spatial" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.968, 1.258, 40.567 )
