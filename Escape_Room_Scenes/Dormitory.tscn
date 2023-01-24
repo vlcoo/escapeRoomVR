@@ -416,29 +416,46 @@ transform = Transform( 0.751865, 3.11021, -0.0359111, -3.11041, 0.751912, 0, 0.0
 transform = Transform( 2.83014, 0, -0.0289204, 0, 3.2, 0, 0.0317625, 0, 2.5769, -20.9256, -0.314335, -8.75421 )
 
 [node name="SpotLight2" type="SpotLight" parent="."]
-transform = Transform( 0.307218, 0.941785, 0.136594, -0.296738, -0.0415753, 0.954054, 0.904192, -0.333635, 0.266691, -0.985554, 8.62782, 9.40509 )
-light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
-light_energy = 2.899
+transform = Transform( 0.307218, 0.941785, 0.136594, -0.296738, -0.0415753, 0.954054, 0.904192, -0.333635, 0.266691, -0.985554, 12.0391, 9.02251 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 2.018
 light_indirect_energy = 16.0
-light_specular = 16.0
-spot_range = 13.0625
+light_specular = 6.579
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 15.217
 spot_angle = 36.0813
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 0.329039, 0.932277, 0.150312, 0.124826, -0.200719, 0.971664, 0.93603, -0.300952, -0.182417, -9.79757, 7.90835, -1.81641 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 3.796
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 2.328
 light_indirect_energy = 16.0
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 10.8439
+spot_angle = 35.4694
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( 0.329039, 0.932277, 0.150312, 0.124826, -0.200719, 0.971664, 0.93603, -0.300952, -0.182417, -0.952649, 9.80495, -8.12621 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 2.328
+light_indirect_energy = 16.0
+light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 10.8439
 spot_angle = 35.4694
 
 [node name="SpotLight14" type="SpotLight" parent="."]
 transform = Transform( 0.293866, 0.932139, -0.211564, 0.207938, 0.153693, 0.965992, 0.932955, -0.327864, -0.148662, 12.5564, 9.98469, -0.634413 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
 light_energy = 9.961
 light_indirect_energy = 16.0
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 12.9826
 spot_angle = 40.7813
 

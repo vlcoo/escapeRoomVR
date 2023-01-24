@@ -1,16 +1,18 @@
-extends Node
+extends Control
+
+onready var focuseable_holder = $GridContainer
 
 
 func _ready():
-	pass # Replace with function body.
+	$GridContainer/Heidi.grab_focus()
 
 
 func _on_Nathan_button_up():
 	print("You Failed!")
-	
+	 
 
 func _on_Heidi_button_up():
-	 print("You Failed!")
+	print("You Failed!")
 
 
 func _on_Nicole_button_up():

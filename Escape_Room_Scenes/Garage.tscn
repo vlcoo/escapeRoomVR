@@ -430,12 +430,25 @@ transform = Transform( -0.215105, 0, -2.94253, 0, 3.15012, 0, 1.11112, 0, -0.081
 transform = Transform( -0.0310412, 2.59609e-09, -0.900506, -5.02907e-08, -0.550324, 0, -0.764438, 6.39326e-08, -0.0817145, 0.353349, 1.42508, 2.02875 )
 
 [node name="SpotLight9" type="SpotLight" parent="."]
-transform = Transform( 0.347602, 0.936668, 0.0427352, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503238, 397.932, 8.09914, 7.38824 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+transform = Transform( 0.347602, 0.936668, 0.0427351, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503237, 397.932, 8.09914, 7.17002 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 2.586
 light_indirect_energy = 16.0
 light_specular = 16.0
-spot_range = 16.9038
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 18.244
+spot_angle = 38.3562
+
+[node name="SpotLight10" type="SpotLight" parent="."]
+transform = Transform( -0.215225, 0.94853, 0.232312, -0.559411, -0.314738, 0.766811, 0.800461, 0.0350788, 0.598358, 406.752, 8.09914, 0.932141 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.118
+light_indirect_energy = 16.0
+light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 18.244
 spot_angle = 38.3562
 
 [node name="barrel_LP4" type="MeshInstance" parent="."]
@@ -469,11 +482,13 @@ material/0 = SubResource( 56 )
 transform = Transform( -1.83147, 0, -2.37607, 0, 3, 0, 2.37607, 0, -1.83147, 403.602, 0.479049, -5.05264 )
 
 [node name="SpotLight13" type="SpotLight" parent="."]
-transform = Transform( -0.524375, -0.850025, -0.0498777, -0.343162, 0.157359, 0.926001, -0.779275, 0.502688, -0.374212, 397.557, 8.99049, 8.53883 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+transform = Transform( -0.524375, -0.850025, -0.0498775, -0.343162, 0.157359, 0.926001, -0.779275, 0.502688, -0.374212, 397.557, 8.99049, 8.53883 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 4.095
 light_indirect_energy = 16.0
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 19.7832
 spot_angle = 35.9264
 
