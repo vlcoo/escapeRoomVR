@@ -72,7 +72,7 @@ _global_script_classes=[ {
 "base": "RigidBody",
 "class": "VRInteractable",
 "language": "GDScript",
-"path": "res://Scenes/VRInteractable.gd"
+"path": "res://scripts/VRInteractable.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",

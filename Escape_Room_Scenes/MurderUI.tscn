@@ -2,13 +2,13 @@
 
 [ext_resource path="res://Assets/Fonts/Charu_Chandan_BloodDrip_Unicode-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/Merriweather-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.21.40.jpg" type="Texture" id=3]
-[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.15.27.jpg" type="Texture" id=4]
-[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.22.01.jpg" type="Texture" id=5]
-[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.17.40.jpg" type="Texture" id=6]
-[ext_resource path="res://Assets/Imagen de WhatsApp 2023-01-22 a las 18.18.53.jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/Textures/Imagen de WhatsApp 2023-01-22 a las 18.21.40.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/Imagen de WhatsApp 2023-01-22 a las 18.15.27.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/Textures/Imagen de WhatsApp 2023-01-22 a las 18.22.01.jpg" type="Texture" id=5]
+[ext_resource path="res://Assets/Textures/Imagen de WhatsApp 2023-01-22 a las 18.17.40.jpg" type="Texture" id=6]
+[ext_resource path="res://Assets/Textures/Imagen de WhatsApp 2023-01-22 a las 18.18.53.jpg" type="Texture" id=7]
 [ext_resource path="res://Escape_Room_Scenes/MurderUI.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Captura_de_pantalla_2023-01-18_130427.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Textures/Captura_de_pantalla_2023-01-18_130427.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 65
