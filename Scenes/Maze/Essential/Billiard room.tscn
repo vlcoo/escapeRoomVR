@@ -487,10 +487,10 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 82 )
 
-[node name="operation_door5" parent="." instance=ExtResource( 4 )]
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 4 )]
 transform = Transform( 0.224446, 0, -3.19212, 0, 3.2, 0, 3.19212, 0, 0.224446, 0.376831, -1.34742, -9.96665 )
 
-[node name="MorseCode2" parent="operation_door5" instance=ExtResource( 13 )]
+[node name="MorseCode2" parent="operation_door" instance=ExtResource( 13 )]
 transform = Transform( -0.800001, 6.99383e-08, 0, -6.99383e-08, -0.8, 0, 0, -1.77636e-15, 0.800001, -0.082674, 1.64132, 0.0439236 )
 
 [node name="lustre4" parent="." instance=ExtResource( 7 )]

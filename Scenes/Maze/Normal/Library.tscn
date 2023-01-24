@@ -427,7 +427,7 @@ transform = Transform( -0.999996, 0, 0.00294967, 0, 1, 0, -0.00294967, 0, -0.999
 [node name="3Seat5" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.0439158, 0, -0.999035, 0, 1, 0, 0.999035, 0, 0.0439158, -4.01008, -0.726472, 1.14308 )
 
-[node name="operation_door4" parent="." instance=ExtResource( 5 )]
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 5 )]
 transform = Transform( 0.226508, 0, -3.19197, 0, 3.2, 0, 3.19197, 0, 0.226508, 0.460926, -1.17416, -10.2829 )
 
 [node name="table_basse2" parent="." instance=ExtResource( 1 )]

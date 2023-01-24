@@ -522,7 +522,7 @@ transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 303.602, 2.71966, -0.396
 [node name="WaterMElon" parent="Spatial" instance=ExtResource( 10 )]
 transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228, 303.272, 2.13253, -2.77284 )
 
-[node name="operation_door3" parent="Spatial" instance=ExtResource( 7 )]
+[node name="operation_door" parent="Spatial" groups=["doors"] instance=ExtResource( 7 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 298.042, -1.17416, 9.40472 )
 
 [node name="lamp_murale_boule3" parent="Spatial" instance=ExtResource( 9 )]

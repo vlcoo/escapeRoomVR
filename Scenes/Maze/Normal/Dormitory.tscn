@@ -403,7 +403,7 @@ transform = Transform( 3.1998, 0, -0.0359111, 0, 3.2, 0, 0.0359111, 0, 3.1998, 2
 [node name="lamp_bureau2" parent="Spatial" instance=ExtResource( 2 )]
 transform = Transform( 3.1998, 0, -0.0359111, 0, 3.2, 0, 0.0359111, 0, 3.1998, 264.92, 2.00143, -41.6646 )
 
-[node name="operation_door2" parent="Spatial" instance=ExtResource( 9 )]
+[node name="operation_door" parent="Spatial" groups=["doors"] instance=ExtResource( 9 )]
 transform = Transform( -0.200094, 0, 3.19374, 0, 3.2, 0, -3.19374, 0, -0.200094, 297.999, -1.21055, -30.767 )
 
 [node name="mappemonde2" parent="Spatial" instance=ExtResource( 8 )]

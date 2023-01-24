@@ -53,8 +53,7 @@ func _on_Eliminate_pressed():
 
 func _on_Enter_pressed():
 	if(text == str(4651)):
-		get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
-		get_node("numberclues").CluesUnlocked =+1
+		Global.open_door("Bathroom")
 		
 	if(text.length()==4):
 		if(text != str(4651)):

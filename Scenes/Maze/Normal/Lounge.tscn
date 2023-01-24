@@ -433,7 +433,7 @@ light_specular = 16.0
 spot_range = 13.8387
 spot_angle = 58.9513
 
-[node name="operation_door5" parent="." instance=ExtResource( 6 )]
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 6 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, -0.651306, -1.17416, 9.80033 )
 
 [node name="table_basse3" parent="." instance=ExtResource( 4 )]
