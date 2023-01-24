@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/plantravaiUpl.fbx" type="PackedScene" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Fbx/Dominos.fbx" type="PackedScene" id=17]
 [ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/UI/Domino.tscn" type="PackedScene" id=20]
 
 [sub_resource type="SpatialMaterial" id=49]
 albedo_texture = ExtResource( 15 )
@@ -448,3 +450,7 @@ transform = Transform( -3.31165, 0, -2.24342, 0, 4, 0, 2.24342, 0, -3.31165, -2.
 diag_timeline_name = "PresentacionMargarita"
 
 [node name="StaticBody" parent="." instance=ExtResource( 18 )]
+
+[node name="VRGUI" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38965, 4.32339, -10.6495 )
+control_scene = ExtResource( 20 )

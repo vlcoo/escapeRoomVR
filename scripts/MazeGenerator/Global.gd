@@ -20,6 +20,16 @@ enum OPEN_PATHS {
 }
 
 
+var clues_solved = 0
+
+
+func solve_mystery(correct: bool):
+	if clues_solved < 3:
+		return
+	
+	print("did you win? " + str(correct))
+
+
 func load_world_area(which):
 	$"../World".load_area(which)
 
