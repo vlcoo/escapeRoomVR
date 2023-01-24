@@ -22,6 +22,8 @@ var velocity: float = 0
 export(float) var grav_scale: float = 9.8
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(Input.is_action_pressed("ui_up")):
+		unlock()
 	if(can_fall):
 		translation.y -= velocity*delta
 		velocity += grav_scale*delta
