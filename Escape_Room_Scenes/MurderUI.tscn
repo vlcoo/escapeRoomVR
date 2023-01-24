@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Fonts/Charu_Chandan_BloodDrip_Unicode-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/Merriweather-Regular.ttf" type="DynamicFontData" id=2]
@@ -31,18 +31,6 @@ corner_radius_bottom_left = 5
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 0.686275 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-draw_center = false
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color( 1, 0.419608, 0, 1 )
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.0156863, 0.0627451, 0.137255, 0.392157 )
 corner_radius_top_left = 15
@@ -50,7 +38,7 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[node name="MurderUI" type="Control"]
+[node name="MurderUI" type="Node"]
 script = ExtResource( 8 )
 
 [node name="ColorRect" type="TextureRect" parent="."]
@@ -80,143 +68,55 @@ custom_constants/hseparation = 63
 columns = 5
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 109.0
-margin_top = 153.0
-margin_right = 1376.0
-margin_bottom = 734.0
+margin_left = 272.0
+margin_top = 152.0
+margin_right = 1001.0
+margin_bottom = 446.0
 rect_scale = Vector2( 0.628408, 0.613437 )
 custom_constants/hseparation = 75
-columns = 3
+columns = 2
 
 [node name="Heidi2" type="TextureRect" parent="GridContainer"]
-margin_right = 416.0
+margin_right = 302.0
 margin_bottom = 226.0
 texture = ExtResource( 7 )
 stretch_mode = 6
 
 [node name="Nathan2" type="TextureRect" parent="GridContainer"]
-margin_left = 491.0
-margin_right = 851.0
+margin_left = 377.0
+margin_right = 729.0
 margin_bottom = 226.0
 size_flags_stretch_ratio = 0.0
 texture = ExtResource( 4 )
-stretch_mode = 6
-
-[node name="Nicole2" type="TextureRect" parent="GridContainer"]
-margin_left = 926.0
-margin_right = 1267.0
-margin_bottom = 226.0
-rect_min_size = Vector2( 0, -0.123 )
-texture = ExtResource( 3 )
 stretch_mode = 6
 
 [node name="Heidi" type="Button" parent="GridContainer"]
 margin_top = 230.0
 margin_right = 302.0
 margin_bottom = 294.0
-focus_neighbour_right = NodePath("../Nathan")
-focus_neighbour_bottom = NodePath("../Isaías")
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_constants/hseparation = 7
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
 custom_styles/normal = SubResource( 3 )
 text = "Heidi Weber"
 icon_align = 1
 
 [node name="Nathan" type="Button" parent="GridContainer"]
-margin_left = 491.0
+margin_left = 377.0
 margin_top = 230.0
-margin_right = 843.0
+margin_right = 729.0
 margin_bottom = 294.0
-focus_neighbour_left = NodePath("../Heidi")
-focus_neighbour_right = NodePath("../Nicole")
-focus_neighbour_bottom = NodePath("../Pedro")
+focus_mode = 0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
 custom_styles/normal = SubResource( 3 )
 text = "Nathan  Drake"
-icon_align = 1
-
-[node name="Nicole" type="Button" parent="GridContainer"]
-margin_left = 926.0
-margin_top = 230.0
-margin_right = 1267.0
-margin_bottom = 294.0
-focus_neighbour_left = NodePath("../Nathan")
-focus_neighbour_bottom = NodePath("../Pedro")
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 3 )
-text = "Nicole Dubois"
-icon_align = 1
-
-[node name="Isaías2" type="TextureRect" parent="GridContainer"]
-margin_top = 298.0
-margin_right = 416.0
-margin_bottom = 513.0
-rect_min_size = Vector2( 0, 0.046 )
-texture = ExtResource( 6 )
-stretch_mode = 6
-
-[node name="Pedro2" type="TextureRect" parent="GridContainer"]
-margin_left = 491.0
-margin_top = 298.0
-margin_right = 851.0
-margin_bottom = 513.0
-texture = ExtResource( 5 )
-stretch_mode = 6
-
-[node name="empty" type="TextureRect" parent="GridContainer"]
-margin_left = 926.0
-margin_top = 298.0
-margin_right = 1267.0
-margin_bottom = 513.0
-stretch_mode = 6
-
-[node name="Isaías" type="Button" parent="GridContainer"]
-margin_top = 517.0
-margin_right = 416.0
-margin_bottom = 581.0
-focus_neighbour_top = NodePath("../Heidi")
-focus_neighbour_right = NodePath("../Pedro")
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 3 )
-text = "Isaías Fernández"
-icon_align = 1
-
-[node name="Pedro" type="Button" parent="GridContainer"]
-margin_left = 491.0
-margin_top = 517.0
-margin_right = 851.0
-margin_bottom = 581.0
-rect_pivot_offset = Vector2( -0.011, 0 )
-focus_neighbour_left = NodePath("../Isaías")
-focus_neighbour_top = NodePath("../Nathan")
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 3 )
-text = "Pedro Sánchez"
 icon_align = 1
 
 [node name="GridContainer2" type="GridContainer" parent="."]
@@ -228,8 +128,72 @@ rect_scale = Vector2( 0.691137, 0.654182 )
 custom_constants/hseparation = 70
 columns = 3
 
+[node name="Nicole2" type="TextureRect" parent="GridContainer2"]
+margin_right = 341.0
+margin_bottom = 215.0
+rect_min_size = Vector2( 0, -0.123 )
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="Isaías2" type="TextureRect" parent="GridContainer2"]
+margin_left = 411.0
+margin_right = 827.0
+margin_bottom = 215.0
+rect_min_size = Vector2( 0, 0.046 )
+texture = ExtResource( 6 )
+stretch_mode = 6
+
+[node name="Pedro2" type="TextureRect" parent="GridContainer2"]
+margin_left = 897.0
+margin_right = 1257.0
+margin_bottom = 215.0
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="Nicole" type="Button" parent="GridContainer2"]
+margin_top = 219.0
+margin_right = 341.0
+margin_bottom = 283.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Nicole Dubois"
+icon_align = 1
+
+[node name="Isaías" type="Button" parent="GridContainer2"]
+margin_left = 411.0
+margin_top = 219.0
+margin_right = 827.0
+margin_bottom = 283.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Isaías Fernández"
+icon_align = 1
+
+[node name="Pedro" type="Button" parent="GridContainer2"]
+margin_left = 897.0
+margin_top = 219.0
+margin_right = 1257.0
+margin_bottom = 283.0
+rect_pivot_offset = Vector2( -0.011, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+text = "Pedro Sánchez"
+icon_align = 1
+
 [connection signal="button_up" from="GridContainer/Heidi" to="." method="_on_Heidi_button_up"]
 [connection signal="button_up" from="GridContainer/Nathan" to="." method="_on_Nathan_button_up"]
-[connection signal="button_up" from="GridContainer/Nicole" to="." method="_on_Nicole_button_up"]
-[connection signal="button_up" from="GridContainer/Isaías" to="." method="_on_Isaas_button_up"]
-[connection signal="button_up" from="GridContainer/Pedro" to="." method="_on_Pedro_button_up"]
+[connection signal="button_up" from="GridContainer2/Nicole" to="." method="_on_Nicole_button_up"]
+[connection signal="button_up" from="GridContainer2/Isaías" to="." method="_on_Isaas_button_up"]
+[connection signal="button_up" from="GridContainer2/Pedro" to="." method="_on_Pedro_button_up"]

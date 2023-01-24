@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/MazeGenerator/Maze3D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Maze/Essential/Billiard room.tscn" type="PackedScene" id=2]
@@ -9,9 +9,6 @@
 [ext_resource path="res://Scenes/Maze/Normal/Library.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Maze/Normal/Lounge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Maze/Normal/Kitchen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Escape_Room_Scenes/MurderUI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/UI/MurderVRUI.gd" type="Script" id=12]
 
 [node name="Maze3D" type="Spatial"]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
@@ -47,9 +44,4 @@ transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e
 light_energy = 0.4
 
 [node name="PlayerSpawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.54794, 1, 8.42311 )
-
-[node name="MurderSolverGUI" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.999123, 0, 0.0418757, 0, 1, 0, -0.0418757, 0, -0.999123, 5.97634, 0.358201, 7.34661 )
-script = ExtResource( 12 )
-control_scene = ExtResource( 11 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 16 )
