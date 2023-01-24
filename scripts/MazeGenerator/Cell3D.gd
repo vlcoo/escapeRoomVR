@@ -8,6 +8,7 @@ var open_paths: int = 0
 var room_degrees: int = 0
 var room_degrees_offset: int
 var room: Spatial;
+var unlocked: bool = false;
 
 func unlock():
 	$PathsNew/Unlocked.set_visible(true)
@@ -33,7 +34,6 @@ func update_visuals() -> void:
 		$PathsNew/DownPath.visible = true
 		room_degrees = 270
 		
-	if(room): room.rotation_degrees.y = room_degrees_offset + room_degrees
 
 func dead_cell():
 	pass;
@@ -47,6 +47,7 @@ func essential_cell():
 	add_child(room)
 	room_degrees_offset = room.rotation_degrees.y-90;
 	update_visuals()
+	room.rotation_degrees.y = room_degrees_offset + room_degrees
 	pass;
 func room_cell():
 	$PathsNew.visible = false
@@ -56,6 +57,7 @@ func room_cell():
 	add_child(room)
 	room_degrees_offset = room.rotation_degrees.y-90;
 	update_visuals()
+	room.rotation_degrees.y = room_degrees_offset + room_degrees
 	pass;
 #	$PathsNew/Unlocked.material.albedo_color = Color.green
 

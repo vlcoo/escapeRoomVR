@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Lock/Padlock_LOD1.fbx" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Padlock_LOD1" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1597, -23.6912, -37.7842 )

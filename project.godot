@@ -69,6 +69,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/MazeGenerator/MazeGeneratorPoint.gd"
 }, {
+"base": "Spatial",
+"class": "VRGUI",
+"language": "GDScript",
+"path": "res://Scenes/GUI.gd"
+}, {
 "base": "RigidBody",
 "class": "VRInteractable",
 "language": "GDScript",
@@ -87,6 +92,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "HistoryRow": "",
 "MazeGeneratorPoint": "",
+"VRGUI": "",
 "VRInteractable": ""
 }
 
@@ -138,4 +144,5 @@ quality/shadow_atlas/size=2048
 quality/reflections/high_quality_ggx=false
 quality/filters/anisotropic_filter_level=1
 quality/filters/msaa=1
+quality/filters/use_debanding=true
 environment/default_environment="res://default_env.tres"
