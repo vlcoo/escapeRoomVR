@@ -425,11 +425,13 @@ transform = Transform( 2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 320.315, -5.5602, -9.313
 
 [node name="SpotLight3" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427352, -0.0577731, -0.0240954, 0.998039, 0.935861, -0.349389, 0.0457386, 297.416, 10.4028, -1.36934 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 2.181
 light_indirect_energy = 16.0
 light_specular = 16.0
-spot_range = 10.8439
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 21.551
 spot_angle = 58.9513
 
 [node name="chaisepatron2" parent="." instance=ExtResource( 5 )]

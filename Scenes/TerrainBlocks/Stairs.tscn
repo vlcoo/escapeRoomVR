@@ -48,17 +48,19 @@ material = SubResource( 35 )
 transform = Transform( -3.48666e-09, -4.04231, 0, 0.083014, -1.83891e-07, 0, 0, 0, 5.2653, 357.196, -1.2104, -6.94674 )
 material = SubResource( 37 )
 
-[node name="model" type="Spatial" parent="." instance=ExtResource( 2 )]
+[node name="model" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 351.278, 2.66434, -3.11413 )
 
-[node name="lamp_murale_boule7" type="Spatial" parent="." instance=ExtResource( 3 )]
+[node name="lamp_murale_boule7" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.03236, 3.02694, -0.108877, 0, -0.115027, -3.19793, -3.0289, 1.03169, -0.0371092, 337.745, -0.411436, 24.9725 )
 
 [node name="SpotLight9" type="SpotLight" parent="."]
-transform = Transform( 0.307218, 0.941785, 0.136594, -0.247855, -0.0593955, 0.966975, 0.918795, -0.330928, 0.215179, 353.325, 10.2886, 3.26736 )
-light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
-light_energy = 2.899
+transform = Transform( 0.307218, 0.941785, 0.136595, -0.247855, -0.0593956, 0.966975, 0.918795, -0.330928, 0.215179, 353.325, 10.2886, 3.26736 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.578
 light_indirect_energy = 16.0
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 25.4727
 spot_angle = 36.0813

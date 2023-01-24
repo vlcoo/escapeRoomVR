@@ -493,11 +493,14 @@ transform = Transform( 0.236322, 0, -3.21349, 0, 3.27476, 0, 0.784403, 0, 0.0576
 transform = Transform( -4.09782e-08, 0, 0.904207, 0, 0.550325, 0, -0.765068, 0, -2.23517e-08, -1.22361, 1.40515, -1.94244 )
 
 [node name="SpotLight7" type="SpotLight" parent="."]
-transform = Transform( -0.344235, -0.937918, -0.0425705, -0.0577731, -0.0240954, 0.998039, -0.937104, 0.346019, -0.0458919, 349.067, 8.98547, 38.5979 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+transform = Transform( -0.344235, -0.937918, -0.0425705, -0.0577731, -0.0240954, 0.998039, -0.937104, 0.346019, -0.045892, 397.615, 8.98547, 38.5979 )
+visible = false
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 0.256
 light_indirect_energy = 16.0
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 12.8067
 spot_angle = 58.9513
 
@@ -505,9 +508,18 @@ spot_angle = 58.9513
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 324.431, -0.411436, 23.1187 )
 
 [node name="SpotLight8" type="SpotLight" parent="."]
-transform = Transform( 0.307218, 0.941785, 0.136595, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 349.042, 10.2886, 27.8631 )
-light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
-light_energy = 2.899
+transform = Transform( 0.307218, 0.941785, 0.136595, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 347.25, 10.2886, 36.7698 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.284
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 25.4727
+spot_angle = 36.0813
+
+[node name="SpotLight9" type="SpotLight" parent="."]
+transform = Transform( 0.307218, 0.941785, 0.136594, 0.0193016, -0.149673, 0.988547, 0.951443, -0.301063, -0.0641602, 350.751, 10.2886, 35.6022 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.578
 light_indirect_energy = 16.0
 light_specular = 16.0
 spot_range = 25.4727

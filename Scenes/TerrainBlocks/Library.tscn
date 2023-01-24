@@ -384,7 +384,7 @@ transform = Transform( -0.00718158, 0, -2.85739, 0, 2.99, 0, 0.999997, 0, -0.002
 
 [node name="SpotLight4" type="SpotLight" parent="."]
 transform = Transform( -0.34484, -0.937694, -0.0426001, -0.0577731, -0.0240954, 0.998039, -0.936882, 0.346625, -0.0458644, 293.622, -1.36529, 30.6179 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
 light_energy = 0.42
 light_indirect_energy = 16.0
 light_specular = 16.0
@@ -393,20 +393,34 @@ spot_angle = 58.9513
 
 [node name="SpotLight5" type="SpotLight" parent="."]
 transform = Transform( -0.34484, -0.937694, -0.0426001, -0.0577731, -0.0240954, 0.998039, -0.936882, 0.346625, -0.0458644, 282.076, -2.40664, 29.3896 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 5.411
 light_indirect_energy = 16.0
 light_specular = 16.0
 spot_range = 10.8439
 spot_angle = 58.9513
 
+[node name="SpotLight8" type="SpotLight" parent="."]
+transform = Transform( -0.336507, -0.929507, -0.150931, -0.0949479, -0.125971, 0.98748, -0.936882, 0.346625, -0.0458644, 293.256, -1.73329, 30.35 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 3.883
+light_indirect_energy = 16.0
+light_specular = 16.156
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 10.047
+spot_attenuation = 0.615572
+spot_angle = 46.8
+spot_angle_attenuation = 0.68302
+
 [node name="SpotLight6" type="SpotLight" parent="."]
 transform = Transform( -0.34484, -0.937694, -0.0426001, -0.0577731, -0.0240954, 0.998039, -0.936882, 0.346625, -0.0458644, 294.669, -2.40664, 21.189 )
-light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
-light_energy = 9.961
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 9.667
 light_indirect_energy = 16.0
 light_specular = 16.0
-spot_range = 10.8439
+spot_range = 17.141
+spot_attenuation = 3.36358
 spot_angle = 58.9513
 
 [node name="lamp_murale_boule4" parent="." instance=ExtResource( 10 )]
@@ -434,10 +448,25 @@ transform = Transform( -0.0695993, 0, 3.99939, 0, 4, 0, -3.99939, 0, -0.0695993,
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 270.207, -10.7622, 13.7865 )
 
 [node name="SpotLight3" type="SpotLight" parent="."]
-transform = Transform( 0.307218, 0.941785, 0.136594, -0.247855, -0.0593955, 0.966975, 0.918795, -0.330928, 0.215179, 294.817, -0.0621614, 18.9704 )
-light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
-light_energy = 2.899
-light_indirect_energy = 16.0
+transform = Transform( 0.307218, 0.941785, 0.136595, -0.247855, -0.0593956, 0.966975, 0.918795, -0.330928, 0.215179, 294.817, -0.0621614, 18.9704 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.871
+light_indirect_energy = 16.16
+light_negative = true
 light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 25.4727
+spot_angle = 36.0813
+
+[node name="SpotLight7" type="SpotLight" parent="."]
+transform = Transform( 0.307218, 0.941785, 0.136595, -0.247855, -0.0593956, 0.966975, 0.918795, -0.330928, 0.215179, 294.817, -0.0621614, 18.9704 )
+light_color = Color( 0.666667, 0.643137, 0.564706, 1 )
+light_energy = 1.871
+light_indirect_energy = 16.16
+light_negative = true
+light_specular = 16.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_range = 25.4727
 spot_angle = 36.0813
