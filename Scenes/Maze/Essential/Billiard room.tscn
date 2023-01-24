@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/Textures/parkettkaiser-skaben-tapete-jungle-dschungeltapete-palmentapete-gruen-194573_r.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=11]
 [ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Fbx/MorseCode2.fbx" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 8 )
