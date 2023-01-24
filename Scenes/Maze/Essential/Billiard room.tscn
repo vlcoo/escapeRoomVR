@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/UI/ClueSolveVRUI.gd" type="Script" id=16]
 [ext_resource path="res://Scenes/UI/MorseCode.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Maze/Lock.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 8 )
@@ -488,11 +489,14 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 82 )
 
+[node name="Lock" parent="." instance=ExtResource( 18 )]
+transform = Transform( 25, 0, 0, 0, 25, 0, 0, 0, 25, 0.229806, 2.0385, -10.394 )
+
 [node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 4 )]
 transform = Transform( 0.224446, 0, -3.19212, 0, 3.2, 0, 3.19212, 0, 0.224446, 0.376831, -1.34742, -9.96665 )
 
-[node name="MorseCode2" parent="operation_door" instance=ExtResource( 13 )]
-transform = Transform( -0.800001, 6.99383e-08, 3.72529e-09, -6.99383e-08, -0.8, 0, 3.72529e-09, -1.77636e-15, 0.800001, -0.082674, 1.64132, 0.0439236 )
+[node name="clue" parent="operation_door" instance=ExtResource( 13 )]
+transform = Transform( -0.800001, 6.99383e-08, 1.11759e-08, -6.99383e-08, -0.8, 0, 1.11759e-08, -3.55271e-15, 0.800001, -0.047924, 0.96139, -1.03794 )
 
 [node name="lustre4" parent="." instance=ExtResource( 7 )]
 transform = Transform( -2.29999, 0, 0.00826951, 0, 2.3, 0, -0.00826951, 0, -2.29999, -22.4482, -5.05978, 7.57225 )

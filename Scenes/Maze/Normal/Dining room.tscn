@@ -65,6 +65,9 @@ extents = Vector3( 0.202459, 0.795352, 0.642514 )
 [node name="Dining room" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 7 )]
+transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 0.0740042, -1.17416, 10.1487 )
+
 [node name="Spatial" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.968, 0, 0.744 )
 
@@ -521,9 +524,6 @@ transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 303.602, 2.71966, -0.396
 
 [node name="WaterMElon" parent="Spatial" instance=ExtResource( 10 )]
 transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228, 303.272, 2.13253, -2.77284 )
-
-[node name="operation_door" parent="Spatial" groups=["doors"] instance=ExtResource( 7 )]
-transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 298.042, -1.17416, 9.40472 )
 
 [node name="lamp_murale_boule3" parent="Spatial" instance=ExtResource( 9 )]
 transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 273.465, -0.411436, 2.69752 )

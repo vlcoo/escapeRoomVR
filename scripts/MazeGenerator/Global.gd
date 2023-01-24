@@ -39,6 +39,12 @@ func open_door(which: String):
 	for door in get_tree().get_nodes_in_group("doors"):
 		if door.get_parent().name == which:
 			door.get_node("RootNode/AnimationPlayer").play("open")
+			if door.get_children().size() > 1:
+				door.get_node("clue").queue_free()
+			break;
+	for lock in get_tree().get_nodes_in_group("locks"):
+		if lock.get_parent().name == which:
+			lock.unlock();
 			return
 
 func setup_doors():
