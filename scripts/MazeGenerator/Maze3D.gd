@@ -5,9 +5,9 @@ extends Spatial
 # var a: int = 2
 # var b: String = "text"
 
-var _mazeGeneratorPoint_tscn = preload('res://scripts/MazeGenerator/MazeGeneratorPoint.tscn')
+var _mazeGeneratorPoint_tscn = preload('res://Escape_Room_Scenes/MazeGeneratorPoint.tscn')
 var _mazeGeneratorPoint
-var _cell_tscn = preload('res://scripts/MazeGenerator/Cell3D.tscn')
+var _cell_tscn = preload('res://Escape_Room_Scenes/Cell3D.tscn')
 
 
 var cells: Dictionary = {}
@@ -26,6 +26,7 @@ var first_time_dead_cells: Array = []
 var essential_cells: Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.setup_doors()
 	setup_cells()
 	setup_rooms()
 	

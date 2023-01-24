@@ -3,7 +3,8 @@
 [ext_resource path="res://Assets/Ghost/FBX/Ghost/Material #3.material" type="Material" id=1]
 [ext_resource path="res://Assets/Ghost/FBX/Ghost/Ghost3.material" type="Material" id=2]
 [ext_resource path="res://scripts/Ghost.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Main_VR_GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
@@ -193,7 +194,7 @@ __meta__ = {
 }
 
 [node name="RootNode" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.094087, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0320233, 0 )
 
 [node name="Skeleton" type="Skeleton" parent="RootNode"]
 bones/0/name = "RigRArmRing3"

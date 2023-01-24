@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Escape_Room_Scenes/Plate1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Knife2.tscn" type="PackedScene" id=2]
@@ -19,6 +19,9 @@
 [ext_resource path="res://Assets/Textures/374131_11.jpg" type="Texture" id=17]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=19]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=21]
+[ext_resource path="res://Assets/Fbx/Postcard5.fbx" type="PackedScene" id=22]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 18 )
@@ -52,6 +55,12 @@ albedo_texture = ExtResource( 19 )
 
 [sub_resource type="SpatialMaterial" id=77]
 albedo_texture = ExtResource( 19 )
+
+[sub_resource type="BoxShape" id=78]
+extents = Vector3( 0.386027, 1, 0.806596 )
+
+[sub_resource type="BoxShape" id=79]
+extents = Vector3( 0.202459, 0.795352, 0.642514 )
 
 [node name="Dining room" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
@@ -474,9 +483,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.432, 2.09411, -2.50744 )
 [node name="Glass4" parent="Spatial" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 296.197, 1.99723, 1.16042 )
 
-[node name="CornFlakes" parent="Spatial" instance=ExtResource( 8 )]
-transform = Transform( -0.997033, 0, 0.0769801, 0, 1, 0, -0.0769801, 0, -0.997033, 294.756, 2.53529, 0.342818 )
-
 [node name="Glass5" parent="Spatial" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 302.286, 2.51606, 1.17612 )
 
@@ -516,8 +522,33 @@ transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 303.602, 2.71966, -0.396
 [node name="WaterMElon" parent="Spatial" instance=ExtResource( 10 )]
 transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228, 303.272, 2.13253, -2.77284 )
 
-[node name="operation_door3" parent="Spatial" instance=ExtResource( 7 )]
+[node name="operation_door" parent="Spatial" groups=["doors"] instance=ExtResource( 7 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, 298.042, -1.17416, 9.40472 )
 
 [node name="lamp_murale_boule3" parent="Spatial" instance=ExtResource( 9 )]
 transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 273.465, -0.411436, 2.69752 )
+
+[node name="VRInteractable" type="RigidBody" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 294.332, 0.173522, 2.57492e-05 )
+script = ExtResource( 21 )
+
+[node name="CornFlakes" parent="Spatial/VRInteractable" instance=ExtResource( 8 )]
+transform = Transform( -0.997033, 0, 0.0769801, 0, 1, 0, -0.0769801, 0, -0.997033, 0, 2.535, 0.343 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/VRInteractable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7575, 0.235385 )
+shape = SubResource( 78 )
+
+[node name="VRInteractable2" type="RigidBody" parent="Spatial"]
+transform = Transform( -0.0257059, 0.983306, -0.180135, -0.976042, -0.0636328, -0.208068, -0.216057, 0.170471, 0.961384, 302.763, 1.53066, 3.10958 )
+script = ExtResource( 21 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/VRInteractable2"]
+transform = Transform( 0.941264, 0, -0.33767, 0, 1, 0, 0.33767, 0, 0.941264, -0.263942, -0.0166082, 0.0894709 )
+shape = SubResource( 79 )
+
+[node name="Postcard5" parent="Spatial/VRInteractable2" instance=ExtResource( 22 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 20 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )

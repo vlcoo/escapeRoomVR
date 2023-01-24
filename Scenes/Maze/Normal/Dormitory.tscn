@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/petitbureau.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_bureau.fbx" type="PackedScene" id=2]
@@ -12,30 +12,22 @@
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=10]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/chaise.fbx" type="PackedScene" id=11]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/plante_balcon.fbx" type="PackedScene" id=12]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/fenetre02.fbx" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Textures/TexturesCom_Wall_Stucco2_2x2_1K_albedo.png" type="Texture" id=14]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Textures/Fabric_Carpet_001_normal.jpg" type="Texture" id=15]
-[ext_resource path="res://Assets/Textures/TexturesCom_Wall_Stucco2_2x2_1K_normal.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Textures/22.jpg" type="Texture" id=17]
 [ext_resource path="res://Assets/Textures/Fabric_Carpet_001_ambientOcclusion.jpg" type="Texture" id=18]
 [ext_resource path="res://Assets/Textures/Rug_006_basecolor.jpg" type="Texture" id=19]
 [ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=21]
-[ext_resource path="res://Assets/3D assets/boardingPass.fbx" type="PackedScene" id=22]
+[ext_resource path="res://Assets/Fbx/boardingPass.fbx" type="PackedScene" id=22]
 [ext_resource path="res://Escape_Room_Scenes/PhoneClue.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/VRInteractable.gd" type="Script" id=24]
+[ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=24]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 20 )
 
 [sub_resource type="SpatialMaterial" id=30]
 albedo_texture = ExtResource( 20 )
-
-[sub_resource type="SpatialMaterial" id=39]
-albedo_texture = ExtResource( 14 )
-normal_enabled = true
-normal_scale = 1.0
-normal_texture = ExtResource( 16 )
 
 [sub_resource type="SpatialMaterial" id=31]
 albedo_texture = ExtResource( 20 )
@@ -71,6 +63,10 @@ ao_texture = ExtResource( 18 )
 ao_on_uv2 = false
 ao_texture_channel = 0
 
+[sub_resource type="CapsuleShape" id=77]
+radius = 0.279151
+height = 1.04275
+
 [sub_resource type="BoxShape" id=74]
 extents = Vector3( 13.3065, 0.143351, 10.1839 )
 
@@ -84,7 +80,7 @@ extents = Vector3( 0.366487, 0.10891, 0.941737 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.968, 1.258, 40.567 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.968, 0, 40.567 )
 
 [node name="Wall5" type="CSGBox" parent="Spatial"]
 transform = Transform( -3.62843e-09, -4.20667, -0.0562778, 0.083014, -1.83891e-07, 0, -4.07217e-11, -0.0472111, 5.01453, 290.119, -1.2104, -45.7411 )
@@ -93,12 +89,6 @@ material = SubResource( 29 )
 [node name="Wall6" type="CSGBox" parent="Spatial"]
 transform = Transform( -3.62843e-09, -4.20667, -0.0562778, 0.083014, -1.83891e-07, 0, -4.07217e-11, -0.0472111, 5.01453, 290.006, -1.2104, -35.6795 )
 material = SubResource( 30 )
-
-[node name="Wall9" type="CSGBox" parent="Spatial"]
-transform = Transform( 0.000367989, 4.20663, -0.0562778, -0.0830132, 0.01865, 0, 4.12992e-06, 0.0472107, 5.01453, 179.526, 8.86784, 51.3068 )
-height = 1.70911
-depth = 1.60194
-material = SubResource( 39 )
 
 [node name="Wall7" type="CSGBox" parent="Spatial"]
 transform = Transform( -3.62843e-09, -4.20667, -0.0562778, 0.083014, -1.83891e-07, 0, -4.07217e-11, -0.0472111, 5.01453, 298.385, -1.2104, -35.5855 )
@@ -401,9 +391,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="fenetre03" parent="Spatial" instance=ExtResource( 13 )]
-transform = Transform( 0.0670423, 0, 2.79919, 0, 2.8, 0, -2.79919, 0, 0.0670423, 153.914, -0.418915, -14.8502 )
-
 [node name="penderie3" parent="Spatial" instance=ExtResource( 6 )]
 transform = Transform( 3.1998, 0, -0.0359111, 0, 3.2, 0, 0.0359111, 0, 3.1998, 324.582, -12.0323, -13.0649 )
 
@@ -416,7 +403,7 @@ transform = Transform( 3.1998, 0, -0.0359111, 0, 3.2, 0, 0.0359111, 0, 3.1998, 2
 [node name="lamp_bureau2" parent="Spatial" instance=ExtResource( 2 )]
 transform = Transform( 3.1998, 0, -0.0359111, 0, 3.2, 0, 0.0359111, 0, 3.1998, 264.92, 2.00143, -41.6646 )
 
-[node name="operation_door2" parent="Spatial" instance=ExtResource( 9 )]
+[node name="operation_door" parent="Spatial" groups=["doors"] instance=ExtResource( 9 )]
 transform = Transform( -0.200094, 0, 3.19374, 0, 3.2, 0, -3.19374, 0, -0.200094, 297.999, -1.21055, -30.767 )
 
 [node name="mappemonde2" parent="Spatial" instance=ExtResource( 8 )]
@@ -448,9 +435,6 @@ material = SubResource( 41 )
 
 [node name="lamp_murale_boule2" parent="Spatial" instance=ExtResource( 10 )]
 transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, 274.318, -0.411436, -37.4367 )
-
-[node name="vinaigre2" parent="Spatial" instance=ExtResource( 7 )]
-transform = Transform( 0.751865, 3.11021, -0.0359111, -3.11041, 0.751912, 0, 0.00843813, 0.0349057, 3.1998, 299.07, 21.1558, -49.5188 )
 
 [node name="plante_balcon2" parent="Spatial" instance=ExtResource( 12 )]
 transform = Transform( 2.83014, 0, -0.0289204, 0, 3.2, 0, 0.0317625, 0, 2.5769, 278.478, -1.2685, -49.5797 )
@@ -485,27 +469,43 @@ spot_angle = 40.7813
 [node name="lamp_murale_boule13" parent="Spatial" instance=ExtResource( 10 )]
 transform = Transform( -0.196136, 3.19192, -0.11481, 0, -0.115027, -3.19793, -3.19398, -0.196009, 0.00705029, 307.319, 0.0160164, -17.0608 )
 
+[node name="VRInteractable" type="RigidBody" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 300.229, 21.4798, -43.7473 )
+script = ExtResource( 24 )
+
+[node name="vinaigre2" parent="Spatial/VRInteractable" instance=ExtResource( 7 )]
+transform = Transform( 0.751865, 3.11021, -0.0359111, -3.11041, 0.751912, 0, 0.00843813, 0.0349057, 3.1998, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/VRInteractable"]
+transform = Transform( -4.46598e-08, -0.207178, -0.978303, 9.05602e-09, 0.978303, -0.207178, 1, -1.8112e-08, -4.18146e-08, 5.9364, -21.9313, 9.19511 )
+shape = SubResource( 77 )
+
 [node name="TPFloor" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="TPFloor"]
 shape = SubResource( 74 )
 
 [node name="VRInteractable" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5888e-07, 3.5724, 4.10511 )
 script = ExtResource( 24 )
 
 [node name="boardingPass" parent="VRInteractable" instance=ExtResource( 22 )]
-transform = Transform( -0.0407379, 0.240914, -0.969691, -0.918137, 0.373827, 0.131447, 0.394164, 0.895664, 0.205963, 0, 3.91117, 4.32794 )
+transform = Transform( -0.0407379, 0.240914, -0.969691, -0.918137, 0.373827, 0.131447, 0.394164, 0.895664, 0.205963, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
-transform = Transform( 0.977142, 0, 0.212587, 0, 1, 0, -0.212587, 0, 0.977142, 0.654977, 0.872963, 4.4966 )
+transform = Transform( 0.977142, 0, 0.212587, 0, 1, 0, -0.212587, 0, 0.977142, 0.654977, -2.95342, 0.136109 )
 shape = SubResource( 75 )
 
 [node name="VRInteractable2" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.49296, 2.61658, -0.853609 )
 script = ExtResource( 24 )
 
 [node name="PhoneClue2" parent="VRInteractable2" instance=ExtResource( 23 )]
-transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.00047163, 0.275909, 0.0363186, 0.284219, -7.75877, 3.36312, -0.556202 )
+transform = Transform( 0.271726, 0.0362028, -0.268408, -0.0787814, 0.594805, 0.00047163, 0.275909, 0.0363186, 0.284219, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable2"]
-transform = Transform( 0.711857, 0.070271, 0.6988, 0.0879863, 0.97822, -0.188, -0.696791, 0.195314, 0.69017, -7.78777, 3.35855, -0.606297 )
+transform = Transform( 0.71631, 0.139608, 0.683674, -0.0727424, 0.989383, -0.12582, -0.69398, 0.0403939, 0.71886, 0.0767374, -0.000501871, 0.0698826 )
 shape = SubResource( 76 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )

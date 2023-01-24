@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/3D assets/PhoneClue.fbx" type="PackedScene" id=1]
-[ext_resource path="res://Assets/3D assets/CluePhone.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Fbx/PhoneClue.fbx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Textures/CluePhone.jpg" type="Texture" id=2]
+
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
