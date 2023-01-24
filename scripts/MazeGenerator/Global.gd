@@ -20,6 +20,7 @@ enum OPEN_PATHS {
 }
 
 var clues_solved = {}
+var active_control_node = null
 
 
 func solve_mystery(correct: bool):
@@ -30,22 +31,31 @@ func solve_mystery(correct: bool):
 
 
 func open_door(which: String):
+	print("opening " + which + "!!")
 	if clues_solved.keys().has(which) and clues_solved[which]:
 		return
 	
 	clues_solved[which] = true
 	for door in get_tree().get_nodes_in_group("doors"):
 		if door.get_parent().name == which:
-			door.get_node("AnimationPlayer").play("open door")
+			door.get_node("RootNode/AnimationPlayer").play("open")
 			return
 
 func setup_doors():
-	yield(get_tree().create_timer(5), "timeout")
+	yield(get_tree().create_timer(3), "timeout")
 	open_door("Dormitory")
 	open_door("Dining room")
 	open_door("Kitchen")
 	open_door("Library")
 	open_door("Lounge")
+
+
+func ui_input_dir(dir: int):	# up, right, down, left = 0, 1, 2, 3 ; accept = -1
+	print("input " + str(dir) + " on " + str(active_control_node))
+	if active_control_node == null:
+		return
+	
+	active_control_node.request_input_dir(dir)
 
 
 func load_world_area(which):

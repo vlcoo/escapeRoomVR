@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/plantravaiUpl.fbx" type="PackedScene" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Fbx/ToiletBrush.FBX" type="PackedScene" id=6]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/evier2.fbx" type="PackedScene" id=7]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/tabledop.fbx" type="PackedScene" id=8]
-[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=9]
+[ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Fbx/Toilet.FBX" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Fbx/ToiletRollHolder.FBX" type="PackedScene" id=12]
@@ -19,7 +19,8 @@
 [ext_resource path="res://Assets/Fbx/Dominos.fbx" type="PackedScene" id=17]
 [ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/UI/Domino.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/UI/ClueSolveVRUI.gd" type="Script" id=20]
+[ext_resource path="res://Scenes/UI/Domino.tscn" type="PackedScene" id=21]
 
 [sub_resource type="SpatialMaterial" id=49]
 albedo_texture = ExtResource( 15 )
@@ -369,12 +370,9 @@ transform = Transform( -3.19965, 0, -0.0473597, 0, 3.2, 0, 0.0473597, 0, -3.1996
 
 [node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 9 )]
 transform = Transform( 0.283128, 0, -3.18745, 0, 3.2, 0, 3.18745, 0, 0.283128, 0.501209, -1.17416, -10.174 )
-__meta__ = {
-"_editor_description_": ""
-}
 
 [node name="Dominos" parent="operation_door" instance=ExtResource( 17 )]
-transform = Transform( -0.8, 6.99382e-08, 0, -6.99382e-08, -0.8, 0, 0, 0, 0.8, -0.146183, 1.64702, 0.0548795 )
+transform = Transform( -0.8, 6.99382e-08, 0, -6.99382e-08, -0.8, 0, 0, -4.44089e-16, 0.8, -0.146183, 1.64702, 0.0548795 )
 
 [node name="SpotLight10" type="SpotLight" parent="."]
 transform = Transform( -0.361247, -0.931386, -0.0449622, -0.1562, 0.0129059, 0.987641, -0.919294, 0.363806, -0.150145, -8.60582, 12.5337, -1.38644 )
@@ -456,4 +454,5 @@ diag_timeline_name = "PresentacionMargarita"
 
 [node name="VRGUI" parent="." instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38965, 4.32339, -10.6495 )
-control_scene = ExtResource( 20 )
+script = ExtResource( 20 )
+control_scene = ExtResource( 21 )

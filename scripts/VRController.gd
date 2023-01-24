@@ -283,10 +283,7 @@ func button_pressed(button_index):
 		
 	# If the menu button on the VR controller is pressed...
 	elif button_index == Global.INPUT_BUTTONS.MENU:
-		var a = InputEventKey.new()
-		a.scancode = KEY_ENTER
-		a.pressed = true
-		Input.parse_input_event(a)
+		Global.ui_input_dir(-1)
 		Dialogic.next_event()
 
 # handling UI navigation...
@@ -298,21 +295,20 @@ func _on_button_pressed_touchpad():
 	simulate_key_based_on_vector2(trackpad_vector)
 
 func simulate_key_based_on_vector2(vector: Vector2):
-	var a = InputEventAction.new()
+	var dir
 	
 	if abs(vector.x) > abs(vector.y):
 		if vector.x > 0:
-			a.action = "ui_left"
+			dir = 3
 		else:
-			a.action = "ui_right"
+			dir = 1
 	else:
 		if vector.y > 0:
-			a.action = "ui_up"
+			dir = 0
 		else:
-			a.action = "ui_down"
+			dir = 2
 	
-	a.pressed = true
-	Input.parse_input_event(a)
+	Global.ui_input_dir(dir)
 
 # This function is called when the trigger button on the VR controller is pressed.
 func _on_button_pressed_trigger():

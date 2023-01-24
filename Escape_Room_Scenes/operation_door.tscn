@@ -59,6 +59,7 @@ resource_name = "Take 001"
 length = 1.95833
 
 [sub_resource type="Animation" id=5]
+resource_name = "open"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cadre/pivot:rotation_degrees")
@@ -80,7 +81,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "clips": [ {
-"end_offset": 0.0,
+"end_offset": 0.32,
 "start_offset": 0.0,
 "stream": ExtResource( 3 )
 } ],
@@ -114,8 +115,7 @@ mesh = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RootNode"]
 "anims/Take 001" = SubResource( 3 )
-"anims/open door" = SubResource( 5 )
+anims/open = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RootNode/AnimationPlayer"]
 stream = ExtResource( 3 )
-volume_db = 23.223
