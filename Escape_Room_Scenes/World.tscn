@@ -5,7 +5,6 @@
 [ext_resource path="res://Escape_Room_Scenes/LeftController.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Textures/fog-parts.png" type="Texture" id=4]
 
-
 [sub_resource type="CapsuleShape" id=10]
 radius = 0.822466
 height = 1.55626
@@ -110,6 +109,7 @@ mesh = SubResource( 9 )
 material/0 = SubResource( 8 )
 
 [node name="Particles" type="Particles" parent="."]
+emitting = false
 amount = 3000
 speed_scale = 0.26
 visibility_aabb = AABB( -99.1048, -4, -98.1935, 198.21, 8, 196.387 )

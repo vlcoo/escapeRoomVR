@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/book01.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://Assets/Textures/panoramatapete-epifita-tres-tintas-barcelona.jpg" type="Texture" id=12]
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Textures/iris-apfel-birds-of-a-feather-A-RC-IA004-57_720x720.png" type="Texture" id=14]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=16]
+[ext_resource path="res://Assets/Fbx/MorseCode1.fbx" type="PackedScene" id=17]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 11 )
@@ -47,6 +50,9 @@ albedo_texture = ExtResource( 13 )
 
 [sub_resource type="SpatialMaterial" id=48]
 albedo_texture = ExtResource( 14 )
+
+[sub_resource type="BoxShape" id=72]
+extents = Vector3( 0.129773, 1.37939, 1.12868 )
 
 [node name="Lounge" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
@@ -492,3 +498,17 @@ spot_angle = 28.4278
 
 [node name="lamp_murale_boule12" parent="." instance=ExtResource( 7 )]
 transform = Transform( -0.231967, 3.18952, -0.114724, 0, -0.115027, -3.19793, -3.19158, -0.231817, 0.00833827, -4.38928, 0.605063, 34.9602 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="VRInteractable" type="RigidBody" parent="."]
+transform = Transform( 4.6894e-09, -0.871941, -0.489611, 1, -4.37114e-08, 8.74228e-08, -9.76291e-08, -0.489611, 0.871941, -2.3774, 1.08693, 0.325791 )
+script = ExtResource( 16 )
+
+[node name="MorseCode1" parent="VRInteractable" instance=ExtResource( 17 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365935, 0, 0.381235 )
+shape = SubResource( 72 )

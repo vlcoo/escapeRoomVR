@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Textures/-1000331653-220208-14561500010-IMAGE-P000000001000331653.png" type="Texture" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/plantravaiUpl.fbx" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/Textures/TexturesCom_Pavement_MarbleTiles_2.6x2.6_1K_albedo.png" type="Texture" id=15]
 [ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Fbx/Dominos.fbx" type="PackedScene" id=17]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=49]
 albedo_texture = ExtResource( 15 )
@@ -445,3 +446,5 @@ transform = Transform( -3.19999, 0, -0.0104448, 0, 3.2, 0, 0.0104448, 0, -3.1999
 [node name="Ghost" parent="." instance=ExtResource( 16 )]
 transform = Transform( -3.31165, 0, -2.24342, 0, 4, 0, 2.24342, 0, -3.31165, -2.77376e-07, 0, 3.17281 )
 diag_timeline_name = "PresentacionMargarita"
+
+[node name="StaticBody" parent="." instance=ExtResource( 18 )]

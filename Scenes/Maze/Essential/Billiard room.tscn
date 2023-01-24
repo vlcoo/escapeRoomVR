@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=11]
 [ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Fbx/MorseCode2.fbx" type="PackedScene" id=13]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 8 )
@@ -544,3 +545,5 @@ transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29
 [node name="Ghost" parent="." instance=ExtResource( 12 )]
 transform = Transform( -3.59881, 0, 1.74601, 0, 4, 0, -1.74601, 0, -3.59881, -8.58866, 0, 2.76224 )
 diag_timeline_name = "PresentacionJessie"
+
+[node name="StaticBody" parent="." instance=ExtResource( 14 )]
