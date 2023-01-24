@@ -51,5 +51,5 @@ light_energy = 0.4
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.448, 0.222, 8 )
 
 [node name="VRGUI" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 0.945519, 0.325568, 0, -0.325568, 0.945519, 5.742, 3.26615, 9.77698 )
+transform = Transform( 1, 0, 0, 0, 0.945519, 0.325568, 0, -0.325568, 0.945519, 5.742, 1.44191, 9.77698 )
 control_scene = ExtResource( 12 )

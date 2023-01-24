@@ -24,7 +24,7 @@ var active_control_node = null
 
 
 func solve_mystery(correct: bool):
-	if clues_solved.size() < 3:
+	if clues_solved.size() < 8:
 		return
 	
 	print("did you win? " + str(correct))

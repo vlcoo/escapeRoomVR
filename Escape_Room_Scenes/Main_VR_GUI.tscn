@@ -38,6 +38,7 @@ shape = SubResource( 4 )
 
 [node name="GUI" type="Viewport" parent="."]
 size = Vector2( 800, 800 )
+size_override_stretch = true
 transparent_bg = true
 hdr = false
 usage = 1
