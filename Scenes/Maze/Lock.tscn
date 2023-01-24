@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Lock/M_Padlock.material" type="Material" id=1]
 [ext_resource path="res://Audio/effects/Padlock.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Scenes/Maze/Lock.gd" type="Script" id=3]
 [ext_resource path="res://Audio/effects/ghost-whispers-6030.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Scenes/Maze/Camera.gd" type="Script" id=5]
 
 [sub_resource type="ArrayMesh" id=2]
 blend_shape_mode = 0
@@ -355,7 +354,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00081975, -0.000533178, -0.
 stream = ExtResource( 4 )
 unit_db = -20.0
 autoplay = true
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.493318 )
-script = ExtResource( 5 )
