@@ -26,6 +26,7 @@ var first_time_dead_cells: Array = []
 var essential_cells: Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.setup_doors()
 	setup_cells()
 	setup_rooms()
 	

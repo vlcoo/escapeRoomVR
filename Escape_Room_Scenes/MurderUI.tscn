@@ -228,6 +228,26 @@ rect_scale = Vector2( 0.691137, 0.654182 )
 custom_constants/hseparation = 70
 columns = 3
 
+[node name="Mask" type="ColorRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 605.0
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="Label" type="Label" parent="Mask"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -354.5
+margin_top = -138.0
+margin_right = 354.5
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 1 )
+text = "Come back here
+when you are ready
+to solve the mystery..."
+align = 1
+
 [connection signal="button_up" from="GridContainer/Heidi" to="." method="_on_Heidi_button_up"]
 [connection signal="button_up" from="GridContainer/Nathan" to="." method="_on_Nathan_button_up"]
 [connection signal="button_up" from="GridContainer/Nicole" to="." method="_on_Nicole_button_up"]

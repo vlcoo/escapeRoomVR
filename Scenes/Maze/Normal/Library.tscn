@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_basse.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Furniture/Source/Mesh/chair.fbx" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Fbx/testament.fbx" type="PackedScene" id=14]
 [ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=15]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=16]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 9 )
@@ -426,7 +427,7 @@ transform = Transform( -0.999996, 0, 0.00294967, 0, 1, 0, -0.00294967, 0, -0.999
 [node name="3Seat5" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.0439158, 0, -0.999035, 0, 1, 0, 0.999035, 0, 0.0439158, -4.01008, -0.726472, 1.14308 )
 
-[node name="operation_door4" parent="." instance=ExtResource( 5 )]
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 5 )]
 transform = Transform( 0.226508, 0, -3.19197, 0, 3.2, 0, 3.19197, 0, 0.226508, 0.460926, -1.17416, -10.2829 )
 
 [node name="table_basse2" parent="." instance=ExtResource( 1 )]
@@ -448,6 +449,7 @@ spot_range = 25.4727
 spot_angle = 36.0813
 
 [node name="VRInteractable" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.408054, 0 )
 script = ExtResource( 15 )
 
 [node name="testament" parent="VRInteractable" instance=ExtResource( 14 )]
@@ -456,3 +458,5 @@ transform = Transform( 0.285877, 0.700449, 1.85139, -1.97629, -0.00496707, 0.307
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
 transform = Transform( 0.940122, 0, -0.340839, 0, 1, 0, 0.340839, 0, 0.940122, 0, 0.464246, 0 )
 shape = SubResource( 80 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 16 )]

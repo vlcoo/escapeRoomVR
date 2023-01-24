@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/lambert2.material" type="Material" id=2]
 [ext_resource path="res://Audio/effects/door sound.mp3" type="AudioStream" id=3]
@@ -34,6 +34,9 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 779
 }
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.114142, 1.03815, 0.432315 )
 
 [sub_resource type="ArrayMesh" id=4]
 blend_shape_mode = 0
@@ -92,12 +95,18 @@ tracks/1/keys = {
 mesh = SubResource( 1 )
 
 [node name="pivot" type="Spatial" parent="RootNode/cadre"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0312668, 0.881521, -0.338979 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0312668, 0.881521, -0.338979 )
 
 [node name="door" type="MeshInstance" parent="RootNode/cadre/pivot"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.338979, -0.881521, -0.0312668 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="RootNode/cadre/pivot/door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RootNode/cadre/pivot/door/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 1.07962, 0.0459251 )
+shape = SubResource( 6 )
 
 [node name="door" type="MeshInstance" parent="RootNode/cadre"]
 visible = false

@@ -55,9 +55,7 @@ func _on_Button9_pressed():
 
 func _on_Enter_pressed():
 	if(text == str(2798)):
-		get_tree().change_scene("res://Escape_Room_Scenes/Game.tscn")
-		#trigger door animation with signal
-		get_node("numberclues").CluesUnlocked =+1
+		Global.open_door("Billiard room")
 		
 	if(text.length()==4):
 		if(text != str(2798)):

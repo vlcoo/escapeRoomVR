@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://Assets/Fbx/RomanNumbers.fbx" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Fbx/paternityTest.fbx" type="PackedScene" id=14]
 [ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=15]
+[ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/UI/RomanNumbers.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=54]
 albedo_texture = ExtResource( 5 )
@@ -430,11 +433,11 @@ height = 1.83523
 depth = 2.20956
 material = SubResource( 64 )
 
-[node name="operation_door8" parent="." instance=ExtResource( 1 )]
+[node name="operation_door" parent="." groups=["doors"] instance=ExtResource( 1 )]
 transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922, -0.453636, -1.17416, 10.0357 )
 
-[node name="RomanNumbers" parent="operation_door8" instance=ExtResource( 13 )]
-transform = Transform( -0.8, 6.99382e-08, -3.72529e-09, -6.99382e-08, -0.8, 0, -3.72529e-09, 0, 0.8, -0.0643179, 1.6376, 0.0565613 )
+[node name="RomanNumbers" parent="operation_door" instance=ExtResource( 13 )]
+transform = Transform( -0.791303, 6.40217e-08, 0.11764, 7.50944e-08, 0.8, 6.97479e-08, -0.11764, 8.00324e-08, -0.791303, -0.0643184, 1.6376, 0.0565614 )
 
 [node name="SpotLight9" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427351, -0.485073, 0.140635, 0.863091, 0.802419, -0.320742, 0.503237, -1.40963, 8.09914, 9.58363 )
@@ -492,7 +495,7 @@ transform = Transform( 3.37379, 0, 2.14885, 0, 4, 0, -2.14885, 0, 3.37379, -8.30
 diag_timeline_name = "PresentacionJurgen"
 
 [node name="VRInteractable" type="RigidBody" parent="."]
-transform = Transform( 0.470479, 0.876281, 0.103833, -0.875188, 0.448361, 0.181709, 0.112674, -0.176363, 0.977855, -0.254914, 1.994, -5.98061 )
+transform = Transform( 0.470479, 0.876281, 0.103833, -0.875188, 0.448361, 0.181709, 0.112674, -0.176363, 0.977855, -0.254914, 2.41966, -5.98061 )
 script = ExtResource( 15 )
 
 [node name="paternityTest" parent="VRInteractable" instance=ExtResource( 14 )]
@@ -504,3 +507,10 @@ __meta__ = {
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
 transform = Transform( 0.983808, 0.179018, 0.00870416, -0.178697, 0.983469, -0.0292443, -0.0137955, 0.0272157, 0.999534, -0.00631094, -0.0262778, 1.45398 )
 shape = SubResource( 77 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -9.13911e-08, 0, 1, 0, 9.13911e-08, 0, -1, 0, 0, 0 )
+
+[node name="VRGUI" parent="." instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.43782, 4.43083, 10.4246 )
+control_scene = ExtResource( 18 )

@@ -2,6 +2,7 @@ extends Spatial
 
 var diag_ui
 export var diag_timeline_name = "Test"
+var diag_active = false
 
 
 func _ready():
@@ -20,9 +21,17 @@ func start_diag():
 
 
 func _on_AreaDialog_area_entered(area: Area):
+	if diag_active:
+		return
+	
 	start_diag()
+	diag_active = true
 
 
 func _on_AreaDialog_area_exited(area: Area):
+	if !diag_active:
+		return
+	
 	for dialog in $VRGUI/GUI.get_children():
 		dialog.queue_free();
+	diag_active = false

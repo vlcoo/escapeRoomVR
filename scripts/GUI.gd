@@ -66,7 +66,6 @@ func set_transparent(how: bool):
 
 func _on_Area_area_entered(area):
 	is_activated = true
-	get_node(initially_focused).grab_focus()
 	print("got in UI area")
 
 

@@ -17,7 +17,7 @@ func _ready():
 		OS.vsync_enabled = false
 		Engine.iterations_per_second = 90
 	
-	load_area("res://Scenes/Areas/MainMenu.tscn")
+	load_area("res://Escape_Room_Scenes/MainMenu.tscn")
 
 
 func load_area(which, also_remove_current: bool = true):
