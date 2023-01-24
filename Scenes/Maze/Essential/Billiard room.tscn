@@ -1,0 +1,546 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Furniture/Source/Mesh/3Seat3.fbx" type="PackedScene" id=1]
+[ext_resource path="res://Escape_Room_Scenes/Billiard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_basse.fbx" type="PackedScene" id=3]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/operation_door.fbx" type="PackedScene" id=4]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/bookshelf.fbx" type="PackedScene" id=5]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=6]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lustre.fbx" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Textures/TexturesCom_Wood_CompositeDecking2_1K_albedo.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Textures/-1000349504-220617-010-IMAGE-P000000001000349504.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Textures/parkettkaiser-skaben-tapete-jungle-dschungeltapete-palmentapete-gruen-194573_r.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Textures/dt35246_110_160x230.jpg" type="Texture" id=11]
+[ext_resource path="res://Escape_Room_Scenes/Ghost.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/3D assets/MorseCode2.fbx" type="PackedScene" id=13]
+
+[sub_resource type="SpatialMaterial" id=29]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=30]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=31]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=34]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=35]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=37]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=61]
+albedo_texture = ExtResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=81]
+albedo_texture = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=80]
+albedo_texture = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=82]
+albedo_texture = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=83]
+albedo_texture = ExtResource( 11 )
+
+[node name="Billiard room" type="Spatial"]
+
+[node name="Wall11" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 8.71783, -1.38366, 4.86275 )
+material = SubResource( 29 )
+
+[node name="Wall13" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 8.45084, -1.38366, -5.19595 )
+material = SubResource( 30 )
+
+[node name="Wall40" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 0.0748291, -1.38366, -4.97385 )
+material = SubResource( 31 )
+
+[node name="Wall46" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, 0.34082, -1.38366, 5.05355 )
+material = SubResource( 34 )
+
+[node name="Wall47" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, -8.29816, -1.38366, -4.75175 )
+material = SubResource( 35 )
+
+[node name="Wall48" type="CSGBox" parent="."]
+transform = Transform( 3.62738e-09, 4.20545, -0.132935, 0.083014, -1.83891e-07, 0, -9.61898e-11, -0.111519, -5.01309, -8.03217, -1.38366, 5.28105 )
+material = SubResource( 37 )
+
+[node name="Wall37" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.5718, 1.1894, 9.72515 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall42" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 5.69684, 1.1894, 9.85445 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall95" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 0.826843, 1.1894, 9.98365 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall96" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.05017, 1.1894, 10.1129 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall97" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.24518, 1.1894, 10.2506 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 61 )
+
+[node name="Wall98" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.5718, 6.12711, 9.72515 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall99" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 5.69684, 6.12711, 9.85445 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall100" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 0.826843, 6.12711, 9.98365 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall101" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.05017, 6.12711, 10.1129 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall102" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.24518, 6.12711, 10.2506 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 61 )
+
+[node name="Wall103" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.0428, 1.1894, -10.2245 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall104" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 4.62485, 1.1894, -10.0807 )
+height = 1.83523
+depth = 2.40973
+material = SubResource( 61 )
+
+[node name="Wall105" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.45715, 1.1894, -9.84605 )
+height = 1.83523
+depth = 2.28911
+material = SubResource( 61 )
+
+[node name="Wall106" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.77417, 1.1894, -9.69895 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 61 )
+
+[node name="Wall107" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.0428, 6.12711, -10.2245 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall108" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 0.153839, 7.22846, -9.96215 )
+height = 1.02021
+depth = 1.55158
+material = SubResource( 61 )
+
+[node name="Wall109" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.77417, 6.12711, -9.69895 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 61 )
+
+[node name="Wall110" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.0592, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall111" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1542, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall144" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1542, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall112" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2502, 1.1894, -1.86635 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall113" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.3522, 1.1894, -6.97485 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall114" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.0592, 6.12711, 7.88125 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall115" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1542, 6.12711, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall116" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2502, 6.12711, -1.86635 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall117" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.3522, 6.12711, -6.97485 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall145" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.7218, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall146" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.6258, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall147" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.6428, 1.1894, 2.36535 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall148" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.5468, 1.1894, -2.50575 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall149" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, 12.4448, 1.1894, -7.61425 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall150" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.7378, 6.12711, 7.24185 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall151" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.6428, 6.12711, 2.36535 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall152" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.5468, 6.12711, -2.50575 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall153" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, 12.4448, 6.12711, -7.61425 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall154" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.8568, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall155" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.7618, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall156" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.7778, 1.1894, 2.36535 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall157" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.6818, 1.1894, -2.50575 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall158" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, 12.5798, 1.1894, -7.61425 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall159" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.8728, 6.12711, 7.24185 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall160" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.7778, 6.12711, 2.36535 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall161" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, 12.6818, 6.12711, -2.50575 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall162" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, 12.5798, 6.12711, -7.61425 )
+height = 1.83523
+material = SubResource( 81 )
+
+[node name="Wall120" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1832, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall121" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2782, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall122" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.3742, 1.1894, -1.86635 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall123" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.4752, 1.1894, -6.97485 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall136" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.0592, 6.12711, 7.88125 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall137" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1542, 6.12711, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall138" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2502, 6.12711, -1.86635 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall139" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.3522, 6.12711, -6.97485 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall140" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1832, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall141" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2782, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall142" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.3742, 1.1894, -1.86635 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall143" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.4752, 1.1894, -6.97485 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall128" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.0592, 6.12711, 7.88125 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall129" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1542, 6.12711, 3.00475 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall130" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2502, 6.12711, -1.86635 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall131" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.3522, 6.12711, -6.97485 )
+height = 1.83523
+material = SubResource( 61 )
+
+[node name="Wall132" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1832, 1.1894, 7.88125 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall133" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2782, 1.1894, 3.00475 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall134" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.3742, 1.1894, -1.86635 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall135" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.4752, 1.1894, -6.97485 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall124" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.1832, 6.12711, 7.88125 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall125" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.2782, 6.12711, 3.00475 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall126" type="CSGBox" parent="."]
+transform = Transform( -0.082998, 0, -0.0481741, 0, 2.71996, 0, 0.00162987, 0, -2.45318, -12.3742, 6.12711, -1.86635 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall127" type="CSGBox" parent="."]
+transform = Transform( -0.0829993, 0, -0.0540139, 0, 2.71996, 0, 0.00157863, 0, -2.6734, -12.4752, 6.12711, -6.97485 )
+height = 1.83523
+material = SubResource( 80 )
+
+[node name="Wall118" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 4.87683, 6.12711, -10.0875 )
+height = 1.83523
+depth = 2.41924
+material = SubResource( 61 )
+
+[node name="Wall119" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.39117, 6.12711, -9.84165 )
+height = 1.83523
+depth = 2.20956
+material = SubResource( 61 )
+
+[node name="Wall163" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.0428, 1.1894, -10.3878 )
+height = 1.83523
+material = SubResource( 82 )
+
+[node name="Wall164" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 4.62485, 1.1894, -10.2443 )
+height = 1.83523
+depth = 2.40973
+material = SubResource( 82 )
+
+[node name="Wall165" type="CSGBox" parent="."]
+transform = Transform( 0.00222005, 0, -2.47451, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.45715, 1.1894, -10.0096 )
+height = 1.83523
+depth = 2.28911
+material = SubResource( 82 )
+
+[node name="Wall166" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.77417, 1.1894, -9.86235 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 82 )
+
+[node name="Wall167" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 10.0428, 6.12711, -10.3878 )
+height = 1.83523
+material = SubResource( 82 )
+
+[node name="Wall168" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 0.153839, 7.22846, -10.1257 )
+height = 1.02021
+depth = 1.55158
+material = SubResource( 82 )
+
+[node name="Wall169" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -9.77417, 6.12711, -9.86235 )
+height = 1.83523
+depth = 2.24379
+material = SubResource( 82 )
+
+[node name="Wall170" type="CSGBox" parent="."]
+transform = Transform( 0.00220057, 0, -2.45279, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, 4.87683, 6.12711, -10.2509 )
+height = 1.83523
+depth = 2.41924
+material = SubResource( 82 )
+
+[node name="Wall171" type="CSGBox" parent="."]
+transform = Transform( 0.00225603, 0, -2.51461, 0, 2.71996, 0, 0.0829848, 0, 0.0650423, -4.39117, 6.12711, -10.0051 )
+height = 1.83523
+depth = 2.20956
+material = SubResource( 82 )
+
+[node name="operation_door5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.224446, 0, -3.19212, 0, 3.2, 0, 3.19212, 0, 0.224446, 0.376831, -1.34742, -9.96665 )
+
+[node name="MorseCode2" parent="operation_door5" instance=ExtResource( 13 )]
+transform = Transform( -0.800001, 6.99383e-08, 0, -6.99383e-08, -0.8, 0, 0, -1.77636e-15, 0.800001, -0.082674, 1.64132, 0.0439236 )
+
+[node name="lustre4" parent="." instance=ExtResource( 7 )]
+transform = Transform( -2.29999, 0, 0.00826951, 0, 2.3, 0, -0.00826951, 0, -2.29999, -22.4482, -5.05978, 7.57225 )
+
+[node name="SpotLight7" type="SpotLight" parent="."]
+transform = Transform( -0.344235, -0.937918, -0.0425705, -0.0577731, -0.0240954, 0.998039, -0.937104, 0.346019, -0.045892, 0.478821, 8.81221, -0.28965 )
+light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
+light_energy = 9.961
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 12.8067
+spot_angle = 58.9513
+
+[node name="lamp_murale_boule6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 3.1998, -0.0358879, 0.00129086, 0, -0.115027, -3.19793, 0.0359111, 3.19773, -0.11502, -24.1572, -0.58469, -15.7689 )
+
+[node name="SpotLight8" type="SpotLight" parent="."]
+transform = Transform( 0.307218, 0.941785, 0.136595, 0.565351, -0.296084, 0.769878, 0.765503, -0.159297, -0.623402, 0.453827, 10.1153, -10.5849 )
+light_color = Color( 0.678431, 0.643137, 0.501961, 1 )
+light_energy = 2.899
+light_indirect_energy = 16.0
+light_specular = 16.0
+spot_range = 25.4727
+spot_angle = 36.0813
+
+[node name="Billiard" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.00551501, 0, 4, 0, 4, 0, -4, 0, 0.00551501, -7.39117, -1.01425, 18.8116 )
+
+[node name="alfombra3" type="CSGBox" parent="."]
+transform = Transform( -2.81182e-06, -0.0222631, -7.23553, -0.0830133, 0.0112985, -1.07251e-07, 0.000956889, 7.54766, -0.0213425, -0.67218, -0.997387, -0.884048 )
+height = 1.83523
+depth = 2.55629
+material = SubResource( 83 )
+
+[node name="bookshelf7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, -5.32217, -1.20953, 8.14405 )
+
+[node name="bookshelf8" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, -1.02518, -1.20953, 8.14405 )
+
+[node name="bookshelf9" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.0433952, 0, -3.19971, 0, 3.2, 0, 3.19971, 0, 0.0433952, 3.34283, -1.20953, 8.14405 )
+
+[node name="3Seat5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.938955, 0, 0.00164967, 0, 1.4, 0, 0.0471841, 0, -1.39848, 5.74585, -1.29914, -5.37905 )
+
+[node name="3Seat6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0172505, 0, 1.39989, 0, 1.4, 0, -1.39989, 0, -0.0172505, 10.6788, -1.29914, 0.869049 )
+
+[node name="table_basse3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.29999, 0, 0.00678424, 0, 2.3, 0, -0.00678424, 0, -2.29999, -13.2362, -1.04531, -14.6518 )
+
+[node name="Ghost" parent="." instance=ExtResource( 12 )]
+transform = Transform( -3.59881, 0, 1.74601, 0, 4, 0, -1.74601, 0, -3.59881, -8.58866, 0, 2.76224 )
+diag_timeline_name = "PresentacionJessie"

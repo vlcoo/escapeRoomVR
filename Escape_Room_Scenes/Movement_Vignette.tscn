@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/vignette.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/vignette.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Movement_Vignette.gd" type="Script" id=2]
 
 
