@@ -4,7 +4,7 @@ onready var focuseable_holder = $GridContainer
 
 
 func _process(delta):
-	$Mask.visible = Global.clues_solved >= 3
+	$Mask.visible = Global.clues_solved.size() >= 3
 
 
 func _ready():

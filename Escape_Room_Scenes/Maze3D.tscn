@@ -11,7 +11,7 @@
 [ext_resource path="res://Escape_Room_Scenes/Kitchen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/godot-openvr/icon.png" type="Texture" id=10]
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Escape_Room_Scenes/MurderUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/UI/MurderVRUI.gd" type="Script" id=12]
 
 [node name="Maze3D" type="Spatial"]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
@@ -58,4 +58,4 @@ texture = ExtResource( 10 )
 
 [node name="VRGUI" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98068, 0, 10.8032 )
-control_scene = ExtResource( 12 )
+script = ExtResource( 12 )

@@ -30,11 +30,10 @@ func solve_mystery(correct: bool):
 
 
 func open_door(which: String):
-	if clues_solved[which]:
+	if clues_solved.keys().has(which) and clues_solved[which]:
 		return
 	
 	clues_solved[which] = true
-	var world_node = get_node("../World")
 	for door in get_tree().get_nodes_in_group("doors"):
 		if door.get_parent().name == which:
 			door.get_node("AnimationPlayer").play("open door")
