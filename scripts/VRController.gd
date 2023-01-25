@@ -312,25 +312,17 @@ func simulate_key_based_on_vector2(vector: Vector2):
 
 # This function is called when the trigger button on the VR controller is pressed.
 func _on_button_pressed_trigger():
-	# If the VR controller is NOT currently holding anything...
-	if held_object == null:
-		# Make sure the teleport mesh is currently invisible. We do this because if the teleport
-		# mesh is visible, then the other VR controller is trying to teleport. We do not want both
-		# controllers to allow teleportation at the same time, so we do this to work around it.
-		if teleport_mesh.visible == false:
-			# If the teleport mesh is not visible, then we can teleport with this VR controller.
-			#
-			# Set the teleport_button_down variable to true, make the teleport mesh visible, and
-			# make the teleport raycast mesh visible.
-			teleport_button_down = true
-			teleport_mesh.visible = true
-			teleport_raycast.visible = true
-	# If the VR controller IS currently holding something...
-	else:
-		# If the object the VR controller is holding extends VR_Interactable_RigidBody...
-		if held_object is VRInteractable:
-			# Call the interact function so the object can do whatever it does when interacted with.
-			held_object.interact()
+	# Make sure the teleport mesh is currently invisible. We do this because if the teleport
+	# mesh is visible, then the other VR controller is trying to teleport. We do not want both
+	# controllers to allow teleportation at the same time, so we do this to work around it.
+	if teleport_mesh.visible == false:
+		# If the teleport mesh is not visible, then we can teleport with this VR controller.
+		#
+		# Set the teleport_button_down variable to true, make the teleport mesh visible, and
+		# make the teleport raycast mesh visible.
+		teleport_button_down = true
+		teleport_mesh.visible = true
+		teleport_raycast.visible = true
 
 
 # This function is called when the grab button on the VR controller is pressed.

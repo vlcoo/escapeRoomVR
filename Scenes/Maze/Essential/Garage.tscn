@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=2]
@@ -47,6 +47,9 @@ albedo_texture = ExtResource( 9 )
 
 [sub_resource type="SpatialMaterial" id=56]
 albedo_texture = ExtResource( 7 )
+
+[sub_resource type="BoxShape" id=78]
+extents = Vector3( 0.635378, 0.0968023, 0.84569 )
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
@@ -496,6 +499,12 @@ material/0 = SubResource( 56 )
 [node name="Car" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1.83147, 0, -2.37607, 0, 3, 0, 2.37607, 0, -1.83147, 4.26036, 0.479049, -2.85725 )
 
+[node name="StaticBody" type="StaticBody" parent="Car"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Car/StaticBody"]
+transform = Transform( -0.0263821, -0.0327218, -0.999114, -0.348202, 0.93717, -0.0214987, 0.937046, 0.347328, -0.0361183, -0.0282485, 0.446517, 1.42885 )
+shape = SubResource( 78 )
+
 [node name="SpotLight13" type="SpotLight" parent="."]
 transform = Transform( -0.524375, -0.850025, -0.0498775, -0.343162, 0.157359, 0.926001, -0.779275, 0.502688, -0.374212, -1.78463, 8.99049, 10.7342 )
 light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
@@ -529,7 +538,6 @@ transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 77 )
 
 [node name="StaticBody" parent="." instance=ExtResource( 16 )]
