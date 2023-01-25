@@ -8,11 +8,14 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("locks");
 	$AnimationPlayer.play("idle")
 	pass # Replace with function body.
 
 func unlock() -> void:
 	$AnimationPlayer.play("open");
+	yield(get_tree().create_timer(5),"timeout")
+	queue_free()
 	
 func unlock_animation_finished() -> void:
 	pass

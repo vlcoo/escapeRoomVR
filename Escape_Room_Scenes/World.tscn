@@ -37,7 +37,8 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="ARVROrigin" type="ARVROrigin" parent="ViewportContainer/Viewport"]
-transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 1, 0 )
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0, 0 )
+world_scale = 0.5
 
 [node name="PlayerCamera" type="ARVRCamera" parent="ViewportContainer/Viewport/ARVROrigin"]
 current = true

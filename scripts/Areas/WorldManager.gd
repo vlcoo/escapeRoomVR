@@ -24,7 +24,10 @@ func load_area(which, also_remove_current: bool = true):
 	var scene_trs = load(which)
 	var scene = scene_trs.instance()
 	add_child(scene)
-	$ViewportContainer/Viewport/ARVROrigin.translation = scene.get_node("PlayerSpawn").translation
+	
+	$ViewportContainer/Viewport/ARVROrigin.global_translation = scene.get_node("PlayerSpawn").global_translation
+	$ViewportContainer/Viewport/ARVROrigin.world_scale = 1 if "MainMenu" in which else 0.8
+	
 	if also_remove_current:
 		remove_child(current_area)
 	current_area = scene

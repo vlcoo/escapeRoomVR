@@ -131,3 +131,5 @@ margin_top = -72.0
 margin_right = 128.0
 margin_bottom = -72.0
 grow_horizontal = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -6,7 +6,7 @@ var tried_to_solve = false
 
 func _process(delta):
 	if !tried_to_solve:
-		$Mask.visible = Global.clues_solved.size() >= 3
+		$Mask.visible = Global.clues_solved.size() < 8
 
 
 func _ready():

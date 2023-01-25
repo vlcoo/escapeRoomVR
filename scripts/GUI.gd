@@ -17,24 +17,28 @@ func _ready():
 	render_viewport()
 
 
-func _process(delta):
-	if !is_activated:
+func request_input_dir(dir):
+	if !is_activated or control_node == null:
 		return
 	
 	var next_focus
 	var focus_owner
-	if Input.is_action_just_pressed("ui_up"):
+	
+	if "focuseable_holder" in control_node:
 		focus_owner = control_node.focuseable_holder.get_focus_owner()
+	else:
+		focus_owner = control_node.get_focus_owner()
+	
+	if dir == 0:
 		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_top)
-	elif Input.is_action_just_pressed("ui_down"):
-		focus_owner = control_node.focuseable_holder.get_focus_owner()
+	elif dir == 2:
 		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_bottom)
-	elif Input.is_action_just_pressed("ui_left"):
-		focus_owner = control_node.focuseable_holder.get_focus_owner()
+	elif dir == 3:
 		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_left)
-	elif Input.is_action_just_pressed("ui_right"):
-		focus_owner = control_node.focuseable_holder.get_focus_owner()
+	elif dir == 1:
 		next_focus = focus_owner.get_node(focus_owner.focus_neighbour_right)
+	elif dir == -1:
+		focus_owner.emit_signal("pressed")
 	
 	if (next_focus != null):
 		next_focus.grab_focus()
@@ -66,9 +70,11 @@ func set_transparent(how: bool):
 
 func _on_Area_area_entered(area):
 	is_activated = true
+	Global.active_control_node = self
 	print("got in UI area")
 
 
 func _on_Area_area_exited(area):
 	is_activated = false
+	Global.active_control_node = null
 	print("got out of UI area")
