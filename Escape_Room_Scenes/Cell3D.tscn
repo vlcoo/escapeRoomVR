@@ -1,18 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/MazeGenerator/Cell3D.gd" type="Script" id=1]
 [ext_resource path="res://Escape_Room_Scenes/corridor_wall12.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escape_Room_Scenes/corridor_floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Escape_Room_Scenes/RenderBody.gd" type="Script" id=4]
-
-[sub_resource type="CapsuleShape" id=1]
-radius = 2.31585
-height = 3.62508
 
 [node name="Cell3D" type="Spatial"]
 transform = Transform( 0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0 )
+visible = false
 script = ExtResource( 1 )
-corridor_walls = [ NodePath("PathsNew/RightPath/corridorBase2"), NodePath("PathsNew/DownPath/corridorBase2"), NodePath("PathsNew/LeftPath/corridorBase2"), NodePath("PathsNew/UpPath/corridorBase2") ]
 
 [node name="PathsOld" type="Spatial" parent="."]
 
@@ -55,7 +50,6 @@ transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0 )
 [node name="Unlocked" parent="PathsNew" instance=ExtResource( 3 )]
 transform = Transform( -8.74228e-08, -1.74846e-07, -1, 0, 2, -8.74228e-08, 2, -7.64274e-15, -4.37114e-08, 0, 0, 0 )
 visible = false
-script = null
 
 [node name="RightPath" type="Spatial" parent="PathsNew"]
 visible = false
@@ -70,7 +64,6 @@ visible = false
 
 [node name="corridorBase2" parent="PathsNew/RightPath" instance=ExtResource( 3 )]
 transform = Transform( -8.74228e-08, 0, -1, 0, 2, 0, 2, 0, -4.37114e-08, 1.90336, 0, 0 )
-script = null
 
 [node name="DownPath" type="Spatial" parent="PathsNew"]
 transform = Transform( -3.93403e-08, -8.74228e-08, -1, 0, 1, -8.74228e-08, 0.9, -3.82137e-15, -4.37114e-08, -0.123679, 0, 0 )
@@ -86,7 +79,6 @@ visible = false
 
 [node name="corridorBase2" parent="PathsNew/DownPath" instance=ExtResource( 3 )]
 transform = Transform( -8.74228e-08, 8.47033e-22, -2.4, 6.34743e-22, 2, 8.47033e-22, 2, 3.34075e-22, -1.04907e-07, 3.29919, -6.21725e-15, 0 )
-script = null
 
 [node name="LeftPath" type="Spatial" parent="PathsNew"]
 transform = Transform( -1, -0.000137926, -0.000494631, -0.000138105, 1, 0.000361753, 0.000494581, 0.000361821, -1, 0, 0, -0.13 )
@@ -102,7 +94,6 @@ visible = false
 
 [node name="corridorBase2" parent="PathsNew/LeftPath" instance=ExtResource( 3 )]
 transform = Transform( -8.77772e-08, 9.6918e-12, -1, -3.49246e-10, 2, -6.19025e-11, 2, 2.91038e-10, -4.37722e-08, 2.05544, -8.89267e-05, -0.00031887 )
-script = null
 
 [node name="UpPath" type="Spatial" parent="PathsNew"]
 transform = Transform( -0.000445331, -0.00013803, 1, 0.000325584, 1, 0.000138209, -0.9, 0.000361828, -0.000494762, 0, 0, 0 )
@@ -118,10 +109,3 @@ visible = false
 
 [node name="corridorBase2" parent="PathsNew/UpPath" instance=ExtResource( 3 )]
 transform = Transform( -8.76607e-08, 0, -2.4, 1.13374e-10, 2, 2.32831e-10, 2, -6.0453e-11, -1.05007e-07, 3.31517, -0.000200269, 0.000273846 )
-script = null
-
-[node name="RenderBody" type="StaticBody" parent="."]
-script = ExtResource( 4 )
-
-[node name="CollisionShape" type="CollisionShape" parent="RenderBody"]
-shape = SubResource( 1 )

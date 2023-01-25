@@ -35,9 +35,9 @@ func load_area(which, also_remove_current: bool = true):
 
 func _on_RenderArea_body_entered(body: Node) -> void:
 	if(body.is_in_group("renderable")):
-		body.render(true)
+		body.visible = true
 
 
 func _on_RenderArea_body_exited(body: Node) -> void:
 	if(body.is_in_group("renderable")):
-		body.render(false)
+		body.visible = false
