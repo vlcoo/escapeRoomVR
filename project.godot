@@ -69,12 +69,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/MazeGenerator/MazeGeneratorPoint.gd"
 }, {
-"base": "Reference",
+"base": "Spatial",
 "class": "VRGUI",
 "language": "GDScript",
 "path": "res://scripts/GUI.gd"
 }, {
-"base": "Reference",
+"base": "RigidBody",
 "class": "VRInteractable",
 "language": "GDScript",
 "path": "res://scripts/VRInteractable.gd"
