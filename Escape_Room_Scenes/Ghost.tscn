@@ -1701,40 +1701,40 @@ skin = SubResource( 2 )
 material/0 = ExtResource( 1 )
 
 [node name="RigPelvisGizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( -1.19209e-07, 2.98023e-08, 1, 0.993546, 0.113431, 8.9407e-08, -0.113431, 0.993546, 0, -4.25287e-09, 1.0464, -0.00305752 )
+transform = Transform( 0, 0, 1, 0.993546, 0.113431, 0, -0.113431, 0.993546, 0, -4.25287e-09, 1.0464, -0.00305752 )
 
 [node name="RigRibcageGizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.020134, -0.0265253, 0.999445, 0.97761, -0.208906, -0.0252385, 0.209459, 0.977576, 0.0217253, 0.00437147, 1.42723, 0.0201126 )
+transform = Transform( 0.020133, -0.0265249, 0.999445, 0.97761, -0.208906, -0.0252375, 0.209459, 0.977576, 0.0217252, 0.00437147, 1.42723, 0.0201126 )
 
 [node name="RigLArm1Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.60217, -0.449161, -0.660035, -0.788411, -0.204391, -0.580201, 0.125699, 0.869758, -0.477202, 0.156019, 1.41921, 0.0225122 )
+transform = Transform( 0.60217, -0.449161, -0.660035, -0.788411, -0.204392, -0.5802, 0.125697, 0.869758, -0.477202, 0.156019, 1.41921, 0.0225122 )
 
 [node name="RigLArm2Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( -0.100567, -0.917729, -0.384267, -0.415738, 0.389653, -0.821786, 0.903908, 0.0771095, -0.42072, 0.297347, 1.23417, 0.0520136 )
+transform = Transform( -0.100567, -0.917728, -0.384268, -0.415737, 0.389654, -0.821786, 0.903907, 0.0771101, -0.42072, 0.297347, 1.23417, 0.0520136 )
 
 [node name="RigLArmPalmGizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.659743, 0.585164, -0.47151, -0.0237279, 0.643341, 0.765212, 0.751116, -0.493656, 0.438324, 0.27065, 1.12381, 0.291969 )
+transform = Transform( 0.659743, 0.585163, -0.47151, -0.0237277, 0.643341, 0.765211, 0.751116, -0.493656, 0.438324, 0.27065, 1.12381, 0.291969 )
 
 [node name="RigRArm1Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( -0.386779, 0.524812, -0.758271, -0.913519, -0.105668, 0.392833, 0.126038, 0.844634, 0.520295, -0.147448, 1.42687, 0.0159157 )
+transform = Transform( -0.386778, 0.524812, -0.758271, -0.913519, -0.105667, 0.392833, 0.126039, 0.844634, 0.520296, -0.147448, 1.42687, 0.0159157 )
 
 [node name="RigRArm2Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( -0.152558, 0.851944, -0.500918, -0.414181, 0.405079, 0.815087, 0.897319, 0.331819, 0.291061, -0.238225, 1.21247, 0.0454968 )
+transform = Transform( -0.152558, 0.851944, -0.500917, -0.414182, 0.405079, 0.815086, 0.897318, 0.331818, 0.291061, -0.238225, 1.21247, 0.0454968 )
 
 [node name="RigRArmPalmGizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( -0.465348, -0.639513, -0.611943, 0.385917, 0.475596, -0.790491, 0.796567, -0.604013, 0.0254814, -0.278724, 1.10252, 0.283703 )
+transform = Transform( -0.465348, -0.639513, -0.611942, 0.385917, 0.475596, -0.790491, 0.796567, -0.604013, 0.0254817, -0.278724, 1.10252, 0.283703 )
 
 [node name="RigHeadGizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.0247873, -0.000202268, 0.999693, 0.999341, 0.0265294, -0.0247732, -0.0265162, 0.999648, 0.000859737, 0.00831962, 1.6566, 0.107829 )
+transform = Transform( 0.0247869, -0.000201166, 0.999693, 0.999341, 0.0265303, -0.0247729, -0.0265171, 0.999648, 0.000858665, 0.00831962, 1.6566, 0.107829 )
 
 [node name="RigSkirt2Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.0251362, -0.00515845, 0.999671, -0.979259, 0.200981, 0.0256602, -0.201047, -0.979582, 3.57628e-07, -3.97414e-09, 0.759424, 0.0262831 )
+transform = Transform( 0.0251362, -0.00515905, 0.999671, -0.979259, 0.200981, 0.0256602, -0.201047, -0.979581, -1.19209e-07, -3.97414e-09, 0.759424, 0.0262831 )
 
 [node name="RigSkirt3Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.107621, -0.0471778, 0.993072, -0.909518, 0.398708, 0.117508, -0.40149, -0.915863, 3.57628e-07, 0.00425642, 0.593603, -0.00776083 )
+transform = Transform( 0.107621, -0.0471777, 0.993072, -0.909519, 0.398708, 0.117507, -0.401489, -0.915864, 3.57628e-07, 0.00425642, 0.593603, -0.00776083 )
 
 [node name="RigSkirt4Gizmo" type="Spatial" parent="GhostCastSpell/RootNode"]
-transform = Transform( 0.16028, -0.11009, 0.980913, -0.808552, 0.555369, 0.194446, -0.566176, -0.824285, 5.96046e-07, 0.0140944, 0.510461, -0.0444623 )
+transform = Transform( 0.160281, -0.110091, 0.980913, -0.808552, 0.555369, 0.194447, -0.566175, -0.824285, 7.15256e-07, 0.0140944, 0.510461, -0.0444623 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GhostCastSpell"]
 anims/Appear = SubResource( 4 )
