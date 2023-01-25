@@ -10,6 +10,8 @@ var room_degrees_offset: int
 var room: Spatial;
 var unlocked: bool = false;
 
+export(Array) var corridor_walls;
+
 func unlock():
 	$PathsNew/Unlocked.set_visible(true)
 
@@ -63,7 +65,7 @@ func room_cell():
 
 func _ready():
 #	$PathsNew/Unlocked.material = SpatialMaterial.new()
-	add_to_group("renderable")
+	$RenderBody.connect('rendering', self, "set_visible")
 	update_visuals()
 	
 
