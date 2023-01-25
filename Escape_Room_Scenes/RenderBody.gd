@@ -11,6 +11,7 @@ func render(is_rendered: bool):
 	emit_signal("rendering", is_rendered)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("renderable")
 	pass # Replace with function body.
 
 
