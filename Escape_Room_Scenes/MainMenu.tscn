@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Escape_Room_Scenes/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=2]
@@ -6,6 +6,31 @@
 [ext_resource path="res://scripts/Areas/MainMenu.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/UI/MainMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/ControlsHint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/petitbureau.fbx" type="PackedScene" id=7]
+[ext_resource path="res://Assets/3D assets/Police Report.material" type="Material" id=8]
+[ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=9]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.418034, 0.125112, 1 )
+
+[sub_resource type="ArrayMesh" id=1]
+blend_shape_mode = 0
+surfaces/0 = {
+"aabb": AABB( -0.00305246, -0.005, 0, 0.00610493, 0.01, 1e-05 ),
+"array_data": PoolByteArray( 217, 11, 72, 187, 10, 215, 163, 187, 0, 0, 0, 0, 0, 0, 127, 63, 0, 0, 0, 60, 217, 11, 72, 59, 10, 215, 163, 59, 0, 0, 0, 0, 0, 0, 127, 63, 0, 60, 0, 0, 217, 11, 72, 59, 10, 215, 163, 187, 0, 0, 0, 0, 0, 0, 127, 63, 0, 60, 0, 60, 217, 11, 72, 187, 10, 215, 163, 59, 0, 0, 0, 0, 0, 0, 127, 63, 0, 0, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 6,
+"material": ExtResource( 8 ),
+"name": "Police Report",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.100698, 0.951809, 0.540713 )
 
 [node name="Terrain" type="Spatial"]
 script = ExtResource( 4 )
@@ -47,3 +72,29 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.59067
 
 [node name="Spatial" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.83714, 0.916558, 1.12825 )
+
+[node name="petitbureau" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.66093, -0.206105, 1.14024 )
+
+[node name="StaticBody" type="StaticBody" parent="petitbureau"]
+
+[node name="CollisionShape" type="CollisionShape" parent="petitbureau/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.896016, 0 )
+shape = SubResource( 3 )
+
+[node name="VRInteractable" type="RigidBody" parent="."]
+transform = Transform( -0.612372, 0.353553, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353553, -0.707107, 1.82465, 1.67329, 1.07403 )
+script = ExtResource( 9 )
+
+[node name="Police Report" type="Spatial" parent="VRInteractable"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="RootNode" type="Spatial" parent="VRInteractable/Police Report"]
+
+[node name="Police Report" type="MeshInstance" parent="VRInteractable/Police Report/RootNode"]
+transform = Transform( 1.78814e-05, 0, 100, 0, 100, 0, -100, 0, 1.78814e-05, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
+transform = Transform( 1, 2.98023e-08, 0, 0, 1, -2.98023e-08, -2.98023e-08, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/plate.tscn" type="PackedScene" id=2]
@@ -48,6 +48,9 @@ albedo_texture = ExtResource( 14 )
 
 [sub_resource type="SpatialMaterial" id=53]
 albedo_texture = ExtResource( 13 )
+
+[sub_resource type="BoxShape" id=71]
+extents = Vector3( 0.744531, 0.0968023, 1.23068 )
 
 [sub_resource type="CapsuleShape" id=69]
 radius = 0.429431
@@ -379,6 +382,12 @@ material = SubResource( 53 )
 
 [node name="table_cuisine2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -5.7061, 0.675264, -0.713779 )
+
+[node name="StaticBody" type="StaticBody" parent="table_cuisine2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="table_cuisine2/StaticBody"]
+transform = Transform( 0.999999, 0, 5.96046e-08, 0, 0.999999, 0, -5.96046e-08, 0, 0.999999, -0.00767064, 0.762197, -0.0367627 )
+shape = SubResource( 71 )
 
 [node name="tabouret4" parent="." instance=ExtResource( 3 )]
 transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 1.70391, -11.1888, 31.4153 )

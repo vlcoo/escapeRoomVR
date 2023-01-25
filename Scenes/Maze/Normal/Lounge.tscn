@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/items/book01.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=2]
@@ -50,6 +50,9 @@ albedo_texture = ExtResource( 13 )
 
 [sub_resource type="SpatialMaterial" id=48]
 albedo_texture = ExtResource( 14 )
+
+[sub_resource type="BoxShape" id=73]
+extents = Vector3( 1.01872, 0.0968023, 0.947553 )
 
 [sub_resource type="BoxShape" id=72]
 extents = Vector3( 0.129773, 1.01934, 0.74824 )
@@ -438,6 +441,12 @@ transform = Transform( -0.235922, 0, 3.19129, 0, 3.2, 0, -3.19129, 0, -0.235922,
 
 [node name="table_basse3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 15.3227, -0.872056, 14.6897 )
+
+[node name="StaticBody" type="StaticBody" parent="table_basse3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="table_basse3/StaticBody"]
+transform = Transform( 0.999999, 0, 5.96046e-08, 0, 0.999999, 0, -5.96046e-08, 0, 0.999999, -7.84421, 0.561667, -6.84464 )
+shape = SubResource( 73 )
 
 [node name="buffet2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.328436, 0, -3.1831, 0, 3.2, 0, 3.1831, 0, 0.328436, -5.43329, -0.925314, 7.29733 )
