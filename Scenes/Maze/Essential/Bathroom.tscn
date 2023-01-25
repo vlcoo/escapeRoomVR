@@ -20,7 +20,7 @@
 [ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/UI/ClueSolveVRUI.gd" type="Script" id=20]
-[ext_resource path="res://Scenes/UI/Domino.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/UI/RomanNumbers.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Maze/Lock.tscn" type="PackedScene" id=22]
 
 [sub_resource type="SpatialMaterial" id=49]
@@ -457,6 +457,8 @@ diag_timeline_name = "PresentacionMargarita"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38965, 4.32339, -10.6495 )
 script = ExtResource( 20 )
 control_scene = ExtResource( 21 )
+password = "4651"
+door_to_open = "Bathroom"
 
 [node name="Lock" parent="." instance=ExtResource( 22 )]
 transform = Transform( 25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 1.69866, -10.8502 )

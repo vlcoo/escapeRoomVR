@@ -1,8 +1,7 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/UI/InputRoman.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/PumpkinNight-ZV8Bz.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Fonts/PassionOne-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/UI/RomanNumbers.tres" type="Theme" id=4]
 [ext_resource path="res://Scenes/UI/Padlock.gd" type="Script" id=5]
 [ext_resource path="res://Audio/effects/Padlock/button1.mp3" type="AudioStream" id=6]
@@ -26,51 +25,11 @@ font_data = ExtResource( 2 )
 size = 27
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=35]
-bg_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
-
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=16]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=20]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=23]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="DynamicFont" id=33]
-size = 24
-font_data = ExtResource( 3 )
-
-[sub_resource type="Theme" id=34]
-default_font = SubResource( 33 )
-Button/colors/font_color = Color( 1, 1, 1, 1 )
-Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
-Button/constants/hseparation = 2
-Button/styles/disabled = SubResource( 1 )
-Button/styles/focus = null
-Button/styles/hover = null
 
 [node name="Control" type="Control"]
 anchor_right = 0.527
@@ -80,10 +39,10 @@ margin_bottom = 0.199982
 script = ExtResource( 5 )
 
 [node name="Input" type="RichTextLabel" parent="."]
-margin_left = 227.0
-margin_top = 137.0
-margin_right = 452.0
-margin_bottom = 177.0
+margin_left = 546.0
+margin_top = 316.0
+margin_right = 771.0
+margin_bottom = 356.0
 theme = SubResource( 32 )
 custom_fonts/normal_font = SubResource( 29 )
 script = ExtResource( 1 )
@@ -95,31 +54,33 @@ resultsAudioStream = [ ExtResource( 9 ), ExtResource( 8 ) ]
 [node name="ResultsAudio" type="AudioStreamPlayer" parent="Input"]
 
 [node name="Warning" type="RichTextLabel" parent="."]
-margin_left = 230.0
-margin_top = 215.0
-margin_right = 388.0
-margin_bottom = 255.0
+margin_left = 549.0
+margin_top = 394.0
+margin_right = 707.0
+margin_bottom = 434.0
 custom_colors/default_color = Color( 1, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 30 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_right = 200.0
-margin_bottom = 400.0
+margin_left = 319.0
+margin_top = 179.0
+margin_right = 519.0
+margin_bottom = 579.0
 rect_min_size = Vector2( 200, 400 )
 columns = 3
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Button" type="Button" parent="GridContainer"]
 margin_right = 64.0
 margin_bottom = 97.0
-focus_neighbour_left = NodePath("../Button2")
+focus_neighbour_right = NodePath("../Button2")
 focus_neighbour_bottom = NodePath("../Button4")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_styles/focus = SubResource( 11 )
-custom_styles/disabled = SubResource( 13 )
-custom_styles/normal = SubResource( 35 )
 text = "1"
 
 [node name="Button2" type="Button" parent="GridContainer"]
@@ -132,8 +93,6 @@ focus_neighbour_bottom = NodePath("../Button5")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 14 )
-custom_styles/normal = SubResource( 35 )
 text = "2"
 
 [node name="Button3" type="Button" parent="GridContainer"]
@@ -145,8 +104,6 @@ focus_neighbour_bottom = NodePath("../Button6")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 16 )
-custom_styles/normal = SubResource( 35 )
 text = "3"
 
 [node name="Button4" type="Button" parent="GridContainer"]
@@ -160,8 +117,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
 custom_styles/pressed = SubResource( 8 )
-custom_styles/focus = SubResource( 10 )
-custom_styles/normal = SubResource( 35 )
 text = "4"
 
 [node name="Button5" type="Button" parent="GridContainer"]
@@ -176,8 +131,6 @@ focus_neighbour_bottom = NodePath("../Button8")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 20 )
-custom_styles/normal = SubResource( 35 )
 text = "5"
 
 [node name="Button6" type="Button" parent="GridContainer"]
@@ -191,8 +144,6 @@ focus_neighbour_bottom = NodePath("../Button9")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 23 )
-custom_styles/normal = SubResource( 35 )
 text = "6"
 
 [node name="Button7" type="Button" parent="GridContainer"]
@@ -205,8 +156,6 @@ focus_neighbour_bottom = NodePath("../Enter")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 35 )
 text = "7"
 
 [node name="Button8" type="Button" parent="GridContainer"]
@@ -221,8 +170,6 @@ focus_neighbour_bottom = NodePath("../Button10")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 35 )
 text = "8"
 
 [node name="Button9" type="Button" parent="GridContainer"]
@@ -230,11 +177,12 @@ margin_left = 136.0
 margin_top = 202.0
 margin_right = 200.0
 margin_bottom = 299.0
+focus_neighbour_left = NodePath("../Button8")
+focus_neighbour_top = NodePath("../Button6")
+focus_neighbour_bottom = NodePath("../Eliminate")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 35 )
 text = "9"
 
 [node name="Enter" type="Button" parent="GridContainer"]
@@ -243,9 +191,7 @@ margin_right = 64.0
 margin_bottom = 400.0
 focus_neighbour_top = NodePath("../Button7")
 focus_neighbour_right = NodePath("../Button10")
-theme = SubResource( 34 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 35 )
+theme = ExtResource( 4 )
 text = "ENTER"
 
 [node name="Button10" type="Button" parent="GridContainer"]
@@ -260,9 +206,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_styles/focus = SubResource( 11 )
 custom_styles/disabled = SubResource( 13 )
-custom_styles/normal = SubResource( 35 )
 text = "0"
 
 [node name="Eliminate" type="Button" parent="GridContainer"]
@@ -273,8 +217,6 @@ margin_bottom = 400.0
 focus_neighbour_left = NodePath("../Button10")
 focus_neighbour_top = NodePath("../Button9")
 theme = ExtResource( 4 )
-custom_styles/focus = SubResource( 26 )
-custom_styles/normal = SubResource( 35 )
 text = "ERASE"
 
 [connection signal="pressed" from="GridContainer/Button" to="Input" method="_on_Button_pressed"]

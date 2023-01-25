@@ -58,7 +58,7 @@ extents = Vector3( 1.01872, 0.0968023, 0.947553 )
 extents = Vector3( 0.129773, 1.01934, 0.74824 )
 
 [node name="Lounge" type="Spatial"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.88965, 0 )
 
 [node name="SpotLight12" type="SpotLight" parent="."]
 transform = Transform( 0.304317, 0.928401, -0.213219, 0.207938, 0.153693, 0.965992, 0.929598, -0.338304, -0.146279, 13.1387, 9.03052, -0.470966 )

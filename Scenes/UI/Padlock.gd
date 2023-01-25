@@ -5,8 +5,8 @@ extends Control
 # var a: int = 2
 # var b: String = "text"
 
-var password;
-var door_to_open;
+export(String) var password;
+export(String) var door_to_open;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

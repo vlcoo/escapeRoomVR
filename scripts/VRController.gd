@@ -74,7 +74,6 @@ func _ready():
 	
 	# Get the teleport raycast node and assign it to the teleport_raycast variable.
 	teleport_raycast = get_node("RayCast")
-
 	# Get the teleport mesh and assign it to the teleport_mesh variable.
 	#
 	# The teleport mesh is a child of the game scene so it is not effected changes in the VR controller
