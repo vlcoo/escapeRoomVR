@@ -16,11 +16,10 @@ curve = SubResource( 13 )
 [resource]
 lifetime_randomness = 0.1
 emission_shape = 1
-emission_sphere_radius = 5.0
+emission_sphere_radius = 0.5
 spread = 100.0
 gravity = Vector3( 0, 1, 0 )
-scale = 15.0
-scale_random = 1.0
+scale = 1.5
 scale_curve = SubResource( 14 )
 color_ramp = SubResource( 12 )
 anim_offset = 1.0
