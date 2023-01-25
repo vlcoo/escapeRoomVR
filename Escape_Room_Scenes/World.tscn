@@ -47,7 +47,6 @@ transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107,
 world_scale = 0.5
 
 [node name="Camera" type="Camera" parent="ViewportContainer/Viewport/ARVROrigin"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="PlayerCamera" type="ARVRCamera" parent="ViewportContainer/Viewport/ARVROrigin"]
 current = true

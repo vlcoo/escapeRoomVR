@@ -247,8 +247,8 @@ text = "Come back here after
 solving more clues..."
 align = 1
 
-[connection signal="button_up" from="GridContainer/Heidi" to="." method="_on_Heidi_button_up"]
-[connection signal="button_up" from="GridContainer/Nathan" to="." method="_on_Nathan_button_up"]
-[connection signal="button_up" from="GridContainer/Nicole" to="." method="_on_Nicole_button_up"]
-[connection signal="button_up" from="GridContainer/Isaías" to="." method="_on_Isaas_button_up"]
-[connection signal="button_up" from="GridContainer/Pedro" to="." method="_on_Pedro_button_up"]
+[connection signal="pressed" from="GridContainer/Heidi" to="." method="_on_Heidi_button_up"]
+[connection signal="pressed" from="GridContainer/Nathan" to="." method="_on_Nathan_button_up"]
+[connection signal="pressed" from="GridContainer/Nicole" to="." method="_on_Nicole_button_up"]
+[connection signal="pressed" from="GridContainer/Isaías" to="." method="_on_Isaas_button_up"]
+[connection signal="pressed" from="GridContainer/Pedro" to="." method="_on_Pedro_button_up"]

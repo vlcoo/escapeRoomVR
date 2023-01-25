@@ -64,11 +64,11 @@ CheckButton/styles/normal = null
 CheckButton/styles/pressed = null
 
 [sub_resource type="DynamicFont" id=12]
-size = 36
+size = 42
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 87
+size = 100
 outline_size = 36
 outline_color = Color( 0.227451, 0.196078, 0.196078, 0 )
 font_data = ExtResource( 1 )
@@ -86,18 +86,18 @@ focus_mode = 2
 script = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -22.0
+margin_left = -24.0
 margin_top = -23.0
-margin_right = 1898.0
-margin_bottom = 999.0
+margin_right = 1112.0
+margin_bottom = 574.0
 rect_scale = Vector2( 0.935277, 1.07932 )
 texture = ExtResource( 4 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 402.0
-margin_top = 388.0
-margin_right = 605.0
-margin_bottom = 454.0
+margin_left = 346.0
+margin_top = 345.0
+margin_right = 654.0
+margin_bottom = 440.0
 rect_min_size = Vector2( 0, 64.449 )
 size_flags_vertical = 6
 theme = SubResource( 2 )
@@ -105,9 +105,9 @@ custom_fonts/font = SubResource( 12 )
 text = "START"
 
 [node name="LabelTitle" type="RichTextLabel" parent="."]
-margin_left = 263.0
-margin_top = 113.0
-margin_right = 775.0
+margin_left = 221.0
+margin_top = 99.0
+margin_right = 811.0
 margin_bottom = 208.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
@@ -121,15 +121,5 @@ bbcode_text = "[center]Who killed us"
 text = "Who killed us"
 fit_content_height = true
 scroll_active = false
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -128.0
-margin_top = -72.0
-margin_right = 128.0
-margin_bottom = -72.0
-grow_horizontal = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
