@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Escape_Room_Scenes/Plate1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Knife2.tscn" type="PackedScene" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://Escape_Room_Scenes/Fork.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Escape_Room_Scenes/Lemon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escape_Room_Scenes/operation_door.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Escape_Room_Scenes/CornFlakes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_AO.tga" type="Texture" id=8]
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/lights/lamp_murale_boule.fbx" type="PackedScene" id=9]
 [ext_resource path="res://Escape_Room_Scenes/WaterMElon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Escape_Room_Scenes/Glass.tscn" type="PackedScene" id=11]
@@ -22,6 +22,9 @@
 [ext_resource path="res://Escape_Room_Scenes/RoomCollisioner.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scripts/VRInteractable.gd" type="Script" id=21]
 [ext_resource path="res://Assets/Fbx/Postcard5.fbx" type="PackedScene" id=22]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_MetallicSmoothness.tga" type="Texture" id=23]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_Normal.tga" type="Texture" id=24]
+[ext_resource path="res://Assets/Kitchen Asset/FBX/CornFlakes/Materials/CornFlakes_DefaultMaterial_AlbedoTransparency.tga" type="Texture" id=25]
 
 [sub_resource type="SpatialMaterial" id=29]
 albedo_texture = ExtResource( 18 )
@@ -55,6 +58,32 @@ albedo_texture = ExtResource( 19 )
 
 [sub_resource type="SpatialMaterial" id=77]
 albedo_texture = ExtResource( 19 )
+
+[sub_resource type="ArrayMesh" id=1]
+blend_shape_mode = 0
+surfaces/0 = {
+"aabb": AABB( -0.218373, -1, -0.719987, 0.436746, 2.00001, 1.43998 ),
+"array_data": PoolByteArray( 38, 157, 95, 190, 0, 0, 128, 63, 10, 81, 56, 63, 129, 0, 0, 1, 158, 53, 121, 57, 38, 157, 95, 190, 0, 0, 128, 191, 10, 81, 56, 191, 129, 0, 0, 1, 48, 57, 219, 59, 38, 157, 95, 190, 252, 255, 127, 63, 18, 81, 56, 191, 129, 0, 0, 1, 158, 53, 219, 59, 38, 157, 95, 190, 252, 255, 127, 191, 18, 81, 56, 63, 129, 0, 0, 1, 48, 57, 121, 57, 38, 157, 95, 190, 252, 255, 127, 63, 18, 81, 56, 191, 126, 129, 0, 1, 146, 36, 158, 53, 38, 157, 95, 62, 0, 0, 128, 191, 10, 81, 56, 191, 126, 129, 0, 1, 12, 53, 48, 57, 38, 157, 95, 62, 252, 255, 127, 63, 18, 81, 56, 191, 126, 129, 0, 1, 146, 36, 48, 57, 38, 157, 95, 62, 0, 0, 128, 191, 10, 81, 56, 191, 126, 129, 0, 1, 12, 53, 48, 57, 38, 157, 95, 190, 252, 255, 127, 63, 18, 81, 56, 191, 126, 129, 0, 1, 146, 36, 158, 53, 38, 157, 95, 190, 0, 0, 128, 191, 10, 81, 56, 191, 126, 129, 0, 1, 12, 53, 158, 53, 38, 157, 95, 62, 252, 255, 127, 63, 18, 81, 56, 191, 127, 0, 0, 1, 146, 36, 121, 57, 38, 157, 95, 62, 252, 255, 127, 191, 18, 81, 56, 63, 127, 0, 0, 1, 12, 53, 219, 59, 38, 157, 95, 62, 0, 0, 128, 63, 10, 81, 56, 63, 127, 0, 0, 1, 146, 36, 219, 59, 38, 157, 95, 62, 252, 255, 127, 191, 18, 81, 56, 63, 127, 0, 0, 1, 12, 53, 219, 59, 38, 157, 95, 62, 252, 255, 127, 63, 18, 81, 56, 191, 127, 0, 0, 1, 146, 36, 121, 57, 38, 157, 95, 62, 0, 0, 128, 191, 10, 81, 56, 191, 127, 0, 0, 1, 12, 53, 121, 57, 38, 157, 95, 62, 0, 0, 128, 63, 10, 81, 56, 63, 0, 0, 130, 63, 158, 53, 48, 57, 38, 157, 95, 190, 252, 255, 127, 191, 18, 81, 56, 63, 0, 0, 130, 63, 48, 57, 158, 53, 38, 157, 95, 190, 0, 0, 128, 63, 10, 81, 56, 63, 0, 0, 130, 63, 48, 57, 48, 57, 38, 157, 95, 190, 252, 255, 127, 191, 18, 81, 56, 63, 0, 0, 130, 63, 48, 57, 158, 53, 38, 157, 95, 62, 0, 0, 128, 63, 10, 81, 56, 63, 0, 0, 130, 63, 158, 53, 48, 57, 38, 157, 95, 62, 252, 255, 127, 191, 18, 81, 56, 63, 0, 0, 130, 63, 158, 53, 158, 53, 38, 157, 95, 190, 252, 255, 127, 191, 18, 81, 56, 63, 0, 130, 129, 63, 219, 59, 219, 59, 38, 157, 95, 62, 0, 0, 128, 191, 10, 81, 56, 191, 0, 130, 129, 63, 121, 57, 121, 57, 38, 157, 95, 190, 0, 0, 128, 191, 10, 81, 56, 191, 0, 130, 129, 63, 219, 59, 121, 57, 38, 157, 95, 62, 252, 255, 127, 191, 18, 81, 56, 63, 0, 130, 129, 63, 121, 57, 219, 59, 38, 157, 95, 62, 0, 0, 128, 63, 10, 81, 56, 63, 0, 127, 130, 1, 146, 36, 12, 53, 38, 157, 95, 190, 252, 255, 127, 63, 18, 81, 56, 191, 0, 127, 130, 1, 12, 53, 146, 36, 38, 157, 95, 62, 252, 255, 127, 63, 18, 81, 56, 191, 0, 127, 126, 1, 12, 53, 12, 53, 38, 157, 95, 190, 0, 0, 128, 63, 10, 81, 56, 63, 0, 127, 130, 1, 146, 36, 146, 36 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 23, 0, 24, 0, 23, 0, 22, 0, 25, 0, 26, 0, 27, 0, 28, 0, 27, 0, 26, 0, 29, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 36,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 30
+}
+
+[sub_resource type="SpatialMaterial" id=80]
+albedo_texture = ExtResource( 25 )
+metallic_texture = ExtResource( 23 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 24 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 8 )
+ao_on_uv2 = false
+ao_texture_channel = 0
 
 [sub_resource type="BoxShape" id=78]
 extents = Vector3( 0.386027, 1, 0.806596 )
@@ -529,14 +558,20 @@ transform = Transform( 0.769228, 0, -0.219745, 0, 0.8, 0, 0.219745, 0, 0.769228,
 transform = Transform( 3.2, 0, 0, 0, -0.115027, -3.19793, 0, 3.19793, -0.115027, 273.465, -0.411436, 2.69752 )
 
 [node name="VRInteractable" type="RigidBody" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 294.332, 0.173522, 2.57492e-05 )
+transform = Transform( 0.852604, 0, 0.522558, 0, 1, 0, -0.522558, 0, 0.852604, 294.854, 3.05786, 0.938091 )
 script = ExtResource( 21 )
 
-[node name="CornFlakes" parent="Spatial/VRInteractable" instance=ExtResource( 8 )]
-transform = Transform( -0.997033, 0, 0.0769801, 0, 1, 0, -0.0769801, 0, -0.997033, 0, 2.535, 0.343 )
+[node name="CornFlakes" type="Spatial" parent="Spatial/VRInteractable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="RootNode" type="Spatial" parent="Spatial/VRInteractable/CornFlakes"]
+
+[node name="corn" type="MeshInstance" parent="Spatial/VRInteractable/CornFlakes/RootNode"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 80 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial/VRInteractable"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7575, 0.235385 )
 shape = SubResource( 78 )
 
 [node name="VRInteractable2" type="RigidBody" parent="Spatial"]

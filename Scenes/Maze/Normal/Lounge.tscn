@@ -52,7 +52,7 @@ albedo_texture = ExtResource( 13 )
 albedo_texture = ExtResource( 14 )
 
 [sub_resource type="BoxShape" id=72]
-extents = Vector3( 0.129773, 1.37939, 1.12868 )
+extents = Vector3( 0.129773, 1.01934, 0.74824 )
 
 [node name="Lounge" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
@@ -507,8 +507,8 @@ transform = Transform( 4.6894e-09, -0.871941, -0.489611, 1, -4.37114e-08, 8.7422
 script = ExtResource( 16 )
 
 [node name="MorseCode1" parent="VRInteractable" instance=ExtResource( 17 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+transform = Transform( 2, -8.49187e-43, 1.89478e-14, 0, 2, 8.97548e-29, -1.89478e-14, -8.97548e-29, 2, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VRInteractable"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365935, 0, 0.381235 )
+transform = Transform( 1, -1.42109e-14, 2.84217e-14, 0, 1, 0, 0, 0, 1, -0.0365937, 0.0136795, 0.264404 )
 shape = SubResource( 72 )

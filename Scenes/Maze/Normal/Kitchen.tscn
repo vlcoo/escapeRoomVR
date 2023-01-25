@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Assets/OldMansionPack/rawComponents/furniture/table_cuisine.fbx" type="PackedScene" id=1]
 [ext_resource path="res://Escape_Room_Scenes/plate.tscn" type="PackedScene" id=2]
@@ -52,6 +52,9 @@ albedo_texture = ExtResource( 13 )
 [sub_resource type="CapsuleShape" id=69]
 radius = 0.429431
 height = 1.07192
+
+[sub_resource type="BoxShape" id=70]
+extents = Vector3( 0.316285, 1, 0.713086 )
 
 [node name="Kitchen" type="Spatial"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
@@ -446,9 +449,6 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 6.3059, 1.03574, -8.14318 )
 [node name="plate7" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1.28356, -4.83244, 0, 4.83244, 1.28356, 0, 0, 0, 5, 6.44292, 4.47019, -7.88158 )
 
-[node name="CornFlakes" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.633138, 0, -0.774039, 0, 1, 0, 0.774039, 0, -0.633138, -4.6461, 4.10009, -2.43128 )
-
 [node name="SpotLight11" type="SpotLight" parent="."]
 transform = Transform( 0.347602, 0.936668, 0.0427351, 0.122557, -0.0905733, 0.98832, 0.929598, -0.338305, -0.146279, -0.555096, 10.8468, 12.5454 )
 light_color = Color( 0.647059, 0.603922, 0.486275, 1 )
@@ -474,3 +474,12 @@ shape = SubResource( 69 )
 
 [node name="StaticBody" parent="." instance=ExtResource( 18 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.39188, 0 )
+
+[node name="VRInteractable2" type="RigidBody" parent="."]
+transform = Transform( 0.814693, 0, -0.579893, 0, 1, 0, 0.579893, 0, 0.814693, -5.06998, 4.48433, -1.85899 )
+script = ExtResource( 17 )
+
+[node name="CornFlakes" parent="VRInteractable2" instance=ExtResource( 8 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="VRInteractable2"]
+shape = SubResource( 70 )
