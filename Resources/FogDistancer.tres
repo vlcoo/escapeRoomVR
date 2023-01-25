@@ -14,6 +14,9 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 albedo_color = Color( 1, 1, 1, 0.105882 )
 albedo_texture = ExtResource( 1 )
+distance_fade_mode = 1
+distance_fade_min_distance = 0.18
+distance_fade_max_distance = 10.0
 
 [resource]
 material = SubResource( 16 )

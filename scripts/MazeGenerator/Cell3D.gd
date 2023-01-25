@@ -63,8 +63,12 @@ func room_cell():
 
 func _ready():
 #	$PathsNew/Unlocked.material = SpatialMaterial.new()
+	Global.connect("playerPosChanged", self, "playerPosChanged")
+
 	update_visuals()
 
+func playerPosChanged(newPos: Vector3):
+	set_visible((abs(global_translation.distance_to(newPos))) <= Global.distanceToRender)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

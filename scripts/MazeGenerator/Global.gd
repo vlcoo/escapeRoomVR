@@ -19,8 +19,28 @@ enum OPEN_PATHS {
 	UP		= 1 << 3  #1000
 }
 
+var savedPosition: Vector3
+var distanceToRender: float = 13.0
 var clues_solved = {}
 var active_control_node = null
+signal playerPosChanged
+
+func _onPlayerTeleport(newPos: Vector3):
+	savedPosition = newPos
+	emit_signal("playerPosChanged", newPos)
+
+func _input(event):
+	var i = 0
+	
+	if event.is_action_pressed("debug_up"):
+		i = 2
+	elif event.is_action_pressed("debug_down"):
+		i = -2
+	elif event.is_action_pressed("debug_act"):
+		pass
+	
+	for fog in get_tree().get_nodes_in_group("fog"):
+		fog.amount += i
 
 
 func solve_mystery(correct: bool):

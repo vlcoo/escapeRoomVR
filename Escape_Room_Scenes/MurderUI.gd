@@ -9,10 +9,6 @@ func _process(delta):
 		$Mask.visible = Global.clues_solved.size() < 8
 
 
-func _ready():
-	$GridContainer/Heidi.grab_focus()
-
-
 func reveal_solution(is_correct: bool):
 	tried_to_solve = true
 	$Mask.visible = true

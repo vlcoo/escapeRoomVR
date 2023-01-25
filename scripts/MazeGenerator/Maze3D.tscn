@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/MazeGenerator/Maze3D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Maze/Essential/Billiard room.tscn" type="PackedScene" id=2]
@@ -10,7 +10,68 @@
 [ext_resource path="res://Scenes/Maze/Normal/Lounge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Maze/Normal/Kitchen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Escape_Room_Scenes/Main_VR_GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI/MurderVRUI.gd" type="Script" id=11]
 [ext_resource path="res://Escape_Room_Scenes/MurderUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Audio/Background music/Song_Mistery.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Textures/fog-parts.png" type="Texture" id=14]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+period = 2.0
+
+[sub_resource type="NoiseTexture" id=2]
+seamless = true
+as_normalmap = true
+bump_strength = 32.0
+noise = SubResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0, 0, 0, 1 )
+metallic_specular = 0.0
+roughness = 0.28
+roughness_texture = SubResource( 2 )
+
+[sub_resource type="PlaneMesh" id=4]
+material = SubResource( 3 )
+size = Vector2( 40, 40 )
+
+[sub_resource type="Gradient" id=11]
+offsets = PoolRealArray( 0, 0.0991379, 0.926724, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=17]
+lifetime_randomness = 0.1
+emission_shape = 2
+emission_box_extents = Vector3( 10, 1, 10 )
+direction = Vector3( 0, 0, 0 )
+spread = 100.0
+gravity = Vector3( 0, 0, 0 )
+scale = 1.5
+color_ramp = SubResource( 12 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=16]
+flags_transparent = true
+flags_unshaded = true
+flags_vertex_lighting = true
+flags_do_not_receive_shadows = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 1, 1, 1, 0.105882 )
+albedo_texture = ExtResource( 14 )
+distance_fade_mode = 1
+distance_fade_min_distance = 0.62
+distance_fade_max_distance = 9.97
+
+[sub_resource type="QuadMesh" id=18]
+material = SubResource( 16 )
 
 [node name="Maze3D" type="Spatial"]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
@@ -23,33 +84,33 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.233, 
 projection = 1
 size = 0.001
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 16, 0 )
-light_energy = 0.4
-
-[node name="DirectionalLight2" type="DirectionalLight" parent="."]
-transform = Transform( 4.37114e-08, 7.54979e-08, -1, -1, 7.54979e-08, -4.37114e-08, 7.54979e-08, 1, 7.54979e-08, 0, 16, 0 )
-light_energy = 0.4
-
-[node name="DirectionalLight3" type="DirectionalLight" parent="."]
-transform = Transform( -1.19209e-07, 4.37114e-08, 1, 1, 7.54979e-08, 1.19209e-07, -7.54979e-08, 1, -4.37114e-08, 0, 16, 0 )
-light_energy = 0.4
-
-[node name="DirectionalLight4" type="DirectionalLight" parent="."]
-transform = Transform( 1, 4.37114e-08, -1.91069e-15, 0, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 0, 16, 0 )
-light_energy = 0.4
-
-[node name="DirectionalLight5" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, 0, 16, 0 )
-light_energy = 0.4
-
-[node name="DirectionalLight6" type="DirectionalLight" parent="."]
-transform = Transform( 1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 16, 0 )
-light_energy = 0.4
-
 [node name="PlayerSpawn" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.448, 0.222, 8 )
 
 [node name="VRGUI" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 0.945519, 0.325568, 0, -0.325568, 0.945519, 5.47485, 1.32476, 8.41679 )
+transform = Transform( 0.5, 0, 0, 0, 0.472759, 0.162784, 0, -0.162784, 0.472759, 5.47485, 0.412374, 8.41679 )
+script = ExtResource( 11 )
 control_scene = ExtResource( 12 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.914, -0.245, 7.698 )
+mesh = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -20.0
+autoplay = true
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25426, 0, 8.22702 )
+cast_shadow = 0
+amount = 5000
+speed_scale = 0.1
+visibility_aabb = AABB( -19.2088, -4, -18.3974, 38.4177, 8, 36.7948 )
+process_material = SubResource( 17 )
+draw_pass_1 = SubResource( 18 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.333333, 0, 0, 0, -1.45705e-08, 0.333333, 0, -0.333333, -1.45705e-08, 0, 0, 0 )
+light_color = Color( 0.745098, 0.803922, 1, 1 )
+light_energy = 0.32

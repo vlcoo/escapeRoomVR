@@ -345,6 +345,7 @@ func _on_button_pressed_grab():
 	# and the grab button is pressed, then we want to attempt to pickup a RigidBody node.
 	if held_object == null:
 		_pickup_rigidbody()
+		rumble = 0.1
 	
 	# play the pick-up/drop noise
 	hand_pickup_drop_sound.play()
@@ -494,6 +495,8 @@ func _on_button_released_trigger():
 			
 			# Teleport the ARVR origin to the teleport position, removing the room tracking camera offset.
 			get_parent().global_transform.origin = teleport_pos - camera_offset
+			Global._onPlayerTeleport(get_parent().global_translation)
+			rumble = 0.1
 		
 		# Reset the teleport related variables.
 		teleport_button_down = false

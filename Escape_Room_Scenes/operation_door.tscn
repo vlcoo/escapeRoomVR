@@ -119,3 +119,4 @@ anims/open = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RootNode/AnimationPlayer"]
 stream = ExtResource( 3 )
+volume_db = -10.0

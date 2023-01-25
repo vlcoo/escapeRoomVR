@@ -8,6 +8,7 @@ export (PackedScene) var control_scene = null
 export (NodePath) var initially_focused = null
 var control_node
 var is_activated = false
+var need_billboard = false
 
 
 func _ready():
@@ -59,6 +60,9 @@ func render_viewport():
 	# Tell the material to use transparency
 	material.flags_transparent = true
 	material.flags_unshaded = true
+	material.set_cull_mode(SpatialMaterial.CULL_DISABLED)
+	if need_billboard:
+		material.set_billboard_mode(SpatialMaterial.BILLBOARD_FIXED_Y)
 	# Finally, set the material of the MeshInstance to the newly created SpatialMaterial so the
 	# contents of the Viewport are visible
 	$GUI_Mesh.set_surface_material(0, material)
@@ -72,9 +76,13 @@ func _on_Area_area_entered(area):
 	is_activated = true
 	Global.active_control_node = self
 	print("got in UI area")
+	$AudioStreamPlayer.pitch_scale = 1.1
+	$AudioStreamPlayer.play()
 
 
 func _on_Area_area_exited(area):
 	is_activated = false
 	Global.active_control_node = null
 	print("got out of UI area")
+	$AudioStreamPlayer.pitch_scale = 0.9
+	$AudioStreamPlayer.play()
