@@ -31,3 +31,13 @@ func load_area(which, also_remove_current: bool = true):
 	if also_remove_current:
 		remove_child(current_area)
 	current_area = scene
+
+
+func _on_RenderArea_body_entered(body: Node) -> void:
+	if(body.is_in_group("renderable")):
+		body.visible = true
+
+
+func _on_RenderArea_body_exited(body: Node) -> void:
+	if(body.is_in_group("renderable")):
+		body.visible = false

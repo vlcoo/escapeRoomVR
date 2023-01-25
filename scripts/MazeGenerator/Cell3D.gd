@@ -63,7 +63,9 @@ func room_cell():
 
 func _ready():
 #	$PathsNew/Unlocked.material = SpatialMaterial.new()
+	add_to_group("renderable")
 	update_visuals()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
