@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Corridors/corridor_wall1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Materials/wood_multi_01_001.material" type="Material" id=2]
-[ext_resource path="res://Escape_Room_Scenes/corridor_floor.gd" type="Script" id=3]
-[ext_resource path="res://Escape_Room_Scenes/StaticBody.gd" type="Script" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 blend_shape_mode = 0
@@ -28,7 +26,6 @@ albedo_texture = ExtResource( 1 )
 extents = Vector3( 0.616613, 0.0561568, 1 )
 
 [node name="corridorBase" type="Spatial"]
-script = ExtResource( 3 )
 
 [node name="RootNode" type="Spatial" parent="."]
 
@@ -39,7 +36,6 @@ material/0 = SubResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="RootNode"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0490115, 0 )
-script = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/StaticBody"]
 shape = SubResource( 3 )

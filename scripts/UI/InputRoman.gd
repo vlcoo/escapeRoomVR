@@ -53,9 +53,12 @@ func _on_Button9_pressed():
 
 
 func _on_Enter_pressed():
-		if(text == str(1551)):
-			Global.open_door("Garage")
-			
-		if(text.length()==4):
-			if(text != str(1551)):
-				$"../Warning".text = str("Incorrect!")
+		if(text == get_parent().password):
+			Global.open_door(get_parent().door_to_open)
+		else:
+			$"../Warning".text = str("Incorrect!")
+
+
+func _on_Button10_pressed() -> void:
+	text+= str("0")
+	pass # Replace with function body.
