@@ -10,8 +10,6 @@ var room_degrees_offset: int
 var room: Spatial;
 var unlocked: bool = false;
 
-export(Array) var corridor_walls;
-
 func unlock():
 	$PathsNew/Unlocked.set_visible(true)
 
@@ -65,9 +63,7 @@ func room_cell():
 
 func _ready():
 #	$PathsNew/Unlocked.material = SpatialMaterial.new()
-	$RenderBody.connect('rendering', self, "set_visible")
 	update_visuals()
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

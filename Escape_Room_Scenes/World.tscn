@@ -1,18 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Areas/WorldManager.gd" type="Script" id=1]
 [ext_resource path="res://Escape_Room_Scenes/RightController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escape_Room_Scenes/LeftController.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Resources/FogParticles.tres" type="Material" id=4]
-[ext_resource path="res://Resources/FogDistancer.tres" type="QuadMesh" id=5]
 
 [sub_resource type="CapsuleShape" id=10]
 radius = 0.822466
 height = 1.55626
-
-[sub_resource type="CylinderShape" id=11]
-height = 15.3609
-radius = 11.7567
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.2
@@ -46,8 +40,6 @@ render_target_update_mode = 3
 transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0, 0, 0 )
 world_scale = 0.5
 
-[node name="Camera" type="Camera" parent="ViewportContainer/Viewport/ARVROrigin"]
-
 [node name="PlayerCamera" type="ARVRCamera" parent="ViewportContainer/Viewport/ARVROrigin"]
 current = true
 
@@ -62,17 +54,6 @@ collision_layer = 3
 [node name="CollisionShape" type="CollisionShape" parent="ViewportContainer/Viewport/ARVROrigin/Area"]
 shape = SubResource( 10 )
 
-[node name="Particles" type="Particles" parent="ViewportContainer/Viewport/ARVROrigin"]
-amount = 100
-speed_scale = 0.15
-process_material = ExtResource( 4 )
-draw_pass_1 = ExtResource( 5 )
-
-[node name="RenderArea" type="Area" parent="ViewportContainer/Viewport/ARVROrigin"]
-
-[node name="CollisionShape" type="CollisionShape" parent="ViewportContainer/Viewport/ARVROrigin/RenderArea"]
-shape = SubResource( 11 )
-
 [node name="TeleportMesh" type="MeshInstance" parent="."]
 visible = false
 mesh = SubResource( 1 )
@@ -82,6 +63,3 @@ material/0 = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679908, 0 )
 mesh = SubResource( 9 )
 material/0 = SubResource( 8 )
-
-[connection signal="body_entered" from="ViewportContainer/Viewport/ARVROrigin/RenderArea" to="." method="_on_RenderArea_body_entered"]
-[connection signal="body_exited" from="ViewportContainer/Viewport/ARVROrigin/RenderArea" to="." method="_on_RenderArea_body_exited"]
