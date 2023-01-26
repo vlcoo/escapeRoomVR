@@ -24,6 +24,18 @@ var distanceToRender: float = 13.0
 var clues_solved = {}
 var active_control_node = null
 signal playerPosChanged
+var time_left = 0
+var time = 20*60
+
+signal second_passed
+
+func start_timer():
+	time_left = time
+	while(time_left > 0 ):
+		yield(get_tree().create_timer(1), "timeout")
+		time_left -= 1
+		emit_signal("second_passed")
+	pass
 
 func _onPlayerTeleport(newPos: Vector3):
 	savedPosition = newPos

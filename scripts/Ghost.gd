@@ -23,7 +23,6 @@ func start_diag():
 func _on_AreaDialog_area_entered(area: Area):
 	if diag_active:
 		return
-	$GhostCastSpell/AnimationPlayer.play("Appear")
 	start_diag()
 	diag_active = true
 
@@ -37,7 +36,16 @@ func _on_AreaDialog_area_exited(area: Area):
 	if !diag_active:
 		return
 	
-	$GhostCastSpell/AnimationPlayer.play_backwards("Appear")
 	for dialog in $VRGUI/GUI.get_children():
 		dialog.queue_free();
 	diag_active = false
+
+
+func _on_AreaAppear_area_entered(area):
+	$GhostCastSpell/AnimationPlayer.play("Appear")
+	pass # Replace with function body.
+
+
+func _on_AreaAppear_area_exited(area):
+	$GhostCastSpell/AnimationPlayer.play_backwards("Appear")
+	pass # Replace with function body.

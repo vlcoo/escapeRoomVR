@@ -98,7 +98,7 @@ mesh = SubResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
-volume_db = -20.0
+volume_db = -50.0
 autoplay = true
 
 [node name="Particles" type="Particles" parent="."]

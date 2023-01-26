@@ -65,13 +65,17 @@ const CONTROLLER_RUMBLE_FADE_SPEED = 2.0
 # A variable to hold whether this VR controller is moving the player using the touchpad/joystick.
 # (This is needed for the vignette effect, as it only shows when the VR controller(s) are moving the player)
 var directional_movement = false
-
+export(bool) var leftHand = false
+func update_timer():
+	$Label3D.text = "%02d:%02d"%[Global.time_left/60, Global.time_left%60]
+	pass
 
 func _ready():
 	# Ignore the warnings the from the connect function calls.
 	# (We will not need the returned values for this tutorial)
 	# warning-ignore-all:return_value_discarded
-	
+	if(leftHand):
+		Global.connect("second_passed", self, "update_timer")
 	# Get the teleport raycast node and assign it to the teleport_raycast variable.
 	teleport_raycast = get_node("RayCast")
 	# Get the teleport mesh and assign it to the teleport_mesh variable.

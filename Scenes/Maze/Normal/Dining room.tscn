@@ -580,12 +580,10 @@ transform = Transform( 0.852604, 0, 0.522558, 0, 1, 0, -0.522558, 0, 0.852604, 2
 script = ExtResource( 21 )
 
 [node name="CornFlakes" type="Spatial" parent="Spatial/VRInteractable"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="RootNode" type="Spatial" parent="Spatial/VRInteractable/CornFlakes"]
 
 [node name="corn" type="MeshInstance" parent="Spatial/VRInteractable/CornFlakes/RootNode"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 80 )
 

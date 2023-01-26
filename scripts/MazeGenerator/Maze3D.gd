@@ -40,6 +40,7 @@ func _ready() -> void:
 	add_child(_mazeGeneratorPoint)
 	_mazeGeneratorPoint.make_maze()
 	Global._onPlayerTeleport($PlayerSpawn.global_translation)
+	Global.start_timer()
 	pass # Replace with function body.
 
 func setup_rooms():

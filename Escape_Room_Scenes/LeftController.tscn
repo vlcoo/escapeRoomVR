@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/VRController.gd" type="Script" id=1]
 [ext_resource path="res://Escape_Room_Scenes/Hand_Left.scn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Materials/Assets_Material.tres" type="Material" id=3]
 [ext_resource path="res://Audio/effects/grab something.mp3" type="AudioStream" id=4]
-
-
+[ext_resource path="res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Black.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "lowman_shoes.003"
@@ -43,8 +42,13 @@ flags_transparent = true
 flags_unshaded = true
 albedo_color = Color( 0.667298, 1, 0.460938, 0.431373 )
 
+[sub_resource type="DynamicFont" id=8]
+size = 13
+font_data = ExtResource( 5 )
+
 [node name="LeftController" type="ARVRController"]
 script = ExtResource( 1 )
+leftHand = true
 
 [node name="Hand" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.845723, 0.197862, 0.235802, 0, 0.68944, -0.578509, -0.307818, -0.543621, -0.647862, -0.00853791, 0, 0.0342013 )
@@ -86,3 +90,9 @@ cast_to = Vector3( 0, -0.5, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.244232, 7.45058e-09 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( 0.449376, -0.10943, -0.886615, 0.846487, 0.369359, 0.383449, 0.285518, -0.922821, 0.258612, -0.03542, 0.0249279, 0.0710914 )
+modulate = Color( 1, 0, 0, 1 )
+text = "Time"
+font = SubResource( 8 )

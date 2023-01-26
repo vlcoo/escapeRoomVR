@@ -16,7 +16,7 @@ func _ready():
 		)
 		OS.vsync_enabled = false
 		Engine.iterations_per_second = 90
-	
+#	Global.start_timer()
 	load_area("res://Escape_Room_Scenes/MainMenu.tscn")
 
 

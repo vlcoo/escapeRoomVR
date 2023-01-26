@@ -175,6 +175,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ) ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("AudioStreamPlayer3D:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idle"
@@ -313,6 +325,18 @@ tracks/8/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 900, 450, 650 ) ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("AudioStreamPlayer3D:volume_db")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Lock" type="Spatial"]
 script = ExtResource( 3 )
@@ -345,12 +369,9 @@ anims/RESET = SubResource( 6 )
 anims/idle = SubResource( 5 )
 anims/open = SubResource( 7 )
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00081975, -0.000533178, -0.000341877 )
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
-[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00081975, -0.000533178, -0.000341877 )
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-unit_db = -20.0
 autoplay = true

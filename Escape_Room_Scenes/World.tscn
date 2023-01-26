@@ -50,6 +50,7 @@ current = true
 [node name="Area" type="Area" parent="ViewportContainer/Viewport/ARVROrigin"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="ViewportContainer/Viewport/ARVROrigin/Area"]
 shape = SubResource( 10 )
